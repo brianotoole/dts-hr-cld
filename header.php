@@ -13,13 +13,13 @@
       <div class="header__inner">
         <div class="container">
           <div class="row header__row">
-            <div class="col-sm-4 col-xs-7">
-              <a href="<?php echo get_site_url(); ?>" class="logo"><img src="<?php echo get_template_directory_uri() . '/assets/img/logo.svg'; ?>" alt="logo" rel="logo" /></a>
-            </div>
+            <div class="col-sm-2 col-xs-7">
+              <a href="<?php echo get_site_url(); ?>" class="logo"><img src="<?php echo get_template_directory_uri() . '/dist/img/logo-color.svg'; ?>" alt="Datis HR Cloud logo" rel="logo" /></a>
+            </div><!--/.col-->
             <div class="col-sm-8 col-xs-5">
-              <div class="mobile-menu-toggle u-hidden-desktop u-text-right js-menu-toggle">
-                <img src="<?php echo get_template_directory_uri() . '/assets/img/menu-bars.svg'; ?>" alt="">
-              </div>
+              <div class="mobile-menu-toggle u-hidden-desktop u-text-right" id="js-menu-toggle">
+                <span class="mobile-menu-toggle__line"></span>
+              </div><!--/.mobile-menu-toggle-->
                <div class="nav-wrapper u-visible-desktop">
                 <?php
                 wp_nav_menu( array(
@@ -29,16 +29,18 @@
                   'container_class' => 'nav'
                 ) );
                 ?>
-              </div>
-              <!-- /.nav-wrapper -->
+              </div><!--/.nav-wrapper-->
+            </div><!--/.col-->
+            <div class="col-sm-2">
+              login 
+              watch demo
             </div>
-          </div>
-        </div>
-      </div>
+          </div><!--/.row-->
+        </div><!--/.container-->
+      </div><!--/.header__inner-->
     </header>
 
     <div class="mobile-menu">
-      <div class="mobile-menu__close js-menu-toggle"></div>
       <?php
       wp_nav_menu( array(
         'theme_location' => 'mobile',
@@ -46,4 +48,4 @@
         'container'      => false
       ) );
       ?>
-    </div>
+    </div><!--/.mobile-menu-->

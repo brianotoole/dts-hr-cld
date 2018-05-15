@@ -67,7 +67,7 @@ html {
   box-sizing: border-box; }
 
 body {
-  color: #757575;
+  color: #111111;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
@@ -83,13 +83,13 @@ body {
   * Typography
   */
 a {
-  color: #757575;
+  color: #cfcfcf;
   cursor: pointer;
   text-decoration: none; }
   a strong {
     color: currentColor; }
   a:hover, a:focus, a:visited, a:visited:hover {
-    color: #8f8f8f; }
+    color: #e9e9e9; }
 
 p, .p {
   margin-bottom: 1.4em;
@@ -145,16 +145,16 @@ address {
   color: #ffffff !important; }
 
 .u-color-primary {
-  color: #b2d357 !important; }
+  color: #ea8c2a !important; }
 
 .u-color-link {
-  color: #00ace4 !important; }
+  color: #484b5a !important; }
 
 .u-color-secondary {
-  color: #00ace4 !important; }
+  color: #484b5a !important; }
 
 .bg-tertiary {
-  background-color: #192f5a; }
+  background-color: #1a2940; }
 
 /**
   * -- LAYOUT
@@ -766,13 +766,97 @@ address {
 /**
   * Navigation
   */
+.nav__inner {
+  display: table;
+  margin: 0; }
+
+.nav__inner li {
+  display: table-cell;
+  padding-left: 1.5em; }
+
+.nav__inner li a {
+  color: #111111; }
+
+/**
+  * Navigation - Mobile Menu
+  */
+.mobile-menu-toggle {
+  width: 20px;
+  height: 19px;
+  position: absolute;
+  top: 19px;
+  right: 30px;
+  z-index: 50; }
+  .mobile-menu-toggle:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    background-color: #111111;
+    transform-origin: 0 0;
+    transition: transform 0.3s ease-out; }
+  .mobile-menu-toggle__line {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    background-color: #111111;
+    transform-origin: 0 50%;
+    transition: transform 0.3s ease-out; }
+  .mobile-menu-toggle:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    background-color: #111111;
+    transform-origin: 0 100%;
+    transition: transform 0.3s ease-out; }
+
+/**
+  * MOBILE NAV ICON CLOSED
+  * THE "X"
+  */
+.mobile-menu-toggle.is-active:before {
+  content: '';
+  background-color: white;
+  transform: rotate(45deg) scaleX(1.25); }
+
+.mobile-menu-toggle.is-active__line {
+  opacity: 0;
+  transform: scaleX(0); }
+
+.mobile-menu-toggle.is-active:after {
+  content: '';
+  background-color: white;
+  transform: rotate(-45deg) scaleX(1.25) translateY(1px); }
+
+.mobile-menu {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  z-index: 10;
+  background: rgba(25, 47, 90, 0.97);
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  transition: width 0.3s; }
+
+.mobile-menu.is-active {
+  width: 100%;
+  transition: width 0.4s; }
+
 /**
   * Button
   */
 .btn, .gform_wrapper .gform_footer .button.gform_button {
   display: inline-block;
   padding: 0.9em 0.9em 0.7em;
-  background: #757575;
+  background: #cfcfcf;
   text-align: center;
   letter-spacing: 0.1em;
   font-weight: bold;
@@ -789,12 +873,12 @@ address {
   max-width: 250px; }
 
 .btn--primary, .gform_wrapper .gform_footer .button.gform_button {
-  background: #b2d357;
+  background: #ea8c2a;
   color: white;
   transition: 0.1s; }
   .btn--primary:hover, .gform_wrapper .gform_footer .button.gform_button:hover, .btn--primary:visited:hover, .gform_wrapper .gform_footer .button.gform_button:visited:hover {
     color: white;
-    background: #a5cc3b;
+    background: #db7a16;
     transition: 0.3s;
     cursor: pointer; }
 
@@ -819,7 +903,7 @@ address {
   * Page Hero
   */
 .hero--page {
-  color: #b2d357; }
+  color: #ea8c2a; }
 
 /**
   * CTA
@@ -831,7 +915,7 @@ address {
   padding-top: calc(4.16667vw + 10px);
   padding-bottom: 55px;
   padding-bottom: calc(4.16667vw + 20px);
-  background: #757575; }
+  background: #cfcfcf; }
   @media (max-width: 480px) {
     .cta {
       padding-top: 45px;
@@ -927,7 +1011,7 @@ address {
   font-size: 1.5em; }
 
 .gform_wrapper .gform_body .gfield_required {
-  color: #757575; }
+  color: #cfcfcf; }
 
 .gform_wrapper .gform_body .field_sublabel_below .ginput_complex.ginput_container label {
   display: none; }
