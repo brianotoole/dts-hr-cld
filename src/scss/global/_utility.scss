@@ -4,12 +4,12 @@
 
 
 .u-visible-desktop {
-  display: none;
-  @media (min-width: $desktop) { display: block; }
+  display: none !important;
+  @media (min-width: $desktop) { display: block !important; }
 }
 
 .u-hidden-desktop {
-  @media (min-width: $desktop) { display: none; }
+  @media (min-width: $desktop) { display: none !important; }
 }
 
 .u-hidden-sm {

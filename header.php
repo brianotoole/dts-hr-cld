@@ -16,7 +16,7 @@
             <div class="col-sm-2 col-xs-7">
               <a href="<?php echo get_site_url(); ?>" class="logo"><img src="<?php echo get_template_directory_uri() . '/dist/img/logo-color.svg'; ?>" alt="Datis HR Cloud logo" rel="logo" /></a>
             </div><!--/.col-->
-            <div class="col-sm-8 col-xs-5">
+            <div class="col-sm-6 col-xs-5">
               <div class="mobile-menu-toggle u-hidden-desktop u-text-right" id="js-menu-toggle">
                 <span class="mobile-menu-toggle__line"></span>
               </div><!--/.mobile-menu-toggle-->
@@ -31,9 +31,9 @@
                 ?>
               </div><!--/.nav-wrapper-->
             </div><!--/.col-->
-            <div class="col-sm-2">
-              login 
-              watch demo
+            <div class="col-sm-4 btn-group">
+              <a class="btn btn--outline btn--small u-visible-desktop">Login</a> 
+              <a class="btn btn--primary btn--small">Watch Demo</a> 
             </div>
           </div><!--/.row-->
         </div><!--/.container-->

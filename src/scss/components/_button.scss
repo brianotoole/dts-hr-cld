@@ -4,14 +4,12 @@
 
 .btn {
   display: inline-block;
-  padding: 0.9em 0.9em 0.7em;
+  padding: 0.25em;
   background: $grey;
   text-align: center;
   letter-spacing: 0.1em;
-  font-weight: bold;
-  min-width: 230px;
-  font-size: 0.85em;
-  text-transform: uppercase;
+  min-width: 150px;
+  font-size: 1em;
 
   &:hover, &:focus, &:visited {
     color: white;
@@ -22,13 +20,19 @@
   padding-top: 1.2em;
   padding-bottom: 1em;
   width: 100%;
-  max-width: 250px;
+  max-width: 200px;
+}
+
+.btn--small {
+  padding-top: 0.175em;
+  padding-bottom: 0.175em;
+  height: 33px;
 }
 
 .btn--primary {
   background: $color__primary;
   color: white;
-  transition: 0.1s;
+  transition: 0.3s;
 
   &:hover,
   &:visited:hover {
@@ -40,12 +44,12 @@
 }
 
 .btn--outline {
-  border: 2px solid white;
+  border: 1px solid $color__secondary;
   background: transparent;
-  color: white;
-  transition: 0.1s;
+  color: $color__secondary;
+  transition: 0.3s;
 
-  &:visited { color: white; }
+  &:visited { color: $color__secondary; }
 
   &:hover {
     background: white;
@@ -53,3 +57,9 @@
   }
 }
 
+.btn-group {
+  display: flex;
+  a + a {
+    margin-left: 1.5em;
+  }
+}
