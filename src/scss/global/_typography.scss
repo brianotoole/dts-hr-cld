@@ -1,0 +1,41 @@
+/**
+  * Typography
+  */
+
+a {
+  color: $grey;
+  cursor: pointer;
+  text-decoration: none;
+
+  strong { color: currentColor; }
+
+  &:hover, &:focus,
+  &:visited, &:visited:hover {
+    color: lighten($grey, 10%);
+  }
+}
+
+p, .p {
+  margin-bottom: 1.4em;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: 300; }
+
+h1, .h1 { font-size: 2em; }
+
+h2,.h2 {
+  font-size: 2.5em;
+}
+
+h3, .h3 {
+  font-weight: 400;
+  font-size: 1.5em;
+  margin-bottom: 0.7em;
+}
+
+address {
+  line-height: 1.5;
+  font-style: normal;
+}

@@ -1,0 +1,20 @@
+/**
+  * Header
+  */
+
+.header {
+  font-size: 1em;
+}
+
+.header__inner {
+  padding: 1.5em 0 2.5em;
+  background: white;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 1.5em;
+  }
+}
+
+.logo {
+  max-width: 230px;
+}

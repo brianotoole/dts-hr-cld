@@ -1,0 +1,55 @@
+/**
+  * Button
+  */
+
+.btn {
+  display: inline-block;
+  padding: 0.9em 0.9em 0.7em;
+  background: $grey;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  min-width: 230px;
+  font-size: 0.85em;
+  text-transform: uppercase;
+
+  &:hover, &:focus, &:visited {
+    color: white;
+  }
+}
+
+.btn--large {
+  padding-top: 1.2em;
+  padding-bottom: 1em;
+  width: 100%;
+  max-width: 250px;
+}
+
+.btn--primary {
+  background: $color__primary;
+  color: white;
+  transition: 0.1s;
+
+  &:hover,
+  &:visited:hover {
+    color: white;
+    background: darken($color__primary, 7%);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+}
+
+.btn--outline {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  transition: 0.1s;
+
+  &:visited { color: white; }
+
+  &:hover {
+    background: white;
+    transition: 0.2s;
+  }
+}
+
