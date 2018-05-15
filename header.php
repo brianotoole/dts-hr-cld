@@ -26,7 +26,7 @@
                   'theme_location'  => 'primary',
                   'menu_class'      => 'nav__inner',
                   'container'       => 'div',
-                  'container_class' => 'nav'
+                  'container_class' => 'nav-primary'
                 ) );
                 ?>
               </div><!--/.nav-wrapper-->
@@ -45,7 +45,8 @@
       wp_nav_menu( array(
         'theme_location' => 'mobile',
         'menu_class'     => '',
-        'container'      => false
+        'container'      => div,
+        'container_class' => 'nav-mobile'
       ) );
       ?>
     </div><!--/.mobile-menu-->
