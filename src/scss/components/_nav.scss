@@ -75,7 +75,8 @@ $m_icon_height: 3px;
     background-color: white;
     transform: rotate(45deg) scaleX(1.25);
   }
-  &__line { // middle line 
+  .mobile-menu-toggle__line { // middle line 
+    display: none;
     opacity: 0;
     transform: scaleX(0);
   }
@@ -95,13 +96,20 @@ $m_icon_height: 3px;
   height: 100%;
   width: 0%;
   z-index: 40;
-  background: rgba(25, 47, 90, 0.97);
+  background: $color__secondary;
   top: 0;
   right: 0;
   overflow: hidden;
   transition: width 0.3s;
+  li a {
+    display: block;
+    padding: 0.25em 0;
+    font-size: 1.1em;
+    font-weight: 700;
+  }
 }
 .mobile-menu.is-active {
+  padding: 30px;
   width: 100%;
   transition: width 0.4s;
 }
@@ -140,17 +148,26 @@ $m_icon_height: 3px;
   }
 }
 
-// Nav Mobile - Level 2
-// On click of parent, show children nav items
+/**
+  * NAV MOBILE DROPDOWN 
+  */
 .nav-mobile {
-  ul.sub-menu.active li {
-    display: block;
-  }
-  ul.sub-menu li {
-    display: none;
+  .menu-item-has-children {
+    position: relative;
+    li a {
+      display: block;
+      font-size: 90%;
+      text-decoration: none;
+    }
+    ul.sub-menu.active li {
+      display: block;
+    }
+    ul.sub-menu li {
+      display: none;
+    }
   }
 }
-
+// Nav icon click toggle
 .nav-mobile__chevron {
   &:after {
     content: '';

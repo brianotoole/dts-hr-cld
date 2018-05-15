@@ -826,7 +826,8 @@ address {
   background-color: white;
   transform: rotate(45deg) scaleX(1.25); }
 
-.mobile-menu-toggle.is-active__line {
+.mobile-menu-toggle.is-active .mobile-menu-toggle__line {
+  display: none;
   opacity: 0;
   transform: scaleX(0); }
 
@@ -843,13 +844,19 @@ address {
   height: 100%;
   width: 0%;
   z-index: 40;
-  background: rgba(25, 47, 90, 0.97);
+  background: #484b5a;
   top: 0;
   right: 0;
   overflow: hidden;
   transition: width 0.3s; }
+  .mobile-menu li a {
+    display: block;
+    padding: 0.25em 0;
+    font-size: 1.1em;
+    font-weight: 700; }
 
 .mobile-menu.is-active {
+  padding: 30px;
   width: 100%;
   transition: width 0.4s; }
 
@@ -878,11 +885,19 @@ address {
     border-top: 1px solid white;
     text-align: center; }
 
-.nav-mobile ul.sub-menu.active li {
-  display: block; }
-
-.nav-mobile ul.sub-menu li {
-  display: none; }
+/**
+  * NAV MOBILE DROPDOWN 
+  */
+.nav-mobile .menu-item-has-children {
+  position: relative; }
+  .nav-mobile .menu-item-has-children li a {
+    display: block;
+    font-size: 90%;
+    text-decoration: none; }
+  .nav-mobile .menu-item-has-children ul.sub-menu.active li {
+    display: block; }
+  .nav-mobile .menu-item-has-children ul.sub-menu li {
+    display: none; }
 
 .nav-mobile__chevron:after {
   content: '';

@@ -126,8 +126,8 @@ var parent = $('.nav-mobile li.menu-item-has-children:has(ul)');
 parent.append('<i class="nav-mobile__chevron"></i>');
 parent.on('click', function (e) {
   e.preventDefault();
-  //$(this).find('ul > li').toggle();
-  $(this).find('ul.sub-menu').toggleClass('active');
+  $(this).find('ul > li').toggle();
+  //$(this).find('.sub-menu').toggleClass('active');
   $(this).find('i').toggleClass('is-open');
 });
 
