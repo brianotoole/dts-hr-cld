@@ -874,22 +874,24 @@ address {
   .nav-mobile .menu-item-has-children ul.sub-menu li {
     display: none; }
 
-.nav-mobile__chevron:after {
-  content: '';
+.nav-mobile__chevron {
   position: absolute;
-  top: 20px;
-  right: 4px;
-  width: 12px;
-  height: 12px;
-  border-right: 2px solid white;
-  border-bottom: 2px solid white;
-  right: 5px;
-  transform: rotate(-45deg);
-  transition: all 0.2s ease-out; }
-
-.nav-mobile__chevron.is-open:after {
-  content: '';
-  transform: rotate(45deg); }
+  top: 0;
+  left: 35%; }
+  .nav-mobile__chevron:after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(-45deg);
+    transition: transform 0.2s ease-out; }
+  .nav-mobile__chevron.is-open:after {
+    content: '';
+    transform: rotate(45deg); }
 
 /**
   * MOBILE MENU CONTENT
