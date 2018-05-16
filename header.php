@@ -13,11 +13,11 @@
       <div class="header__inner">
         <div class="container">
           <div class="row header__row">
-            <div class="col-sm-2 col-xs-7">
+            <div class="col-sm-2 col-xs-4">
               <a href="<?php echo get_site_url(); ?>" class="logo"><img src="<?php echo get_template_directory_uri() . '/dist/img/logo-color.svg'; ?>" alt="Datis HR Cloud logo" rel="logo" /></a>
             </div><!--/.col-->
-            <div class="col-sm-6 col-xs-5">
-              <div class="mobile-menu-toggle u-hidden-desktop u-text-right" id="js-menu-toggle">
+            <div class="col-sm-6 col-xs-0">
+              <div class="mobile-menu-toggle u-hidden-desktop" id="js-menu-toggle">
                 <span class="mobile-menu-toggle__line"></span>
               </div><!--/.mobile-menu-toggle-->
                <div class="nav-wrapper u-visible-desktop">
@@ -31,7 +31,7 @@
                 ?>
               </div><!--/.nav-wrapper-->
             </div><!--/.col-->
-            <div class="col-sm-4 btn-group">
+            <div class="col-sm-4 col-xs-4 btn-group">
               <a class="btn btn--outline btn--small u-visible-desktop">Login</a> 
               <a class="btn btn--primary btn--small">Watch Demo</a> 
             </div>
