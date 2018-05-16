@@ -16,8 +16,56 @@
 }
 
 .nav__inner li a {
-  color: $color__text;
+  color: $color__secondary;
   text-transform: uppercase;
+  padding-bottom: 3px;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+  transform: perspective(1px) translateZ(0);
+  z-index: 1;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -4px;
+    background: $color__primary;
+    height: 4px;
+    transition: right 0.2s ease-out;
+    z-index: 2;
+  }
+  &:hover:before {
+    right: 0;
+  }
+  &:hover {
+    color: $color__secondary--dark;
+  }
+}
+
+.nav__inner li.current_page_item a {
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid $color__primary;
+  z-index: 1;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -4px;
+    background: $color__secondary;
+    height: 4px;
+    transition: right 0.2s ease-out;
+    z-index: 2;
+  }
+  &:hover:before {
+    right: 0;
+  }
 }
 
 /**
@@ -146,7 +194,7 @@ $m_icon_height: 3px;
 .nav-mobile__chevron {
   position: absolute;
   top: 0;
-  left: 35%;
+  left: 27%;
   &:after {
     content: '';
     position: absolute;

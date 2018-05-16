@@ -776,8 +776,50 @@ address {
   padding-right: 1em; }
 
 .nav__inner li a {
-  color: #111111;
-  text-transform: uppercase; }
+  color: #484b5a;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+  transform: perspective(1px) translateZ(0);
+  z-index: 1; }
+  .nav__inner li a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -4px;
+    background: #ea8c2a;
+    height: 4px;
+    transition: right 0.2s ease-out;
+    z-index: 2; }
+  .nav__inner li a:hover:before {
+    right: 0; }
+  .nav__inner li a:hover {
+    color: #383a46; }
+
+.nav__inner li.current_page_item a {
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid #ea8c2a;
+  z-index: 1; }
+  .nav__inner li.current_page_item a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -4px;
+    background: #484b5a;
+    height: 4px;
+    transition: right 0.2s ease-out;
+    z-index: 2; }
+  .nav__inner li.current_page_item a:hover:before {
+    right: 0; }
 
 /**
   * Navigation - Mobile Menu
@@ -879,7 +921,7 @@ address {
 .nav-mobile__chevron {
   position: absolute;
   top: 0;
-  left: 35%; }
+  left: 27%; }
   .nav-mobile__chevron:after {
     content: '';
     position: absolute;
@@ -945,7 +987,7 @@ address {
 .btn--small {
   padding-top: 0.175em;
   padding-bottom: 0.175em;
-  height: 33px; }
+  height: 32px; }
 
 .btn--primary, .gform_wrapper .gform_footer .button.gform_button {
   background: #ea8c2a;
