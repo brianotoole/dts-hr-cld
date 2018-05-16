@@ -19,6 +19,13 @@ $color__accent:      $gold;
 $color__text:       $black;
 $color__border:      $grey;
 
+// brand colors--darkens
+$color__primary--dark: darken($color__primary, 7%);
+$color__secondary--dark: darken($color__secondary, 7%);
+$color__tertiary--dark: darken($color__tertiary, 7%);
+$color__text--dark: darken($color__text, 7%);
+
+
 // fonts
 $font__heading: 'Open Sans', arial, sans-serif;
 $font__body:      'Poppins', arial, sans-serif;
