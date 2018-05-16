@@ -1061,7 +1061,7 @@ address {
   background: #484b5a;
   top: 0;
   right: 0;
-  padding: 30px;
+  padding: 60px 30px 30px;
   overflow: hidden;
   transform: translateX(100%);
   transition: all 0.3s ease-out; }
@@ -1099,7 +1099,7 @@ address {
 .btn--small {
   padding-top: 0.175em;
   padding-bottom: 0.175em;
-  height: 32px; }
+  height: 33px; }
 
 .btn--primary, .gform_wrapper .gform_footer .button.gform_button {
   background: #ea8c2a;
