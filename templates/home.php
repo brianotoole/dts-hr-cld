@@ -4,7 +4,7 @@
 
 <?php
 // HERO
-get_template_part('template-parts/hero', 'home');
+get_template_part('template-parts/hero', '');
 ?>
 
 <?php get_footer(); ?>
