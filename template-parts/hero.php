@@ -8,7 +8,8 @@ $hero_subheading = get_field('hero_subheading');
 $hero_button = get_field('hero_button');
 ?>
 
-<?php // set hero background: if acf field is not set, use thumbnail
+<?php 
+  // set hero background: if acf field is not set, use thumbnail
   if ($hero_background) : $hero_background = $hero_background; 
   else : $hero_background = the_post_thumbnail_url(); 
   endif; 
@@ -26,6 +27,9 @@ $hero_button = get_field('hero_button');
             <div class="hero__text">
               <h1 class="hero__heading h2 u-text-bold u-text-upper"><?php the_field('hero_heading'); ?></h1>
               <p class="hero__subheading"><?php the_field('hero_subheading'); ?></p>
+              <?php if ( get_field( 'hero_button' ) ) : ?>
+                <div class="hero__button"><a href="<?php echo $hero_button['url']; ?>" class="btn btn--primary" target="<?php echo $hero_button['target']; ?>"><?php echo $hero_button['title']; ?></a></div>
+              <?php endif; ?>
             </div><!--/.hero__text-->
           <?php
             endwhile;

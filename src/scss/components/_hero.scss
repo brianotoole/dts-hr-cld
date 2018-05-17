@@ -13,7 +13,6 @@ $header__height: 80px;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  z-index: 1;
   &--is-full-height {
     height: calc(100vh - #{$header__height});
   }
@@ -31,8 +30,23 @@ $header__height: 80px;
 }
 
 .hero__heading {
+  padding-bottom: calc-em(5px);
   @media (min-width: $tablet) {
     max-width: 42%;
+  }
+}
+
+.hero__subheading {
+  @media (min-width: $tablet) {
+    max-width: 90%;
+  }
+}
+
+.hero__button {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
   }
 }
 
