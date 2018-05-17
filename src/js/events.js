@@ -15,9 +15,16 @@ import { fitText } from "./fit-text";
 /**
   * Events that fire when the page is loaded.
   */
+// http://kenwheeler.github.io/slick/
 $(document).ready(function(){
   $('.carousel').slick({
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    dots: true,
+    slidesToShow: 1,
+    fade: true,
+    cssEase: 'linear',
+    //autoplay: true,
+    //autoplaySpeed: 3000,
   });
 }); // /.ready
 

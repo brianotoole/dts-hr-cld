@@ -1,0 +1,38 @@
+// HOMEPAGE
+
+.testimonial.row {
+  align-items: center;
+}
+
+.testimonial__title {
+  font-size: 1.4em;
+  color: color('white');
+  line-height: 1;
+}
+
+.testimonial__name {
+  @extend h2;
+  margin-bottom: 0.4em;
+}
+
+.testimonial__description {
+  p {
+    line-height: 1.7;
+  }
+}
+
+.testimonial__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $color__primary;
+}
+
+.testimonial__position { 
+  margin-top: calc-em(10px);
+  color: lighten($color__primary,20%);
+  font-weight: 300; 
+}
+
+.testimonial__button {
+  margin-top: calc-em(100px);
+}

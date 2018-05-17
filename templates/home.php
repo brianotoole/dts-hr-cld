@@ -5,6 +5,9 @@
 <?php
 // HERO
 get_template_part('template-parts/hero', '');
+
+// TESTIMONIALS
+get_template_part('template-parts/carousel', 'testimonials');
 ?>
 
 <?php get_footer(); ?>

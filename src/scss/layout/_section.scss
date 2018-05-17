@@ -3,9 +3,24 @@
   */
 
 .section {
-  padding: 5em 0;
-}
+  padding: 2em 0;
 
-.section--sm {
-  padding: 3em 0;
+  &--sm {
+    padding: 1em 0;
+  }
+
+  &--no-pad {
+    padding: 0;
+  }
+
+  &--primary {
+    background-color: $color__primary;
+  }
+  &--secondary {
+    background-color: $color__secondary;
+    color: white;
+  }
+
+
+
 }

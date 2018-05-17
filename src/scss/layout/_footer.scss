@@ -21,6 +21,7 @@
 }
 
 .footer__bottom-copy {
+  padding-right: calc-em(25px);
   @media (min-width: $tablet) {
     padding-right: calc-em(75px);
   }
