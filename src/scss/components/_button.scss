@@ -4,16 +4,16 @@
 
 .btn {
   display: inline-block;
-  padding: 0.25em;
+  padding: 0.4em;
   background: $grey;
   text-align: center;
-  letter-spacing: 0.1em;
   min-width: 150px;
   font-size: 1em;
   transition: all 0.3s ease-out;
 
   &:hover, &:focus, &:visited {
     color: white;
+    cursor: pointer;
     transition: all 0.3s ease-out;
   }
 }
@@ -27,7 +27,6 @@
 
 .btn--small {
   padding-top: 0.175em;
-  padding-bottom: 0.175em;
   height: 33px;
 }
 
@@ -40,7 +39,6 @@
   &:visited:hover {
     color: white;
     background: darken($color__primary, 7%);
-    cursor: pointer;
   }
 }
 
@@ -60,7 +58,7 @@
 
 .btn-group {
   display: flex;
-  a + a {
+  li + li {
     margin-left: 1.5em;
   }
 }
