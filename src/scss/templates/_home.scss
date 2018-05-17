@@ -37,8 +37,42 @@
   margin-top: calc-em(100px);
 }
 
+// Audience section
+
+// the carousel within this
+.carousel--audience-nav {
+  margin-bottom: 1em;
+  .slick-slide {
+    width: auto!important;
+    cursor: pointer;
+  }
+  .slick-slide.slick-current li {
+    background: $color__primary;
+    width: auto!important;
+    appearance: none;
+  }
+}
+.carousel__nav-item {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 calc-em(8px);
+  background: transparent;
+  border: 2px solid $color__primary;
+  color: white;
+  padding: calc-em(2px) calc-em(10px);
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+
+
+
+
 // Unified section
 .unified__item {
+  margin-top: calc-em(20px);
+  margin-bottom: calc-em(20px);
   @media (min-width: $tablet) {
     display: flex;
     align-items: center;
@@ -51,6 +85,10 @@
 
 .unified__title {
   color: $color__secondary;
+  @media (min-width: $tablet) {
+    margin-left: calc-em(10px);
+    text-align: left;
+  }
 }
 
 .unified__button {

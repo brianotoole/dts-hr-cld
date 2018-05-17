@@ -3,8 +3,9 @@
 ////
 
 // color names
-$orange:  #ea8c2a;
+$orange: #ea8c2a;
 $blue:   #484b5a;
+$l-blue: #bfe0f7;
 $gold:   #fdbf29;
 $navy:   #1a2940;
 $white:  #ffffff;
@@ -12,11 +13,11 @@ $black:  #111111;
 $grey:   #cfcfcf;
 
 // brand colors
-$color__primary:   $orange;
+$color__primary:     $orange;
 $color__secondary:   $blue;
 $color__tertiary:    $navy;
-$color__accent:      $gold;
-$color__text:       $black;
+$color__accent:      $l-blue;
+$color__text:        $black;
 $color__border:      $grey;
 
 // brand colors--darkens

@@ -252,6 +252,10 @@ address {
   .u-hidden-sm {
     display: none !important; } }
 
+.u-flex-center {
+  display: flex;
+  align-items: center; }
+
 .u-text-center {
   text-align: center !important; }
 
@@ -904,6 +908,7 @@ address {
   * Section
   */
 .section {
+  position: relative;
   padding: 2em 0; }
   .section--sm {
     padding: 1em 0; }
@@ -917,9 +922,21 @@ address {
   .section--secondary {
     background-color: #484b5a;
     color: white; }
+  .section--accent {
+    background-color: #bfe0f7; }
   .section--white {
     background-color: white;
     color: #111111; }
+
+.section__img {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 /**
   * -- COMPONENTS
@@ -1520,16 +1537,44 @@ address {
 .testimonial__button {
   margin-top: 6.25em; }
 
-@media (min-width: 768px) {
-  .unified__item {
-    display: flex;
-    align-items: center; } }
+.carousel--audience-nav {
+  margin-bottom: 1em; }
+  .carousel--audience-nav .slick-slide {
+    width: auto !important;
+    cursor: pointer; }
+  .carousel--audience-nav .slick-slide.slick-current li {
+    background: #ea8c2a;
+    width: auto !important;
+    appearance: none; }
+
+.carousel__nav-item {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 0.5em;
+  background: transparent;
+  border: 2px solid #ea8c2a;
+  color: white;
+  padding: 0.125em 0.625em; }
+  .carousel__nav-item:first-child {
+    margin-left: 0; }
+
+.unified__item {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em; }
+  @media (min-width: 768px) {
+    .unified__item {
+      display: flex;
+      align-items: center; } }
 
 .unified__icon {
   color: #ea8c2a; }
 
 .unified__title {
   color: #484b5a; }
+  @media (min-width: 768px) {
+    .unified__title {
+      margin-left: 0.625em;
+      text-align: left; } }
 
 .unified__button {
   margin-top: 1.25em; }

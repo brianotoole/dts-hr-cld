@@ -8,7 +8,7 @@ $testimonial_button = get_field('testimonial_button');
 
 <section class="section section--secondary section--image" style="background-image: url(<?php echo $testimonial_image['url']; ?>)">
 <div class="container">
-  <div class="carousel carousel--testimonial">
+  <div class="carousel carousel--testimonial" id="carousel">
   <?php
   $testimonial_args = array(
     'post_type'   => 'testimonial',

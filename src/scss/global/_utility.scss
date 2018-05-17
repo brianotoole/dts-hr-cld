@@ -16,6 +16,11 @@
   @media (max-width: $tablet) { display: none !important; }
 }
 
+.u-flex-center {
+  display: flex;
+  align-items: center;
+}
+
 .u-text-center {
   text-align: center !important;
 }

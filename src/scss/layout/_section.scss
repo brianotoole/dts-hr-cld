@@ -3,6 +3,7 @@
   */
 
 .section {
+  position: relative;
   padding: 2em 0;
 
   &--sm {
@@ -26,11 +27,23 @@
     background-color: $color__secondary;
     color: white;
   }
+  &--accent {
+    background-color: $color__accent;
+  }
   &--white {
     background-color: white;
     color: $color__text;
   }
 
+}
 
-
+.section__img {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

@@ -16,8 +16,30 @@ import { fitText } from "./fit-text";
   * Events that fire when the page is loaded.
   */
 // http://kenwheeler.github.io/slick/
-$(document).ready(function(){
-  $('.carousel').slick({
+$(document).ready(function() {
+
+  //audience section carrousel
+  $('#carousel--audience').slick({
+    slidesToShow: 1,
+    arrows: false,
+    dots: false,
+    fade: true,
+    cssEase: 'linear',
+    //asNavFor: '.slider-nav-thumbnails',
+  });
+  
+  //audience section carousel navigation
+  $('#carousel--audience-nav').slick({
+    slidesToShow: 4,
+    //slidesToScroll: 1,
+    asNavFor: '#carousel--audience',
+    dots: false,
+    focusOnSelect: true
+  });
+
+
+  //default carousel
+  $('#carousel').slick({
     adaptiveHeight: true,
     dots: true,
     slidesToShow: 1,
@@ -26,6 +48,7 @@ $(document).ready(function(){
     //autoplay: true,
     //autoplaySpeed: 3000,
   });
+
 }); // /.ready
 
 

@@ -25,7 +25,7 @@ $hero_button = get_field('hero_button');
             while ( have_posts() ) :
               the_post();
           ?>
-          <div class="col-sm-11 col-xs-12">
+          <div class="col-sm-10 col-xs-12">
             <div class="hero__text">
               <h1 class="hero__heading h2 u-text-bold u-text-upper"><?php the_field('hero_heading'); ?></h1>
               <p class="hero__subheading"><?php the_field('hero_subheading'); ?></p>

@@ -6,6 +6,9 @@
 // HERO
 get_template_part('template-parts/hero', '');
 
+// AUDIENCES
+get_template_part('template-parts/section', 'audiences');
+
 // UNIFIED
 get_template_part('template-parts/section', 'unified');
 
