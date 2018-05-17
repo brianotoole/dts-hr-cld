@@ -20,7 +20,7 @@ $hero_button = get_field('hero_button');
     <div class="hero__inner">
       <div class="container">
         <div class="row">
-        <?php
+         <?php
           if ( have_posts() ) :
             while ( have_posts() ) :
               the_post();

@@ -9,6 +9,12 @@
     padding: 1em 0;
   }
 
+  &--pad-top-xl {
+    @media (min-width: $tablet) {
+      padding-top: 10em;
+    }
+  }
+
   &--no-pad {
     padding: 0;
   }

@@ -36,3 +36,23 @@
 .testimonial__button {
   margin-top: calc-em(100px);
 }
+
+// Unified section
+.unified__item {
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.unified__icon {
+  color: $color__primary;
+}
+
+.unified__title {
+  color: $color__secondary;
+}
+
+.unified__button {
+  margin-top: calc-em(20px);
+}
