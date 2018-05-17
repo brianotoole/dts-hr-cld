@@ -863,13 +863,29 @@ address {
   * Footer
   */
 .footer {
-  text-align: center;
-  padding: 3em 0; }
+  padding-top: 1.5em;
+  padding-bottom: 1.5em; }
+  .footer--secondary {
+    background-color: #484b5a;
+    color: white; }
 
-.footer__logo {
-  max-width: 200px;
-  width: 100%;
-  margin: 0 auto 1.5em; }
+.footer__bottom {
+  display: flex; }
+
+@media (min-width: 768px) {
+  .footer__bottom-copy {
+    padding-right: 4.6875em; } }
+
+.footer__bottom-menu ul {
+  display: flex;
+  padding: 0;
+  list-style-type: none; }
+
+.footer__bottom-menu li a {
+  color: white;
+  padding: 0 1.5625em; }
+  .footer__bottom-menu li a:first-child {
+    padding-left: 0; }
 
 .footer__info {
   margin-bottom: 0.5em;

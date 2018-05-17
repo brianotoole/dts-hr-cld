@@ -3,14 +3,42 @@
   */
 
 .footer {
-  text-align: center;
-  padding: 3em 0;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+
+  &--secondary {
+    background-color: $color__secondary;
+    color: white;
+  }
 }
 
-.footer__logo {
-  max-width: 200px;
-  width: 100%;
-  margin: 0 auto 1.5em;
+.footer__top {
+
+}
+
+.footer__bottom {
+  display: flex;
+}
+
+.footer__bottom-copy {
+  @media (min-width: $tablet) {
+    padding-right: calc-em(75px);
+  }
+}
+
+.footer__bottom-menu {
+  ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+  }
+  li a {
+    color: white;
+    padding: 0 calc-em(25px);
+    &:first-child {
+      padding-left: 0;
+    }
+  }
 }
 
 .footer__info {
