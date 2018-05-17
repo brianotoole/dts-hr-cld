@@ -19,11 +19,13 @@ $hero_button = get_field('hero_button');
   <div class="hero__bg hero__bg--is-full-height" style="background-image: url(<?php echo $hero_background; ?>);">
     <div class="hero__inner">
       <div class="container">
+        <div class="row">
         <?php
           if ( have_posts() ) :
             while ( have_posts() ) :
               the_post();
           ?>
+          <div class="col-sm-11 col-xs-12">
             <div class="hero__text">
               <h1 class="hero__heading h2 u-text-bold u-text-upper"><?php the_field('hero_heading'); ?></h1>
               <p class="hero__subheading"><?php the_field('hero_subheading'); ?></p>
@@ -31,6 +33,7 @@ $hero_button = get_field('hero_button');
                 <div class="hero__button"><a href="<?php echo $hero_button['url']; ?>" class="btn btn--primary" target="<?php echo $hero_button['target']; ?>"><?php echo $hero_button['title']; ?></a></div>
               <?php endif; ?>
             </div><!--/.hero__text-->
+          </div>
           <?php
             endwhile;
           endif;

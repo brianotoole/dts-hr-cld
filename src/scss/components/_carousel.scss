@@ -117,10 +117,8 @@
 }
 
 .carousel__slide {
-  padding: 0 30px;
-  @media (max-width: $tablet) {
-    padding: 0;
-  }
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .slick-prev,

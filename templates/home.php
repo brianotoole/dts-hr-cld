@@ -6,6 +6,9 @@
 // HERO
 get_template_part('template-parts/hero', '');
 
+// UNIFIED
+get_template_part('template-parts/section', 'unified');
+
 // TESTIMONIALS
 get_template_part('template-parts/carousel', 'testimonials');
 ?>

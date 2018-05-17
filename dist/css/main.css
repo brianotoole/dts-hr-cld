@@ -218,7 +218,8 @@ p, .p {
   letter-spacing: normal; }
 
 h1, h2, .testimonial__name, h3, h4, h5, h6 {
-  line-height: 1.1; }
+  line-height: 1.1;
+  font-weight: bold; }
 
 h1, .h1 {
   font-size: 2em; }
@@ -227,7 +228,6 @@ h2, .testimonial__name, .h2 {
   font-size: 2.5em; }
 
 h3, .h3 {
-  font-weight: 400;
   font-size: 1.5em;
   margin-bottom: 0.7em; }
 
@@ -298,8 +298,8 @@ address {
   width: 100%;
   max-width: 1130px;
   margin: 0 auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem; }
+  padding-left: 1rem;
+  padding-right: 1rem; }
 
 .container-fluid {
   margin-right: auto;
@@ -914,6 +914,9 @@ address {
   .section--secondary {
     background-color: #484b5a;
     color: white; }
+  .section--white {
+    background-color: white;
+    color: #111111; }
 
 /**
   * -- COMPONENTS
@@ -1199,14 +1202,9 @@ address {
       max-width: 42%; } }
 
 @media (min-width: 768px) {
-  .hero__subheading {
-    max-width: 90%; } }
-
-@media (min-width: 768px) {
   .hero__button {
     display: flex;
-    justify-content: flex-end;
-    width: 90%; } }
+    justify-content: flex-end; } }
 
 /**
   * Page Hero
@@ -1341,10 +1339,8 @@ address {
   margin-bottom: 4rem; }
 
 .carousel__slide {
-  padding: 0 30px; }
-  @media (max-width: 768px) {
-    .carousel__slide {
-      padding: 0; } }
+  padding-left: 0;
+  padding-right: 0; }
 
 .slick-prev,
 .slick-next {
