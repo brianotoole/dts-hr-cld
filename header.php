@@ -32,19 +32,11 @@ $site_logo = get_field('site_logo', 'option');
                 <span class="mobile-menu-toggle__line"></span>
               </div><!--/.mobile-menu-toggle-->
                <div class="nav-wrapper u-visible-desktop">
-                <?php
-                wp_nav_menu( array(
-                  'theme_location'  => 'primary',
-                  'menu_class'      => 'nav__inner',
-                  'container'       => 'div',
-                  'container_class' => 'nav-primary'
-                ) );
-                ?>
+               <?php primary_nav(); ?>
               </div><!--/.nav-wrapper-->
             </div><!--/.col-->
             <div class="col-sm-4 col-xs-4 btn-group">
-              <a class="btn btn--outline btn--small u-visible-desktop">Login</a> 
-              <a class="btn btn--primary btn--small">Watch Demo</a> 
+              <?php secondary_nav(); ?>
             </div>
           </div><!--/.row-->
         </div><!--/.container-->
@@ -52,12 +44,5 @@ $site_logo = get_field('site_logo', 'option');
     </header>
 
     <div class="mobile-menu">
-      <?php
-      wp_nav_menu( array(
-        'theme_location' => 'mobile',
-        'menu_class'     => '',
-        'container'      => div,
-        'container_class' => 'nav-mobile'
-      ) );
-      ?>
+      <?php mobile_nav(); ?>
     </div><!--/.mobile-menu-->
