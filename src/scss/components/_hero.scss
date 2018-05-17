@@ -2,13 +2,39 @@
   * Hero
   */
 
+$header__height: 80px;
+
 .hero {
-  color: $white;
+  position: relative;
 }
 
-.hero__inner {}
+.hero__bg {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  &--is-full-height {
+    height: calc(100vh - #{$header__height});
+  }
+}
 
-.hero__heading {}
+.hero__inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-top: calc-em(100px);
+}
+
+.hero__text {
+  color: white;
+}
+
+.hero__heading {
+  @media (min-width: $tablet) {
+    max-width: 42%;
+  }
+}
 
 
 /**
