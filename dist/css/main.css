@@ -1086,9 +1086,11 @@ address {
   text-align: center;
   letter-spacing: 0.1em;
   min-width: 150px;
-  font-size: 1em; }
+  font-size: 1em;
+  transition: all 0.3s ease-out; }
   .btn:hover, .gform_wrapper .gform_footer .button.gform_button:hover, .btn:focus, .gform_wrapper .gform_footer .button.gform_button:focus, .btn:visited, .gform_wrapper .gform_footer .button.gform_button:visited {
-    color: white; }
+    color: white;
+    transition: all 0.3s ease-out; }
 
 .btn--large {
   padding-top: 1.2em;
@@ -1108,19 +1110,18 @@ address {
   .btn--primary:hover, .gform_wrapper .gform_footer .button.gform_button:hover, .btn--primary:visited:hover, .gform_wrapper .gform_footer .button.gform_button:visited:hover {
     color: white;
     background: #db7a16;
-    transition: 0.3s;
     cursor: pointer; }
 
 .btn--outline {
-  border: 1px solid #484b5a;
+  border: 1px solid #cfcfcf;
   background: transparent;
-  color: #484b5a;
-  transition: 0.3s; }
+  color: #cfcfcf; }
   .btn--outline:visited {
-    color: #484b5a; }
+    color: #cfcfcf; }
   .btn--outline:hover {
-    background: white;
-    transition: 0.2s; }
+    background: #ededed;
+    border-color: #bdbdbd;
+    color: #bdbdbd; }
 
 .btn-group {
   display: flex; }

@@ -10,9 +10,11 @@
   letter-spacing: 0.1em;
   min-width: 150px;
   font-size: 1em;
+  transition: all 0.3s ease-out;
 
   &:hover, &:focus, &:visited {
     color: white;
+    transition: all 0.3s ease-out;
   }
 }
 
@@ -38,22 +40,21 @@
   &:visited:hover {
     color: white;
     background: darken($color__primary, 7%);
-    transition: 0.3s;
     cursor: pointer;
   }
 }
 
 .btn--outline {
-  border: 1px solid $color__secondary;
+  border: 1px solid $color__border;
   background: transparent;
-  color: $color__secondary;
-  transition: 0.3s;
+  color: $color__border;
 
-  &:visited { color: $color__secondary; }
+  &:visited { color: $color__border; }
 
   &:hover {
-    background: white;
-    transition: 0.2s;
+    background: darken(white, 7%);
+    border-color: $color__border--dark;
+    color: $color__border--dark;
   }
 }
 
