@@ -6,8 +6,7 @@ $testimonial_button = get_field('testimonial_button');
 ?>
 
 
-<section class="section section--secondary section--image">
-<div class="section__bg section__bg--img-center section__bg--not-fixed" style="background-image: url(<?php echo $testimonial_image['url']; ?>)"></div>
+<section class="section section--secondary section--image" style="background-image: url(<?php echo $testimonial_image['url']; ?>)">
 <div class="container">
   <div class="carousel carousel--testimonial">
   <?php
@@ -26,7 +25,7 @@ $testimonial_button = get_field('testimonial_button');
     <div class="carousel__slide">
       <div class="testimonial">
         <div class="row">
-          <div class="testimonial__description col-sm-10">
+          <div class="testimonial__description col-sm-10 col-xs-12">
             <p>"<?php echo $testimonial_description; ?>"</p>
             <h4 class="testimonial__title"><?php echo $testimonial_title; ?></h4>
             <h4 class="testimonial__position"><?php echo $testimonial_position; ?></h4>
@@ -40,7 +39,7 @@ $testimonial_button = get_field('testimonial_button');
   endif;
   wp_reset_postdata();
   ?>
+  
   </div><!-- /.carousel -->
 </div><!-- /.container -->
-
 </section>

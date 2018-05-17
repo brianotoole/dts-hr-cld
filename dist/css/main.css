@@ -1400,7 +1400,8 @@ address {
     outline: none;
     transition: 0.3s; }
     .slick-dots li button:hover {
-      background: #cfcfcf; }
+      background: #cfcfcf;
+      cursor: pointer; }
   .slick-dots li.slick-active button {
     background: white; }
 
