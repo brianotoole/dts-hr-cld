@@ -7,6 +7,13 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
 </head>
+
+<?php
+//Custom Field Group == Site Options
+$site_logo = get_field('site_logo', 'option');
+?>
+
+
 <body <?php body_class(); ?>>
   <div id="page">
     <header class="header">
@@ -14,7 +21,11 @@
         <div class="container">
           <div class="row header__row">
             <div class="col-sm-2 col-xs-4">
-              <a href="<?php echo get_site_url(); ?>" class="logo"><img src="<?php echo get_template_directory_uri() . '/dist/img/logo-color.svg'; ?>" alt="Datis HR Cloud logo" rel="logo" /></a>
+            <?php if ($site_logo) : ?>
+              <img src="<?php echo $site_logo; ?>" title="<?php bloginfo('name'); ?>" rel="logo" class="logo">
+            <?php else : ?>
+              <?php bloginfo('name'); ?>
+            <?php endif; ?>
             </div><!--/.col-->
             <div class="col-sm-6 col-xs-0">
               <div class="mobile-menu-toggle u-hidden-desktop" id="js-menu-toggle">
