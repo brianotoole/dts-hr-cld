@@ -1,6 +1,6 @@
-///
-// Mixins
-////
+/**
+  * MIXINS
+  */
 
 // Make a property fluidly responsive by using calc and viewport units.
 @mixin fluid-property($property, $min:20, $max:30, $start: 480px, $end: 1200px, $clip: true, $clipAtStart: true, $clipAtEnd: true) {
@@ -27,7 +27,28 @@
   #{$property}: $formula;
 }
 
-// Viewport based responsive text
+/**
+  * Viewport based responsive text
+  */
 @mixin fluid-text($min:20, $max:30, $start: $phone, $end: $desktop) {
   @include fluid-property(font-size, $min, $max, $start, $end);
+}
+
+
+/**
+  * Convert pixels to ems
+  */
+// Strip units from values
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+// Calculate ems from pixels
+// Usage: margin-top: calc-em(60px);
+@function calc-em($px, $base: 16) {
+  $px: strip-unit($px);
+  $base: strip-unit($base);
+  @if $px == 1 {
+    @return 1px;
+  }
+  @return ($px / $base) * 1em;
 }
