@@ -35,7 +35,7 @@ $site_logo = get_field('site_logo', 'option');
                <?php primary_nav(); ?>
               </div><!--/.nav-wrapper-->
             </div><!--/.col-->
-            <div class="col-sm-4 col-xs-4 btn-group">
+            <div class="col-sm-4 col-xs-4 end-sm center-xs btn-group">
               <?php secondary_nav(); ?>
             </div>
           </div><!--/.row-->
