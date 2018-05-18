@@ -708,3 +708,50 @@ $gutter: 1rem;
     order: 1;
   }
 }
+
+
+/**
+ * Text-align fallback for older browsers (IE)
+ */
+ .start-xs {
+  text-align: left;
+}
+
+.end-xs {
+  text-align: right;
+}
+
+@media only screen and (min-width: 48em) {
+
+  .start-sm {
+      text-align: left;
+  }
+
+  .end-sm {
+      text-align: right;
+  }
+
+}
+
+@media only screen and (min-width: 64em) {
+
+  .start-md {
+      text-align: left;
+  }
+
+  .end-md {
+      text-align: right;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+
+  .start-lg {
+      text-align: left;
+  }
+
+  .end-lg {
+      text-align: right;
+  }
+
+}
