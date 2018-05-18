@@ -1,6 +1,7 @@
 <section class="section section--accent">
 <div class="section__img u-visible-desktop" style="background-image: url('http://solana.sparxoodev.com/wp-content/uploads/2018/04/diversity-section-image.jpg')"></div>
   <div class="container">
+  <div class="section--pad">
      <div class="carousel carousel--audience-nav" id="carousel--audience-nav">
        <div class="carousel__slide">
           <li class="carousel__nav-item">CEO</li>
@@ -45,6 +46,7 @@
     wp_reset_postdata();
     ?>
     </div><!-- /.carousel -->
+  </div><!-- /.section--pad -->
     
   </div><!-- /.container -->
   
