@@ -12,12 +12,27 @@
   }
 }
 
-.footer__top {
+.footer__top {}
 
+.footer__top-menu {
+  li a {
+    display: inline-block;
+    color: white;
+    margin-bottom: 0.75em;
+  }
+}
+
+.footer__top-title {
+  color: $color__primary;
+  margin-bottom: 1em;
 }
 
 .footer__bottom {
   display: flex;
+  padding-top: calc-em(25px);
+  @media (min-width: $tablet) {
+    padding-top: calc-em(100px);
+  }
 }
 
 .footer__bottom-copy {

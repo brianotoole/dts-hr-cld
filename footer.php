@@ -1,8 +1,39 @@
 <section class="footer footer--secondary">
  <div class="container">
    <div class="footer__top">
-     <div class="footer__top-menu">
-
+     <div class="row center-xs">
+       <div class="col-sm-3 col-xs-12">
+         <ul class="footer__top-menu">
+           <div class="footer__top-title">Company</div>
+           <li><a>link</a></li>
+           <li><a>link</a></li>
+           <li><a>link</a></li>
+         </ul>
+       </div>
+       <div class="col-sm-3 col-xs-12">
+         <ul class="footer__top-menu">
+           <div class="footer__top-title">Solutions</div>
+           <li><a>link</a></li>
+           <li><a>link</a></li>
+           <li><a>link</a></li>
+         </ul>
+       </div>
+       <div class="col-sm-3 col-xs-12">
+         <ul class="footer__top-menu">
+           <div class="footer__top-title">Resources</div>
+           <li><a>link</a></li>
+           <li><a>link</a></li>
+           <li><a>link</a></li>
+         </ul>
+       </div>
+       <div class="col-sm-3 col-xs-12">
+         <ul class="footer__top-menu">
+           <div class="footer__top-title">Contact</div>
+           <li><a>link</a></li>
+           <li><a>link</a></li>
+           <li><a>link</a></li>
+         </ul>
+       </div>
      </div>
    </div><!--/.footer-top-->
    <div class="footer__bottom">
