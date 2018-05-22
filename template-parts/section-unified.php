@@ -22,12 +22,20 @@ $home_unified_button = get_field('home_unified_button');
           if( have_rows('home_unified_features') ):
             while ( have_rows('home_unified_features') ) : the_row();
               $item_title = get_sub_field('title');
-              $item_icon = get_sub_field('icon');
+              $item_icon_type = get_sub_field('icon_type');
+              $item_icon_type_font = get_sub_field('icon_font');
+              $item_icon_type_custom = get_sub_field('icon_custom');
             ?>
 
           <div class="col-xs-6">
             <div class="unified__item">
-              <div class="unified__icon"><i class="fas fa-compass"></i></div>
+              <div class="unified__icon">
+                <?php if ($item_icon_type == 'font') : //if 'font awesome' is selected, show icon class ?>
+                <i class="<?php echo $item_icon_type_font; ?> fa-3x"></i>
+                <?php else: //if not set, use custom image upload ?>
+                <img src="<?php echo $item_icon_type_custom['url']; ?>">
+                <?php endif; ?>
+              </div>
               <div class="unified__title"><?php echo $item_title; ?></div>
             </div>
           </div><!--/.col-->
