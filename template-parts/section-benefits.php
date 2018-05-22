@@ -21,7 +21,9 @@
           $text = get_sub_field('text');
       ?>
       <div class="col-sm-4 col-xs-12" id="benefits__item--<?php echo $i; ?>">
-        <img src="<?php echo $image['url']; ?>" class="benefits__img benefits__img--has-border">
+        <div class="benefits__img-wrap">
+          <img src="<?php echo $image['url']; ?>" class="benefits__img benefits__img--has-border">
+        </div>
         <div class="benefits__item">
           <h6 class="benefits__item-title"><?php echo $title; ?></h6>
           <div class="benefits__item-text"><?php echo $text; ?></div>

@@ -1621,12 +1621,25 @@ address {
 .benefits__item-text {
   padding-top: 0.25em; }
 
+.benefits__img-wrap {
+  position: relative; }
+  .benefits__img-wrap:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 33.333%;
+    height: 4px;
+    background: #bfe0f7; }
+
+#benefits__item--2 .benefits__img-wrap:after {
+  display: none; }
+
 .benefits__img {
   border-radius: 100%;
   width: auto;
   height: auto; }
   .benefits__img--has-border {
-    border: 2px solid #bfe0f7; }
+    border: 4px solid #bfe0f7; }
 
 /**
   * Testimonials Section
