@@ -57,4 +57,9 @@ $home_unified_button = get_field('home_unified_button');
       </div><!--/.col-->
     </div><!--/.row-->
   </div><!--/.container-->
+  <div class="unified__spacer"></div>
+  <div class="unified__img">
+    <img src="<?php echo get_template_directory_uri() . '/dist/img/home-devices.png'; ?>">
+  </div>
+  <div class="unified__spacer"></div>
 </section>

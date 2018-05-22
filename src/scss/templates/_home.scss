@@ -95,3 +95,19 @@
 .unified__button {
   margin-top: calc-em(20px);
 }
+
+.unified__spacer {
+  position: relative;
+  margin: calc-em(60px) 0;
+}
+
+// the absolute positioned device image
+.unified__img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  img {
+    width: 350px;
+    padding-bottom: calc-em(20px);
+  }
+}
