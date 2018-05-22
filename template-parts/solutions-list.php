@@ -4,8 +4,8 @@
 
 <section class="section section--solutions-list section--white">
   <div class="container container--narrow">
-
-  <div class="solutions" id="js-stagger-solutions-trigger">
+  
+  <div class="solutions" id="js-stagger-solutions-trigger" style="background-image: url('<?php echo get_template_directory_uri() . '/dist/img/solutions-lines.png'; ?>');">
     <?php
       $solution_args = array(
         'post_type'   => 'solution',
@@ -45,6 +45,7 @@
       wp_reset_postdata();
     ?>
   </div><!--/.solutions-->
+  <div class="solution__line"></div>
 
 </div><!--/.container-->
 </section>

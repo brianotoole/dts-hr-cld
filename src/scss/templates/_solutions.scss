@@ -2,6 +2,14 @@
 * Solutions
 */
 
+.solutions {
+  position: relative;
+  overflow: hidden;
+  background-position: center -30%;
+  background-repeat: no-repeat;
+  background-size: 54%;
+}
+
 .solution__item {
   margin-top: calc-em(90px);
   margin-bottom: calc-em(90px);
@@ -22,11 +30,22 @@
   align-items: center;
   height: 100%;
   background: $color__secondary;
-  width: 150px;
-  height: 150px;
+  width: 175px;
+  height: 175px;
   border-radius: 100%;
 }
 
 .solution__icon {
+  position: relative;
   color: $color__primary;
+  z-index: 1;
+}
+
+.solution__line {
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  top: 100px;
+  z-index: 1;
+  overflow: hidden;
 }
