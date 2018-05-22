@@ -5,3 +5,4 @@
 /node_modules/
 .scratchpad
 .DS_Store
+npm-debug.log
