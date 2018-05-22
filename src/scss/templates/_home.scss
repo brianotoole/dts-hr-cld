@@ -1,5 +1,56 @@
 // HOMEPAGE
 
+
+/**
+  * Hero Below Section
+  */
+.hero-below__image {
+  @media (min-width: $tablet) {
+    margin-top: calc-em(-75px);
+  }
+}
+
+
+/**
+  * Benefits Section
+  */
+.benefits {}
+
+.benefits__title {
+  @media (min-width: $tablet) {
+    padding-left: calc-em(25px);
+  }
+}
+
+.benefits__item {
+  padding-top: calc-em(25px);
+  @media (min-width: $tablet) {
+    padding-top: calc-em(60px);
+  }
+}
+
+.benefits__item-title {
+  color: $color__primary;
+}
+
+.benefits__item-text {
+  padding-top: 0.25em;
+}
+
+
+.benefits__img {
+  border-radius: 100%;
+  width: auto;
+  height: auto;
+  &--has-border {
+    border: 2px solid $color__accent;
+  }
+}
+
+
+/**
+  * Testimonials Section
+  */
 .testimonial.row {
   align-items: center;
 }
@@ -37,7 +88,10 @@
   margin-top: calc-em(100px);
 }
 
-// Audience section
+
+/**
+  * Audience Section
+  */
 
 // the carousel within this
 .carousel--audience-nav {
@@ -70,7 +124,9 @@
 
 
 
-// Unified section
+/**
+  * Unified Section
+  */
 .unified__item {
   margin-top: calc-em(20px);
   margin-bottom: calc-em(20px);

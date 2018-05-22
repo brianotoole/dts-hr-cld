@@ -5,6 +5,11 @@
 .section {
   position: relative;
   padding: 2em 0;
+  
+  //template specific
+  &--benefits {
+    padding-bottom: 5em;
+  }
 
   &--sm {
     padding: 1em 0;
