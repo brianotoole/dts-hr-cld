@@ -5,7 +5,7 @@
 <section class="section section--solutions-list section--white">
   <div class="container container--narrow">
 
-  <div class="solutions">
+  <div class="solutions" id="js-stagger-solutions-trigger">
     <?php
       $solution_args = array(
         'post_type'   => 'solution',
@@ -26,12 +26,12 @@
           $reverse = true;
           endif;
       ?>
-      <div class="row solution__item <?php if($reverse == true) : echo 'reverse'; else: echo 'not-reversed'; endif; ?>" id="solution__item--<?php echo $i; ?>">
-        <div class="col-xs-8">
+      <div class="row solution__item <?php if($reverse == true) : echo 'reverse'; else: echo '-xs'; endif; ?>" id="solution__item--<?php echo $i; ?>">
+        <div class="col-xs-7 <?php if($reverse == true) : echo 'col-xs-offset-1'; else: echo ''; endif; ?>">
           <h6 class="solution__title"><?php echo $solution_title; ?></h6>
-          <p class="solution__text"><?php echo $solution_text; ?></p>
+          <div class="solution__text"><?php echo $solution_text; ?></div>
         </div><!--/.col-->
-        <div class="col-xs-3">
+        <div class="col-xs-2 col-xs-offset-1">
           <div class="solution__icon-wrap">
             <i class="solution__icon">icon</i>
           </div>

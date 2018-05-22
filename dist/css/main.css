@@ -1746,7 +1746,7 @@ address {
   margin-bottom: 5.625em;
   text-align: right; }
   .solution__item.reverse {
-    text-align: justify; }
+    text-align: left; }
 
 .solution__title {
   color: #ea8c2a;
