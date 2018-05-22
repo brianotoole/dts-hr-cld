@@ -847,6 +847,33 @@ address {
     order: 1; } }
 
 /**
+ * Text-align fallback for older browsers (IE)
+ */
+.start-xs {
+  text-align: left; }
+
+.end-xs {
+  text-align: right; }
+
+@media only screen and (min-width: 48em) {
+  .start-sm {
+    text-align: left; }
+  .end-sm {
+    text-align: right; } }
+
+@media only screen and (min-width: 64em) {
+  .start-md {
+    text-align: left; }
+  .end-md {
+    text-align: right; } }
+
+@media only screen and (min-width: 75em) {
+  .start-lg {
+    text-align: left; }
+  .end-lg {
+    text-align: right; } }
+
+/**
   * Header
   */
 .header {
@@ -873,8 +900,21 @@ address {
     background-color: #484b5a;
     color: white; }
 
+.footer__top-menu li a {
+  display: inline-block;
+  color: white;
+  margin-bottom: 0.75em; }
+
+.footer__top-title {
+  color: #ea8c2a;
+  margin-bottom: 1em; }
+
 .footer__bottom {
-  display: flex; }
+  display: flex;
+  padding-top: 1.5625em; }
+  @media (min-width: 768px) {
+    .footer__bottom {
+      padding-top: 6.25em; } }
 
 .footer__bottom-copy {
   padding-right: 1.5625em; }
@@ -950,15 +990,15 @@ address {
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-top: 5px; }
+  margin-top: 0.3125em; }
 
 .nav__inner li {
-  padding-right: 1em; }
+  padding-right: 1.25em; }
 
 .nav__inner li a {
   color: #484b5a;
   text-transform: uppercase;
-  padding-bottom: 3px;
+  padding-bottom: 2px;
   vertical-align: middle;
   position: relative;
   overflow: hidden;
@@ -970,9 +1010,9 @@ address {
     z-index: -1;
     left: 0;
     right: 100%;
-    bottom: -4px;
+    bottom: -3px;
     background: #ea8c2a;
-    height: 4px;
+    height: 3px;
     transition: right 0.2s ease-out;
     z-index: 2; }
   .nav__inner li a:hover:before {
@@ -985,7 +1025,7 @@ address {
   transform: perspective(1px) translateZ(0);
   position: relative;
   overflow: hidden;
-  border-bottom: 4px solid #ea8c2a;
+  border-bottom: 3px solid #ea8c2a;
   z-index: 1; }
   .nav__inner li.current_page_item a:before {
     content: "";
@@ -993,9 +1033,9 @@ address {
     z-index: -1;
     left: 0;
     right: 100%;
-    bottom: -4px;
+    bottom: -3px;
     background: #484b5a;
-    height: 4px;
+    height: 3px;
     transition: right 0.2s ease-out;
     z-index: 2; }
   .nav__inner li.current_page_item a:hover:before {
@@ -1062,27 +1102,47 @@ address {
 /**
   * NAV PRIMARY DROPDOWN (DESKTOP)
   */
-.nav-primary ul.sub-menu {
-  display: none;
-  position: absolute;
-  margin-top: -8px;
-  padding-left: 0;
-  list-style-type: none; }
-  .nav-primary ul.sub-menu.active {
-    display: block; }
-  .nav-primary ul.sub-menu li {
-    display: block;
+.nav-primary {
+  margin-left: 5.5em; }
+  .nav-primary ul.sub-menu {
+    display: none;
+    position: absolute;
+    margin-top: 2px;
     padding-left: 0;
-    margin-top: 15px; }
-  .nav-primary ul.sub-menu li + li {
-    margin-top: 0; }
-  .nav-primary ul.sub-menu li a {
-    display: block;
-    padding: 10px;
-    color: white;
-    background: #ea8c2a;
-    border-top: 1px solid white;
-    text-align: center; }
+    list-style-type: none; }
+    .nav-primary ul.sub-menu.active {
+      display: block; }
+    .nav-primary ul.sub-menu li {
+      display: block;
+      position: relative;
+      padding-left: 0;
+      margin-top: -1px; }
+    .nav-primary ul.sub-menu li + li {
+      margin-top: 0; }
+    .nav-primary ul.sub-menu li a {
+      display: block;
+      padding: 10px;
+      color: white;
+      background: #ea8c2a;
+      border-top: 1px solid white;
+      text-align: center;
+      vertical-align: middle;
+      transform: perspective(1px) translateZ(0);
+      transition: color 0.3s ease-out; }
+      .nav-primary ul.sub-menu li a:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #db7a16;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition: transform 0.3s ease-out; }
+      .nav-primary ul.sub-menu li a:hover:before {
+        transform: scaleX(1); }
 
 /**
   * NAV MOBILE DROPDOWN 
@@ -1149,16 +1209,39 @@ address {
   */
 .btn, .gform_wrapper .gform_footer .button.gform_button {
   display: inline-block;
-  padding: 0.4em;
+  padding: 0.4em 0.7em;
   background: #cfcfcf;
   text-align: center;
-  min-width: 125px;
+  min-width: 115px;
   font-size: 1em;
-  transition: all 0.3s ease-out; }
+  transition: all 0.3s ease-out;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+  .btn:before, .gform_wrapper .gform_footer .button.gform_button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #db7a16;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.3s ease-out; }
   .btn:hover, .gform_wrapper .gform_footer .button.gform_button:hover, .btn:focus, .gform_wrapper .gform_footer .button.gform_button:focus, .btn:visited, .gform_wrapper .gform_footer .button.gform_button:visited {
     color: white;
-    cursor: pointer;
-    transition: all 0.3s ease-out; }
+    cursor: pointer; }
+  .btn:hover:before, .gform_wrapper .gform_footer .button.gform_button:hover:before {
+    transform: scaleX(1); }
 
 .btn--large {
   padding-top: 1.2em;
@@ -1206,13 +1289,13 @@ address {
   background-repeat: no-repeat;
   position: relative; }
   .hero__bg--is-full-height {
-    height: calc(100vh - 80px); }
+    height: calc(88vh - 80px); }
 
 .hero__inner {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   height: 100%;
-  padding-top: 6.25em; }
+  padding-bottom: 5em; }
 
 .hero__text {
   color: white; }
@@ -1546,6 +1629,7 @@ address {
     cursor: pointer; }
   .carousel--audience-nav .slick-slide.slick-current li {
     background: #ea8c2a;
+    color: white;
     width: auto !important;
     appearance: none; }
 
@@ -1555,7 +1639,7 @@ address {
   margin: 0 0.5em;
   background: transparent;
   border: 2px solid #ea8c2a;
-  color: white;
+  color: #ea8c2a;
   padding: 0.125em 0.625em; }
   .carousel__nav-item:first-child {
     margin-left: 0; }

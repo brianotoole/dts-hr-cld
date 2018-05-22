@@ -48,6 +48,7 @@
   }
   .slick-slide.slick-current li {
     background: $color__primary;
+    color: white;
     width: auto!important;
     appearance: none;
   }
@@ -58,7 +59,7 @@
   margin: 0 calc-em(8px);
   background: transparent;
   border: 2px solid $color__primary;
-  color: white;
+  color: $color__primary;
   padding: calc-em(2px) calc-em(10px);
   &:first-child {
     margin-left: 0;

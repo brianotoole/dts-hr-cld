@@ -27,7 +27,7 @@ $(document).ready(function() {
     cssEase: 'linear',
     //asNavFor: '.slider-nav-thumbnails',
   });
-  
+
   //audience section carousel navigation
   $('#carousel--audience-nav').slick({
     slidesToShow: 4,
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
   //default carousel
   $('#carousel').slick({
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     dots: true,
     slidesToShow: 1,
     fade: true,

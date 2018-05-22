@@ -155,6 +155,7 @@ $m_icon_height: 3px;
     }
     li {
       display: block;
+      position: relative;
       padding-left: 0;
       margin-top: -1px;
     }
@@ -168,6 +169,25 @@ $m_icon_height: 3px;
       background: $color__primary;
       border-top: 1px solid white;
       text-align: center;
+      vertical-align: middle;
+      transform: perspective(1px) translateZ(0);
+      transition: color 0.3s ease-out;
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $color__primary--dark;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition: transform 0.3s ease-out;
+      }
+      &:hover:before {
+        transform: scaleX(1);
+      }
     }
   }
 }
