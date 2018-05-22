@@ -948,6 +948,8 @@ address {
 .section {
   position: relative;
   padding: 2em 0; }
+  .section--benefits {
+    padding-bottom: 5em; }
   .section--sm {
     padding: 1em 0; }
   .section--pad {
@@ -1593,6 +1595,42 @@ address {
 /**
   * -- TEMPLATES
   */
+/**
+  * Hero Below Section
+  */
+@media (min-width: 768px) {
+  .hero-below__image {
+    margin-top: -4.6875em; } }
+
+/**
+  * Benefits Section
+  */
+@media (min-width: 768px) {
+  .benefits__title {
+    padding-left: 1.5625em; } }
+
+.benefits__item {
+  padding-top: 1.5625em; }
+  @media (min-width: 768px) {
+    .benefits__item {
+      padding-top: 3.75em; } }
+
+.benefits__item-title {
+  color: #ea8c2a; }
+
+.benefits__item-text {
+  padding-top: 0.25em; }
+
+.benefits__img {
+  border-radius: 100%;
+  width: auto;
+  height: auto; }
+  .benefits__img--has-border {
+    border: 2px solid #bfe0f7; }
+
+/**
+  * Testimonials Section
+  */
 .testimonial.row {
   align-items: center; }
 
@@ -1620,6 +1658,9 @@ address {
 .testimonial__button {
   margin-top: 6.25em; }
 
+/**
+  * Audience Section
+  */
 .carousel--audience-nav {
   margin-bottom: 1em; }
   .carousel--audience-nav .slick-slide {
@@ -1642,6 +1683,9 @@ address {
   .carousel__nav-item:first-child {
     margin-left: 0; }
 
+/**
+  * Unified Section
+  */
 .unified__item {
   margin-top: 1.25em;
   margin-bottom: 1.25em; }
