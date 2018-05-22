@@ -98,7 +98,7 @@ function create_solution_cpt() {
 		'description' => __( 'Solutions', 'spx' ),
 		'labels' => $labels,
 		'menu_icon' => 'dashicons-list-view',
-		'supports' => array('title', 'thumbnail', ),
+		'supports' => array('title', 'thumbnail', 'editor' ),
 		'taxonomies' => array(),
 		'public' => true,
 		'show_ui' => true,

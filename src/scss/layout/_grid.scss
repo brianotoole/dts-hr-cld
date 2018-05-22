@@ -13,6 +13,9 @@ $gutter: 1rem;
   margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem;
+  &--narrow {
+    max-width: 1000px;
+  }
 }
 
 .container-fluid {

@@ -304,6 +304,8 @@ address {
   margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem; }
+  .container--narrow {
+    max-width: 1000px; }
 
 .container-fluid {
   margin-right: auto;
@@ -1735,3 +1737,30 @@ address {
   .unified__img img {
     width: 350px;
     padding-bottom: 1.25em; }
+
+/*
+* Solutions
+*/
+.solution__item {
+  margin-top: 5.625em;
+  margin-bottom: 5.625em;
+  text-align: right; }
+  .solution__item.reverse {
+    text-align: justify; }
+
+.solution__title {
+  color: #ea8c2a;
+  margin-top: 0.25em; }
+
+.solution__icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #484b5a;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%; }
+
+.solution__icon {
+  color: #ea8c2a; }

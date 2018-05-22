@@ -1,0 +1,32 @@
+/*
+* Solutions
+*/
+
+.solution__item {
+  margin-top: calc-em(90px);
+  margin-bottom: calc-em(90px);
+  text-align: right;
+  &.reverse {
+    text-align: justify;
+  }
+}
+
+.solution__title {
+  color: $color__primary;
+  margin-top: 0.25em;
+}
+
+.solution__icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: $color__secondary;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.solution__icon {
+  color: $color__primary;
+}
