@@ -1598,6 +1598,10 @@ address {
 /**
   * Hero Below Section
   */
+.hero-below__title {
+  color: #ea8c2a;
+  text-transform: uppercase; }
+
 @media (min-width: 768px) {
   .hero-below__image {
     margin-top: -4.6875em; } }

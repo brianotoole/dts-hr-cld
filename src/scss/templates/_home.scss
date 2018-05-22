@@ -4,6 +4,10 @@
 /**
   * Hero Below Section
   */
+.hero-below__title {
+  color: $color__primary;
+  text-transform: uppercase;
+}
 .hero-below__image {
   @media (min-width: $tablet) {
     margin-top: calc-em(-75px);
