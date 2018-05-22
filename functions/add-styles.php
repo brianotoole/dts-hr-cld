@@ -6,7 +6,7 @@ function spx_styles() {
   //wp_enqueue_style( 'google-font-poppins', '//fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,700,700i' );
 
   // font awesome icons
-  wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
+  wp_enqueue_style( 'font-awesome', '//use.fontawesome.com/releases/v5.0.13/css/all.css', array(), '5.0.13' );
 
   // change version based on modified date
   $ver = filemtime( get_template_directory() . '/dist/css/main.css' );
