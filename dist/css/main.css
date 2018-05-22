@@ -893,12 +893,9 @@ address {
 /**
   * Footer
   */
-.footer {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em; }
-  .footer--secondary {
-    background-color: #484b5a;
-    color: white; }
+.footer--secondary {
+  background-color: #484b5a;
+  color: white; }
 
 .footer__top-menu li a {
   display: inline-block;
@@ -910,17 +907,18 @@ address {
   margin-bottom: 1em; }
 
 .footer__bottom {
-  display: flex;
+  display: block;
   padding-top: 1.5625em; }
   @media (min-width: 768px) {
     .footer__bottom {
+      display: flex;
       padding-top: 6.25em; } }
 
 .footer__bottom-copy {
   padding-right: 1.5625em; }
   @media (min-width: 768px) {
     .footer__bottom-copy {
-      padding-right: 4.6875em; } }
+      padding-right: 6.25em; } }
 
 .footer__bottom-menu ul {
   display: flex;
@@ -1664,3 +1662,15 @@ address {
 
 .unified__button {
   margin-top: 1.25em; }
+
+.unified__spacer {
+  position: relative;
+  margin: 3.75em 0; }
+
+.unified__img {
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+  .unified__img img {
+    width: 350px;
+    padding-bottom: 1.25em; }
