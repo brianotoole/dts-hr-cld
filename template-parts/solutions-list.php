@@ -20,7 +20,6 @@ $solutions_main_button = get_field('solutions_main_button');
       if ($solutions->have_posts()) :
         $i = 0;
         while ($solutions->have_posts()) : $solutions->the_post();
-          //$solution_title = get_the_title();
           //Custom Field Group == PostType: Solution
           $solution_title = get_field('solution_title'); 
           $solution_excerpt = get_field('solution_excerpt'); 
