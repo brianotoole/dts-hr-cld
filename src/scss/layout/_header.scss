@@ -15,6 +15,19 @@
   }
 }
 
+// override header btn classes inserted within wp menu
+.header .btn--primary {
+  a {
+    color: white;
+  }
+}
+
+.header .btn--outline {
+  &:before {
+    background: $color__border--dark;
+  }
+}
+
 .logo {
   max-width: 140px;
   margin-top: calc-em(-8px);
