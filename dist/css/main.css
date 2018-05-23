@@ -888,6 +888,12 @@ address {
     .header__inner {
       padding-bottom: 1.5em; } }
 
+.header .btn--primary a, .header .gform_wrapper .gform_footer .button.gform_button a, .gform_wrapper .gform_footer .header .button.gform_button a {
+  color: white; }
+
+.header .btn--outline:before {
+  background: #bdbdbd; }
+
 .logo {
   max-width: 140px;
   margin-top: -0.5em; }
@@ -1221,13 +1227,10 @@ address {
   transition: all 0.3s ease-out;
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
-  -webkit-transition-property: color;
   transition-property: color;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s; }
   .btn:before, .gform_wrapper .gform_footer .button.gform_button:before {
     content: "";
@@ -1782,6 +1785,31 @@ address {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 60%; }
+
+.solutions__line {
+  position: absolute;
+  top: 9.375em;
+  width: 100%;
+  height: auto; }
+  .solutions__line svg {
+    display: block;
+    margin: 0 auto;
+    max-width: 60%; }
+  .solutions__line path {
+    fill: #cfcfcf;
+    stroke: transparent;
+    stroke-width: 1px;
+    stroke-dasharray: 1009;
+    visibility: hidden; }
+    .solutions__line path.active {
+      animation: draw 3s reverse linear;
+      visibility: visible; }
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 0; }
+  to {
+    stroke-dashoffset: 1009; } }
 
 .solution__item {
   margin-top: 5.625em;

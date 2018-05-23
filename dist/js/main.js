@@ -14466,10 +14466,30 @@ $('.solutions .row').each(function () {
   var projectScene = new _ScrollMagic2.default.Scene({
     //scene options
     triggerElement: this,
-    triggerHook: 0.7,
+    triggerHook: 0.8,
     reverse: false //dont repeat scene on scroll back up 
   }).setTween(tween) //trigger tween
   //.addIndicators({name: 'tween:module',}) //DEBUG ONLY; uses plugin
+  .addTo(controller);
+});
+
+$('.solutions path').each(function () {
+  // Create a scene for each project
+  //var tweenDelay = new TimelineMax()
+  //build tween
+  var tweenSvg = _TweenMax2.default.from($(this), 1, {
+    //autoAlpha: 0, 
+    //scale: 0.95, 
+    fill: '#999', //color__border--dark
+    ease: Power1.easeNone
+  });
+
+  var myScene = new _ScrollMagic2.default.Scene({
+    triggerElement: this,
+    triggerHook: 0.6,
+    reverse: false //dont repeat scene on scroll back up 
+  }).setTween(tweenSvg).setClassToggle(this, 'active')
+  //.addIndicators() //to debug, comment out when done
   .addTo(controller);
 });
 

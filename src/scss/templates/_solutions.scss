@@ -10,6 +10,35 @@
   background-size: 60%;
 }
 
+.solutions__line {
+  position: absolute;
+  top: calc-em(150px);
+  width: 100%;
+  height: auto;
+  svg {
+    display: block;
+    margin: 0 auto;
+    max-width: 60%;
+  }
+  path {
+    fill: $color__border;
+    stroke: transparent;
+    stroke-width: 1px;
+    stroke-dasharray: 1009;
+    visibility: hidden;
+    &.active {
+      animation: draw 3s reverse linear;
+      visibility: visible;
+    }
+  }
+}
+
+
+@keyframes draw {
+  from {stroke-dashoffset: 0;}
+  to {stroke-dashoffset: 1009;}
+}
+
 .solution__item {
   margin-top: calc-em(90px);
   margin-bottom: calc-em(90px);
