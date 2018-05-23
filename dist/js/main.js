@@ -14267,6 +14267,15 @@ $(document).ready(function () {
   });
 }); // /.ready
 
+$(document).on('click', '.unified__item', function (e) {
+  e.preventDefault();
+  var curr_id = $("unified__item img").attr('src');
+  var id = $(this).data("src");
+  $('.unified__img img').attr('src', id).fadeOut(0);
+  setTimeout(function () {
+    $('.unified__img img').attr('src', id).fadeIn(100);
+  }, 10);
+});
 
 /**
  * Events that fire on Window Scroll
@@ -14454,7 +14463,7 @@ var controller = new _ScrollMagic2.default.Controller(); // Animations
 
 var tl = new _TimelineMax2.default();
 
-$('.solutions .row').each(function () {
+$('.solutions .solution__wrap').each(function () {
   //build tween
   var tween = _TweenMax2.default.from($(this), 1, {
     autoAlpha: 0,
@@ -14486,7 +14495,7 @@ $('.solutions path').each(function () {
 
   var myScene = new _ScrollMagic2.default.Scene({
     triggerElement: this,
-    triggerHook: 0.6,
+    triggerHook: 0.5,
     reverse: false //dont repeat scene on scroll back up 
   }).setTween(tweenSvg).setClassToggle(this, 'active')
   //.addIndicators() //to debug, comment out when done

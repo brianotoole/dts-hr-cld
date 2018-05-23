@@ -34,7 +34,7 @@ $solutions_main_button = get_field('solutions_main_button');
           endif;
       ?>
       <div class="row solution__item <?php if($reverse == true) : echo 'reverse'; else: echo '-xs'; endif; ?>" id="solution__item--<?php echo $i; ?>">
-        <div class="col-xs-7 <?php if($reverse == true) : echo 'col-xs-offset-1'; else: echo ''; endif; ?>">
+        <div class="col-xs-7 solution__wrap <?php if($reverse == true) : echo 'col-xs-offset-1'; else: echo ''; endif; ?>">
           <h6 class="solution__title"><?php echo $solution_title; ?></h6>
           <div class="solution__text">
             <?php echo $solution_excerpt; ?>

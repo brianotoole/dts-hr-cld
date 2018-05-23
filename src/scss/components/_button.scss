@@ -30,7 +30,7 @@
     transform-origin: 0 50%;
     transition: transform 0.3s ease-out;
   }
-  &:hover, &:focus, &:visited {
+  &:hover, &:focus {
     color: white;
     cursor: pointer;
   }
@@ -56,8 +56,7 @@
   color: white;
   transition: 0.3s;
 
-  &:hover,
-  &:visited:hover {
+  &:hover {
     color: white;
     background: darken($color__primary, 7%);
   }
@@ -67,8 +66,6 @@
   border: 1px solid $color__border;
   background: transparent;
   color: $color__border--dark;
-
-  &:visited { color: $color__border; }
 
   &:hover {
     background: darken(white, 7%);

@@ -9,8 +9,7 @@ a {
 
   strong { color: currentColor; }
 
-  &:hover, &:focus,
-  &:visited, &:visited:hover {
+  &:hover, &:focus {
     color: lighten($grey, 10%);
   }
 }

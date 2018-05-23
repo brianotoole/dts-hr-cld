@@ -5,9 +5,9 @@
 .solutions {
   position: relative;
   overflow: hidden;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 60%;
+  //background-position: center center;
+  //background-repeat: no-repeat;
+  //background-size: 60%;
 }
 
 .solutions__line {
@@ -18,7 +18,7 @@
   svg {
     display: block;
     margin: 0 auto;
-    max-width: 60%;
+    max-width: 61%;
   }
   path {
     fill: $color__border;
@@ -55,6 +55,7 @@
 }
 
 .solution__icon-wrap {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,26 +68,25 @@
 }
 
 .solution__icon {
-  position: relative;
   color: $color__primary;
-  z-index: 1;
   width: 52%;
 }
 
 .solution__btn {
   display: block;
+  margin-top: 0.25em;
   color: $color__text;
   i {
     color: $color__primary;
-    margin-left: 0;
-    transition: margin-left 0.2s ease-out;
+    transform: translateX(0);
+    transition: transform 0.2s ease-out;
   }
   &:hover {
     color: $color__text;
     i {
       color: $color__text;
-      margin-left: 2px;
-      transition: margin-left 0.2s ease-out;
+      transform: translateX(2px);
+      transition: transform 0.2s ease-out;
     }
   }
 }

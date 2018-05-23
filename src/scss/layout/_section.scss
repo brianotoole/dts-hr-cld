@@ -47,6 +47,12 @@
     color: $color__text;
   }
 
+  &--image {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
 }
 
 .section__img {

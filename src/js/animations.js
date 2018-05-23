@@ -12,7 +12,7 @@ var controller = new ScrollMagic.Controller();
 var tl = new TimelineMax();
 
 
-$('.solutions .row').each(function() {
+$('.solutions .solution__wrap').each(function() {
   //build tween
   var tween = TweenMax.from($(this), 1, {
     autoAlpha: 0, 
@@ -45,7 +45,7 @@ $('.solutions path').each(function(){
   
   var myScene = new ScrollMagic.Scene({
     triggerElement: this,
-    triggerHook: 0.6,
+    triggerHook: 0.5,
     reverse: false //dont repeat scene on scroll back up 
   })
   .setTween(tweenSvg)
