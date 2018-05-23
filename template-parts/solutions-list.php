@@ -38,7 +38,9 @@ $solutions_main_button = get_field('solutions_main_button');
           <h6 class="solution__title"><?php echo $solution_title; ?></h6>
           <div class="solution__text">
             <?php echo $solution_excerpt; ?>
-            <a href="<?php the_permalink(); ?>" class="solution__btn"><?php echo $solution_button_title; ?> <i class="fas fa-long-arrow-alt-right"></i></a>
+            <div>
+              <a href="<?php the_permalink(); ?>" class="solution__btn"><?php echo $solution_button_title; ?> <i class="fas fa-long-arrow-alt-right"></i></a>
+            </div>
           </div>
         </div><!--/.col-->
         <div class="col-xs-3 col-xs-offset-1">

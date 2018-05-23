@@ -1905,7 +1905,8 @@ address {
   width: 50%; }
 
 .solution__btn {
-  display: block;
+  display: inline-block;
+  position: relative;
   color: #111111; }
   .solution__btn i {
     color: #ea8c2a;
@@ -1914,8 +1915,26 @@ address {
     transform: translateX(0);
     transition: transform 0.2s ease-out; }
   .solution__btn:hover {
-    color: #111111; }
+    color: black; }
     .solution__btn:hover i {
       color: #111111;
       transform: translateX(2px);
       transition: transform 0.2s ease-out; }
+
+.solution__btn {
+  transform: perspective(1px) translateZ(0); }
+  .solution__btn:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #111111;
+    height: 2px;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out; }
+  .solution__btn:hover:before {
+    left: 0;
+    right: 0; }

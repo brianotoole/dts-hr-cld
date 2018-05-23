@@ -33,7 +33,6 @@
   }
 }
 
-
 @keyframes draw {
   from {stroke-dashoffset: 0;}
   to {stroke-dashoffset: 1009;}
@@ -72,8 +71,10 @@
   width: 50%;
 }
 
+// solution btn icon transition
 .solution__btn {
-  display: block;
+  display: inline-block;
+  position: relative;
   color: $color__text;
   i {
     color: $color__primary;
@@ -83,11 +84,33 @@
     transition: transform 0.2s ease-out;
   }
   &:hover {
-    color: $color__text;
+    color: $color__text--dark;
     i {
       color: $color__text;
       transform: translateX(2px);
       transition: transform 0.2s ease-out;
     }
+  }
+}
+
+// solution btn underline transition
+.solution__btn {
+  transform: perspective(1px) translateZ(0);
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: $color__text;
+    height: 2px;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  &:hover:before {
+    left: 0;
+    right: 0;
   }
 }
