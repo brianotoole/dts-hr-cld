@@ -23,8 +23,14 @@
 }
 
 .header .btn--outline {
+  a {
+    color: $color__border--dark;
+  }
   &:before {
     background: $color__border--dark;
+  }
+  &:hover a {
+    color: white;
   }
 }
 

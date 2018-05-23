@@ -891,8 +891,14 @@ address {
 .header .btn--primary a, .header .gform_wrapper .gform_footer .button.gform_button a, .gform_wrapper .gform_footer .header .button.gform_button a {
   color: white; }
 
+.header .btn--outline a {
+  color: #bdbdbd; }
+
 .header .btn--outline:before {
   background: #bdbdbd; }
+
+.header .btn--outline:hover a {
+  color: white; }
 
 .logo {
   max-width: 140px;
@@ -1271,7 +1277,7 @@ address {
 .btn--outline {
   border: 1px solid #cfcfcf;
   background: transparent;
-  color: #cfcfcf; }
+  color: #bdbdbd; }
   .btn--outline:visited {
     color: #cfcfcf; }
   .btn--outline:hover {
