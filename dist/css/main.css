@@ -1798,13 +1798,13 @@ address {
 
 .solutions__line {
   position: absolute;
-  top: 9.375em;
+  top: 10em;
   width: 100%;
   height: auto; }
   .solutions__line svg {
     display: block;
     margin: 0 auto;
-    max-width: 61%; }
+    max-width: 59%; }
   .solutions__line path {
     fill: #cfcfcf;
     stroke: transparent;
@@ -1812,7 +1812,7 @@ address {
     stroke-dasharray: 1009;
     visibility: hidden; }
     .solutions__line path.active {
-      animation: draw 3s reverse linear;
+      animation: draw 5s reverse linear;
       visibility: visible; }
 
 @keyframes draw {
@@ -1840,14 +1840,14 @@ address {
   align-items: center;
   height: 100%;
   background: #484b5a;
-  width: 175px;
-  height: 175px;
+  width: 170px;
+  height: 170px;
   margin: auto;
   border-radius: 100%; }
 
 .solution__icon {
   color: #ea8c2a;
-  width: 52%; }
+  width: 50%; }
 
 .solution__btn {
   display: block;

@@ -12,13 +12,13 @@
 
 .solutions__line {
   position: absolute;
-  top: calc-em(150px);
+  top: calc-em(160px);
   width: 100%;
   height: auto;
   svg {
     display: block;
     margin: 0 auto;
-    max-width: 61%;
+    max-width: 59%;
   }
   path {
     fill: $color__border;
@@ -27,7 +27,7 @@
     stroke-dasharray: 1009;
     visibility: hidden;
     &.active {
-      animation: draw 3s reverse linear;
+      animation: draw 5s reverse linear;
       visibility: visible;
     }
   }
@@ -61,15 +61,15 @@
   align-items: center;
   height: 100%;
   background: $color__secondary;
-  width: 175px;
-  height: 175px;
+  width: 170px;
+  height: 170px;
   margin: auto;
   border-radius: 100%;
 }
 
 .solution__icon {
   color: $color__primary;
-  width: 52%;
+  width: 50%;
 }
 
 .solution__btn {
