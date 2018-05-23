@@ -1851,10 +1851,11 @@ address {
 
 .solution__btn {
   display: block;
-  margin-top: 0.25em;
   color: #111111; }
   .solution__btn i {
     color: #ea8c2a;
+    display: inline-block;
+    vertical-align: middle;
     transform: translateX(0);
     transition: transform 0.2s ease-out; }
   .solution__btn:hover {
