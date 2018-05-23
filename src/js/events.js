@@ -51,6 +51,16 @@ $(document).ready(function() {
 
 }); // /.ready
 
+  $(document).on('click', '.unified__item', function (e) {
+    e.preventDefault();
+    var curr_id = $("unified__item img").attr('src');
+    var id = $(this).data("src")
+    $('.unified__img img').attr('src', id).fadeOut(0);
+    setTimeout(function () {
+      $('.unified__img img').attr('src', id).fadeIn(100);
+    }, 10);
+  });
+
 
 /**
  * Events that fire on Window Scroll
