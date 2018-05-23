@@ -152,14 +152,38 @@
 
 
 
-
-
 /**
   * Unified Section
   */
 .unified__item {
   margin-top: calc-em(20px);
   margin-bottom: calc-em(20px);
+  padding: 0.5em;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.3s;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: darken(white, 2%);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.3s ease-out;
+  }
+  &:hover, &:focus, &:visited {
+    color: white;
+    cursor: pointer;
+  }
+  &:hover:before {
+    transform: scaleX(1);
+  }
   @media (min-width: $tablet) {
     display: flex;
     align-items: center;
@@ -168,6 +192,8 @@
 
 .unified__icon {
   color: $color__primary;
+  width: 60px;
+  height: 60px;
 }
 
 .unified__title {
@@ -193,7 +219,7 @@
   bottom: 0;
   left: 0;
   img {
-    width: 350px;
+    width: 445px;
     padding-bottom: calc-em(20px);
   }
 }

@@ -1717,14 +1717,39 @@ address {
   */
 .unified__item {
   margin-top: 1.25em;
-  margin-bottom: 1.25em; }
+  margin-bottom: 1.25em;
+  padding: 0.5em;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.3s; }
+  .unified__item:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fafafa;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.3s ease-out; }
+  .unified__item:hover, .unified__item:focus, .unified__item:visited {
+    color: white;
+    cursor: pointer; }
+  .unified__item:hover:before {
+    transform: scaleX(1); }
   @media (min-width: 768px) {
     .unified__item {
       display: flex;
       align-items: center; } }
 
 .unified__icon {
-  color: #ea8c2a; }
+  color: #ea8c2a;
+  width: 60px;
+  height: 60px; }
 
 .unified__title {
   color: #484b5a; }
@@ -1745,7 +1770,7 @@ address {
   bottom: 0;
   left: 0; }
   .unified__img img {
-    width: 350px;
+    width: 445px;
     padding-bottom: 1.25em; }
 
 /*
