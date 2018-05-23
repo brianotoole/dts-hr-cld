@@ -15,10 +15,12 @@
       if ($solutions->have_posts()) :
         $i = 0;
         while ($solutions->have_posts()) : $solutions->the_post();
-          $solution_title = get_the_title();
-          $solution_text = get_the_content();
+          //$solution_title = get_the_title();
           //Custom Field Group == PostType: Solution
-          //$solution_position = get_field('solution_position'); 
+          $solution_title = get_field('solution_title'); 
+          $solution_excerpt = get_field('solution_excerpt'); 
+          $solution_icon = get_field('solution_icon'); 
+          $solution_button_title = get_field('solution_button_title'); 
 
           // if is odd item, set reverse to false and add class to item
           if ($i % 2 == 0) : $reverse = false;
@@ -29,11 +31,14 @@
       <div class="row solution__item <?php if($reverse == true) : echo 'reverse'; else: echo '-xs'; endif; ?>" id="solution__item--<?php echo $i; ?>">
         <div class="col-xs-7 <?php if($reverse == true) : echo 'col-xs-offset-1'; else: echo ''; endif; ?>">
           <h6 class="solution__title"><?php echo $solution_title; ?></h6>
-          <div class="solution__text"><?php echo $solution_text; ?></div>
+          <div class="solution__text">
+            <?php echo $solution_excerpt; ?>
+            <a href="<?php the_permalink(); ?>" class="solution__btn"><?php echo $solution_button_title; ?> <i class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
         </div><!--/.col-->
         <div class="col-xs-3 col-xs-offset-1">
           <div class="solution__icon-wrap">
-            <i class="solution__icon">icon</i>
+            <img src="<?php echo $solution_icon['url']; ?>" class="solution__icon">
           </div>
         </div><!--/.col-->
       </div><!--/.solution__item-->
