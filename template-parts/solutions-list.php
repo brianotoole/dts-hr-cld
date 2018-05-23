@@ -31,7 +31,7 @@
           <h6 class="solution__title"><?php echo $solution_title; ?></h6>
           <div class="solution__text"><?php echo $solution_text; ?></div>
         </div><!--/.col-->
-        <div class="col-xs-2 col-xs-offset-1">
+        <div class="col-xs-3 col-xs-offset-1">
           <div class="solution__icon-wrap">
             <i class="solution__icon">icon</i>
           </div>
