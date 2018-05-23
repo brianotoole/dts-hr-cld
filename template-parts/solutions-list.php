@@ -1,5 +1,7 @@
-<?php // Solutions-List 
+<?php // Solutions-List == Solutions-Main Landing 
 
+//Custom Field Group == PostType: Solution
+$solutions_main_button = get_field('solutions_main_button'); 
 ?>
 
 <section class="section section--solutions-list section--white">
@@ -50,7 +52,12 @@
       wp_reset_postdata();
     ?>
   </div><!--/.solutions-->
-  <div class="solution__line"></div>
+
+  <div class="row">
+    <div class="col-xs-12 end-xs">
+      <a href="<?php echo $solutions_main_button['url']; ?>" class="btn btn--primary" target="<?php echo $solutions_main_button['target']; ?>"><?php echo $solutions_main_button['title']; ?></a>
+    </div>
+  </div>
 
 </div><!--/.container-->
 </section>

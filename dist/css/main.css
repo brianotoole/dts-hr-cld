@@ -952,6 +952,8 @@ address {
   padding: 2em 0; }
   .section--benefits {
     padding-bottom: 5em; }
+  .section--solutions-list {
+    padding-bottom: 6em; }
   .section--sm {
     padding: 1em 0; }
   .section--pad {
@@ -1781,4 +1783,12 @@ address {
   display: block;
   color: #111111; }
   .solution__btn i {
-    color: #ea8c2a; }
+    color: #ea8c2a;
+    margin-left: 0;
+    transition: margin-left 0.2s ease-out; }
+  .solution__btn:hover {
+    color: #111111; }
+    .solution__btn:hover i {
+      color: #111111;
+      margin-left: 2px;
+      transition: margin-left 0.2s ease-out; }
