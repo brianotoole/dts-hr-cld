@@ -1,5 +1,14 @@
 // HOMEPAGE
 
+/**
+  * Hero
+  */
+.page-template-home .hero__button {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
 
 /**
   * Hero Below Section

@@ -41,9 +41,11 @@ $header__height: 80px;
 }
 
 .hero__button {
-  @media (min-width: $tablet) {
-    display: flex;
-    justify-content: flex-end;
+  &--end {
+    @media (min-width: $tablet) {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }
 

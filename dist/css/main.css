@@ -1311,7 +1311,7 @@ address {
       max-width: 42%; } }
 
 @media (min-width: 768px) {
-  .hero__button {
+  .hero__button--end {
     display: flex;
     justify-content: flex-end; } }
 
@@ -1599,6 +1599,14 @@ address {
 /**
   * -- TEMPLATES
   */
+/**
+  * Hero
+  */
+@media (min-width: 768px) {
+  .page-template-home .hero__button {
+    display: flex;
+    justify-content: flex-end; } }
+
 /**
   * Hero Below Section
   */
