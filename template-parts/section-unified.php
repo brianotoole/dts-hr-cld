@@ -58,9 +58,16 @@ $home_unified_button = get_field('home_unified_button');
       </div><!--/.col-->
     </div><!--/.row-->
   </div><!--/.container-->
-  <div class="unified__spacer"></div>
-  <div class="unified__img">
+  <div class="unified__spacer u-visible-desktop"></div>
+  <div class="unified__img u-visible-desktop">
     <img src="<?php echo get_template_directory_uri() . '/dist/img/home-devices.png'; ?>">
   </div>
-  <div class="unified__spacer"></div>
+  <div class="row u-hidden-desktop">
+    <div class="col-xs-12">
+      <div class="unified__img unified__img--mobile">
+        <img src="<?php echo get_template_directory_uri() . '/dist/img/home-devices.png'; ?>">
+      </div>
+    </div>
+  </div>
+  <div class="unified__spacer u-visible-desktop"></div>
 </section>
