@@ -132,6 +132,12 @@
   */
 
 // the carousel within this
+.audience__title {
+  color: $color__text;
+  @media (min-width: $tablet) {
+    color: white;
+  }
+}
 .carousel--audience-nav {
   margin-bottom: 1em;
   .slick-slide {

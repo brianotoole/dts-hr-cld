@@ -222,14 +222,19 @@ h1, h2, .testimonial__name, h3, h4, h5, h6 {
   font-weight: bold; }
 
 h1, .h1 {
-  font-size: 2em; }
+  font-size: 3em;
+  margin-bottom: 0.9em;
+  text-transform: uppercase; }
 
 h2, .testimonial__name, .h2 {
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  margin-bottom: 0.8em;
+  text-transform: uppercase; }
 
 h3, .h3 {
   font-size: 1.5em;
-  margin-bottom: 0.7em; }
+  margin-bottom: 0.7em;
+  text-transform: uppercase; }
 
 address {
   line-height: 1.5;
@@ -251,6 +256,12 @@ address {
 @media (max-width: 768px) {
   .u-hidden-sm {
     display: none !important; } }
+
+.u-width-sm {
+  max-width: auto; }
+  @media (min-width: 768px) {
+    .u-width-sm {
+      max-width: 30%; } }
 
 .u-flex-center {
   display: flex;
@@ -1710,6 +1721,12 @@ address {
 /**
   * Audience Section
   */
+.audience__title {
+  color: #111111; }
+  @media (min-width: 768px) {
+    .audience__title {
+      color: white; } }
+
 .carousel--audience-nav {
   margin-bottom: 1em; }
   .carousel--audience-nav .slick-slide {

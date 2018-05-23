@@ -11,7 +11,7 @@ $home_unified_button = get_field('home_unified_button');
   <div class="container">
     <div class="row row--title">
       <div class="col-xs-12">
-        <h3 class="section__title h2 u-text-upper"><?php echo $home_unified_title; ?></h3>
+        <h2 class="section__title h2 u-width-sm"><?php echo $home_unified_title; ?></h2>
       </div><!--/.col-->
     </div><!--/.row-->
     <div class="row row--content">

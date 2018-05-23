@@ -6,7 +6,7 @@
   <div class="container benefits">
     <div class="row">
       <div class="col-xs-12">
-        <h3 class="section__title benefits__title h2 u-text-upper">Key Benefits</h3>
+        <h2 class="section__title benefits__title u-width-sm">Key Benefits</h2>
       </div><!--/.col-->
     </div><!--/.row-->
 
