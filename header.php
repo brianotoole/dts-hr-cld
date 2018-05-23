@@ -22,7 +22,9 @@ $site_logo = get_field('site_logo', 'option');
           <div class="row header__row">
             <div class="col-sm-2 col-xs-4">
             <?php if ($site_logo) : ?>
-              <img src="<?php echo $site_logo; ?>" title="<?php bloginfo('name'); ?>" rel="logo" class="logo">
+              <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
+                <img src="<?php echo $site_logo; ?>" title="<?php bloginfo('name'); ?>" rel="logo" class="logo">
+              </a>
             <?php else : ?>
               <?php bloginfo('name'); ?>
             <?php endif; ?>
