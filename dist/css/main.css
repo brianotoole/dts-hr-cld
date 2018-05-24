@@ -947,6 +947,12 @@ address {
     left: 0;
     right: 0; }
 
+@media (max-width: 480px) {
+  .footer__top .row > div:nth-child(odd) {
+    text-align: left; }
+  .footer__top .row > div:nth-child(even) {
+    text-align: right; } }
+
 .footer__top-menu li a {
   display: inline-block;
   color: white;

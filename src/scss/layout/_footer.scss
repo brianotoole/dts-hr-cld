@@ -34,7 +34,17 @@
   }
 }
 
-.footer__top {}
+// on phone only, align columns to outset of page for easier mobile viewing
+@media (max-width: $phone) {
+  .footer__top .row > div {
+    &:nth-child(odd) {
+      text-align: left;
+    }
+    &:nth-child(even) {
+      text-align: right;
+    }
+  }
+}
 
 .footer__top-menu {
   li a {
