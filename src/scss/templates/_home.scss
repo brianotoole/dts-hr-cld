@@ -54,9 +54,8 @@
 // the line ine middle of each image
 .benefits__img-wrap {
   position: relative;
-  &:after {
-    display: none;
-    @media (min-width: $tablet) {
+  @media (min-width: $tablet) {
+    &:after {
       content: '';
       position: absolute;
       top: 50%;

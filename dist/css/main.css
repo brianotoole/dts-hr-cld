@@ -1684,16 +1684,14 @@ address {
 
 .benefits__img-wrap {
   position: relative; }
-  .benefits__img-wrap:after {
-    display: none; }
-    @media (min-width: 768px) {
-      .benefits__img-wrap:after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        width: 50%;
-        height: 4px;
-        background: #bfe0f7; } }
+  @media (min-width: 768px) {
+    .benefits__img-wrap:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 50%;
+      height: 4px;
+      background: #bfe0f7; } }
 
 #benefits__item--2 .benefits__img-wrap:after {
   display: none; }
