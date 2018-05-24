@@ -14,10 +14,14 @@
        <div class="col-sm-3 col-xs-6">
          <ul class="footer__top-menu">
            <div class="footer__top-title">Solutions</div>
-           <li><a>Company</a></li>
-           <li><a>About</a></li>
-           <li><a>Blog</a></li>
-           <li><a>Careers</a></li>
+           <li><a>Overview</a></li>
+           <li><a>Position Control</a></li>
+           <li><a>Recruiting</a></li>
+           <li><a>Time &amp; Attendance</a></li>
+           <li><a>Benefits Administration</a></li>
+           <li><a>Payroll</a></li>
+           <li><a>Talent Management</a></li>
+           <li><a>Workforce Analytics</a></li>
          </ul>
        </div>
        <div class="col-sm-3 col-xs-6">
@@ -55,6 +59,7 @@
 </section>
 
   <?php wp_footer(); ?>
+  <script src="//fast.wistia.com/assets/external/popover-v1.js"></script>
   </div><!--/#page-->
 </body>
 </html>
