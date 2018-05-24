@@ -59,7 +59,6 @@
 </section>
 
   <?php wp_footer(); ?>
-  <script src="//fast.wistia.com/assets/external/popover-v1.js"></script>
   </div><!--/#page-->
 </body>
 </html>
