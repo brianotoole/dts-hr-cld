@@ -14394,7 +14394,7 @@ $('#js-menu-toggle').click(function () {
 function toggleMobileMenu() {
   $('.mobile-menu').toggleClass('is-active');
   $('.mobile-menu-toggle').toggleClass('is-active');
-  $('html').toggleClass('nav-open');
+  $('body').toggleClass('nav-open');
 }
 
 // Primary Nav Dropdown
