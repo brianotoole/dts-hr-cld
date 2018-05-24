@@ -959,7 +959,11 @@ address {
 
 .footer__bottom {
   display: block;
-  padding-top: 1.5625em; }
+  padding-top: 1.5625em;
+  text-align: center; }
+  @media (min-width: 480px) {
+    .footer__bottom {
+      display: left; } }
   @media (min-width: 768px) {
     .footer__bottom {
       display: flex;
@@ -974,7 +978,11 @@ address {
 .footer__bottom-menu ul {
   display: flex;
   padding: 0;
-  list-style-type: none; }
+  list-style-type: none;
+  flex-direction: column; }
+  @media (min-width: 480px) {
+    .footer__bottom-menu ul {
+      flex-direction: row; } }
 
 .footer__bottom-menu li a {
   color: white;
@@ -1182,24 +1190,11 @@ address {
       color: white;
       background: #ea8c2a;
       border-top: 1px solid white;
+      border-bottom: none;
       text-align: center;
-      vertical-align: middle;
-      transform: perspective(1px) translateZ(0);
-      transition: color 0.3s ease-out; }
-      .nav-primary ul.sub-menu li a:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #db7a16;
-        transform: scaleX(0);
-        transform-origin: 0 50%;
-        transition: transform 0.3s ease-out; }
-      .nav-primary ul.sub-menu li a:hover:before {
-        transform: scaleX(1); }
+      transition: background 0.3s ease-out; }
+      .nav-primary ul.sub-menu li a:hover {
+        background: #db7a16; }
 
 /**
   * NAV MOBILE DROPDOWN 

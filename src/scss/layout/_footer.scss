@@ -53,10 +53,15 @@
 .footer__bottom {
   display: block;
   padding-top: calc-em(25px);
+  text-align: center;
+  @media (min-width: $phone) {
+    display: left;
+  }
   @media (min-width: $tablet) {
     display: flex;
     padding-top: calc-em(100px);
   }
+  
 }
 
 .footer__bottom-copy {
@@ -71,6 +76,10 @@
     display: flex;
     padding: 0;
     list-style-type: none;
+    flex-direction: column;
+    @media (min-width: $phone) {
+      flex-direction: row;
+    }
   }
   li a {
     color: white;
