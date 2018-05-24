@@ -1253,7 +1253,7 @@ body.nav-open {
   top: 0;
   right: 0;
   padding: 60px 30px 30px;
-  overflow: hidden;
+  overflow-y: scroll;
   transform: translateX(100%);
   transition: all 0.3s ease-out; }
   .mobile-menu.is-active {
