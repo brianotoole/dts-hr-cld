@@ -8,7 +8,7 @@ $solutions_main_button = get_field('solutions_main_button');
   <div class="container container--narrow">
   
   <div class="solutions" id="js-stagger-solutions-trigger">
-    <div class="solutions__line">
+    <div class="solutions__line u-visible-desktop">
       <?php get_template_part('template-parts/svg', 'solutions-lines.svg'); ?>
     </div>
     <?php
@@ -33,8 +33,8 @@ $solutions_main_button = get_field('solutions_main_button');
           $reverse = true;
           endif;
       ?>
-      <div class="row solution__item <?php if($reverse == true) : echo 'reverse'; else: echo '-xs'; endif; ?>" id="solution__item--<?php echo $i; ?>">
-        <div class="col-xs-7 solution__wrap <?php if($reverse == true) : echo 'col-xs-offset-1'; else: echo ''; endif; ?>">
+      <div class="row solution__item <?php if($reverse == true) : echo 'reverse'; endif; ?>" id="solution__item--<?php echo $i; ?>">
+        <div class="col-sm-7 col-xs-12 solution__wrap <?php if($reverse == true) : echo 'col-sm-offset-1'; else: echo ''; endif; ?>">
           <h6 class="solution__title"><?php echo $solution_title; ?></h6>
           <div class="solution__text">
             <?php echo $solution_excerpt; ?>
@@ -43,7 +43,7 @@ $solutions_main_button = get_field('solutions_main_button');
             </div>
           </div>
         </div><!--/.col-->
-        <div class="col-xs-3 col-xs-offset-1">
+        <div class="col-sm-3 col-sm-offset-1 col-xs-12 first-xs last-sm">
           <div class="solution__icon-wrap">
             <img src="<?php echo $solution_icon['url']; ?>" class="solution__icon">
           </div>
@@ -59,7 +59,7 @@ $solutions_main_button = get_field('solutions_main_button');
   </div><!--/.solutions-->
 
   <div class="row">
-    <div class="col-xs-12 end-xs">
+    <div class="col-xs-12 center-xs end-sm">
       <a href="<?php echo $solutions_main_button['url']; ?>" class="btn btn--primary" target="<?php echo $solutions_main_button['target']; ?>"><?php echo $solutions_main_button['title']; ?></a>
     </div>
   </div>
