@@ -253,6 +253,10 @@ address {
   .u-hidden-desktop {
     display: none !important; } }
 
+@media (max-width: 480px) {
+  .u-hidden-phone {
+    display: none !important; } }
+
 @media (max-width: 768px) {
   .u-hidden-sm {
     display: none !important; } }
@@ -1337,7 +1341,10 @@ address {
   background-repeat: no-repeat;
   position: relative; }
   .hero__bg--is-full-height {
-    height: calc(88vh - 80px); }
+    height: 100vh; }
+    @media (min-width: 768px) {
+      .hero__bg--is-full-height {
+        height: calc(88vh - 80px); } }
 
 .hero__inner {
   display: flex;
