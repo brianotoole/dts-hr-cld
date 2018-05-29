@@ -54,24 +54,23 @@
 // the line ine middle of each image
 .benefits__line {
   position: absolute;
-  left: 82%;
+  left: 8%;
   top: 50%;
   width: auto; //uses animations.js tween to set width on scrollTo
   //width: 46%;
   height: 4px;
   background: $color__accent;
-  //visibility: hidden;
-}
-#benefits__line--2 {
-  display: none;
+  z-index: 1;
 }
 .benefits__img-wrap {
   position: relative;
 }
 .benefits__img {
+  position: relative;
   border-radius: 100%;
   width: 200px;
   height: 200px;
+  z-index: 2;
   @media (min-width: $tablet) {
     width: 225px;
     height: 225px; 

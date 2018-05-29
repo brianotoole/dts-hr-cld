@@ -23,7 +23,6 @@
       <div class="col-sm-4 col-xs-12" id="benefits__item--<?php echo $i; ?>">
         <div class="benefits__img-wrap">
           <img src="<?php echo $image['url']; ?>" class="benefits__img benefits__img--has-border">
-          <div class="benefits__line" id="benefits__line--<?php echo $i; ?>"></div>
         </div>
         <div class="benefits__item">
           <h6 class="benefits__item-title"><?php echo $title; ?></h6>
@@ -37,6 +36,7 @@
     endif;
     wp_reset_postdata();
     ?>
+    <div class="benefits__line u-visible-desktop"></div>
     </div><!--/.row-->
 
   </div><!--/.container-->

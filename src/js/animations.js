@@ -56,29 +56,12 @@ $('.solutions path').each(function(){
 
 
 // build scene for scrolling line animation on 'benefits'
-
-$('.benefits__line').each(function(){
-//tl
-//.to("#benefits__line--0", 1, {width: "100%", ease: Power1.easeOut})
-//.to("#benefits__line--1", 1, {width: "100%", ease: Power1.easeOut})
-
-var tweenLines = tl.to($(this), 1, {
-  //autoAlpha: 1, 
-  width: "46%",
-  ease: Power1.easeOut
+var scene = new ScrollMagic.Scene({
+  triggerElement: ".benefits"
 })
+.setTween(".benefits__line", 1.5, {width: "84%"}) // trigger a TweenMax.to tween
 
-var myScene = new ScrollMagic.Scene({
-  triggerElement: ".benefits",
-  triggerHook: 0.7,
-  reverse: false
-})
-
-.setTween(tweenLines)
-.setClassToggle(this, 'active')
 .addTo(controller);
-
-});
 
 
   // Tween: fade-in header logo on load

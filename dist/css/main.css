@@ -1709,22 +1709,22 @@ body.nav-open {
 
 .benefits__line {
   position: absolute;
-  left: 82%;
+  left: 8%;
   top: 50%;
   width: auto;
   height: 4px;
-  background: #bfe0f7; }
-
-#benefits__line--2 {
-  display: none; }
+  background: #bfe0f7;
+  z-index: 1; }
 
 .benefits__img-wrap {
   position: relative; }
 
 .benefits__img {
+  position: relative;
   border-radius: 100%;
   width: 200px;
-  height: 200px; }
+  height: 200px;
+  z-index: 2; }
   @media (min-width: 768px) {
     .benefits__img {
       width: 225px;
