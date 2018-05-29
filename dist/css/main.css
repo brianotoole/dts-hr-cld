@@ -1795,9 +1795,31 @@ body.nav-open {
   background: transparent;
   border: 2px solid #ea8c2a;
   color: #ea8c2a;
-  padding: 0.125em 0.625em; }
+  padding: 0.125em 0.625em;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.3s; }
   .carousel__nav-item:first-child {
     margin-left: 0; }
+  .carousel__nav-item:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #db7a16;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.3s ease-out; }
+  .carousel__nav-item:hover, .carousel__nav-item:focus {
+    color: white;
+    cursor: pointer; }
+  .carousel__nav-item:hover:before {
+    transform: scaleX(1); }
 
 #carousel--audience .slick-list {
   overflow: visible;
