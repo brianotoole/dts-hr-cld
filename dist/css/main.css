@@ -1193,14 +1193,15 @@ address {
     .nav-primary ul.sub-menu li a {
       display: block;
       padding: 10px;
-      color: white;
-      background: #ea8c2a;
-      border-top: 1px solid white;
+      color: #111111;
+      background: white;
+      border-top: 1px solid #cfcfcf;
       border-bottom: none;
       text-align: center;
-      transition: background 0.3s ease-out; }
+      transition: all 0.3s ease-out; }
       .nav-primary ul.sub-menu li a:hover {
-        background: #db7a16; }
+        background: #ea8c2a;
+        color: white; }
 
 /**
   * NAV MOBILE DROPDOWN 
