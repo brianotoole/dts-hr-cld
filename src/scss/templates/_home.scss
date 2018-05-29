@@ -130,15 +130,21 @@
   * Audience Section
   */
 
-// the carousel within this
+
 .audience__title {
+  position: relative;
   color: $color__text;
+  bottom: 75px;
   @media (min-width: $tablet) {
     color: white;
   }
 }
+
+// the carousel within this
 .carousel--audience-nav {
-  margin-bottom: 1em;
+  position: relative;
+  top: 75px;
+  z-index: 9;
   .slick-slide {
     width: auto!important;
     cursor: pointer;
@@ -160,6 +166,12 @@
   padding: calc-em(2px) calc-em(10px);
   &:first-child {
     margin-left: 0;
+  }
+}
+#carousel--audience {
+  .slick-list {
+    overflow: visible;
+    width: auto;
   }
 }
 

@@ -1353,7 +1353,11 @@ body.nav-open {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   position: relative; }
+  @media (min-width: 768px) {
+    .hero__bg {
+      background-position: center top; } }
   .hero__bg--is-full-height {
     height: 100vh; }
     @media (min-width: 768px) {
@@ -1762,13 +1766,17 @@ body.nav-open {
   * Audience Section
   */
 .audience__title {
-  color: #111111; }
+  position: relative;
+  color: #111111;
+  bottom: 75px; }
   @media (min-width: 768px) {
     .audience__title {
       color: white; } }
 
 .carousel--audience-nav {
-  margin-bottom: 1em; }
+  position: relative;
+  top: 75px;
+  z-index: 9; }
   .carousel--audience-nav .slick-slide {
     width: auto !important;
     cursor: pointer; }
@@ -1788,6 +1796,10 @@ body.nav-open {
   padding: 0.125em 0.625em; }
   .carousel__nav-item:first-child {
     margin-left: 0; }
+
+#carousel--audience .slick-list {
+  overflow: visible;
+  width: auto; }
 
 /**
   * Unified Section
