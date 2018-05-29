@@ -58,11 +58,11 @@ $solutions_main_button = get_field('solutions_main_button');
     ?>
   </div><!--/.solutions-->
 
-  <div class="row">
+  <!--<div class="row">
     <div class="col-xs-12 center-xs end-sm">
-      <a href="<?php echo $solutions_main_button['url']; ?>" class="btn btn--primary" target="<?php echo $solutions_main_button['target']; ?>"><?php echo $solutions_main_button['title']; ?></a>
+      <a href=" $solutions_main_button['url']; ?>" class="btn btn--primary" target="$solutions_main_button['target']; ?>"> $solutions_main_button['title']; ?></a>
     </div>
-  </div>
+  </div>-->
 
 </div><!--/.container-->
 </section>
