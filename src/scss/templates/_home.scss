@@ -52,25 +52,22 @@
 }
 
 // the line ine middle of each image
+.benefits__line {
+  position: absolute;
+  left: 82%;
+  top: 50%;
+  width: auto; //uses animations.js tween to set width on scrollTo
+  //width: 46%;
+  height: 4px;
+  background: $color__accent;
+  //visibility: hidden;
+}
+#benefits__line--2 {
+  display: none;
+}
 .benefits__img-wrap {
   position: relative;
-  @media (min-width: $tablet) {
-    &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 50%;
-      height: 4px;
-      background: $color__accent;
-    }
-  }
 }
-#benefits__item--2 .benefits__img-wrap {
-  &:after {
-    display: none;
-  }
-}
-
 .benefits__img {
   border-radius: 100%;
   width: 200px;

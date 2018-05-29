@@ -1707,19 +1707,19 @@ body.nav-open {
 .benefits__item-text {
   padding-top: 0.25em; }
 
+.benefits__line {
+  position: absolute;
+  left: 82%;
+  top: 50%;
+  width: auto;
+  height: 4px;
+  background: #bfe0f7; }
+
+#benefits__line--2 {
+  display: none; }
+
 .benefits__img-wrap {
   position: relative; }
-  @media (min-width: 768px) {
-    .benefits__img-wrap:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 50%;
-      height: 4px;
-      background: #bfe0f7; } }
-
-#benefits__item--2 .benefits__img-wrap:after {
-  display: none; }
 
 .benefits__img {
   border-radius: 100%;
