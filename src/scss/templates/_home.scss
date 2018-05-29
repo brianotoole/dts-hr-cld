@@ -134,17 +134,19 @@
 .audience__title {
   position: relative;
   color: $color__text;
-  bottom: 75px;
   @media (min-width: $tablet) {
     color: white;
+    bottom: 75px;
   }
 }
 
 // the carousel within this
 .carousel--audience-nav {
   position: relative;
-  top: 75px;
   z-index: 9;
+  @media (min-width: $tablet) {
+    top: 75px;
+  }
   .slick-slide {
     width: auto!important;
     cursor: pointer;

@@ -1767,16 +1767,18 @@ body.nav-open {
   */
 .audience__title {
   position: relative;
-  color: #111111;
-  bottom: 75px; }
+  color: #111111; }
   @media (min-width: 768px) {
     .audience__title {
-      color: white; } }
+      color: white;
+      bottom: 75px; } }
 
 .carousel--audience-nav {
   position: relative;
-  top: 75px;
   z-index: 9; }
+  @media (min-width: 768px) {
+    .carousel--audience-nav {
+      top: 75px; } }
   .carousel--audience-nav .slick-slide {
     width: auto !important;
     cursor: pointer; }
