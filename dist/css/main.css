@@ -1702,7 +1702,8 @@ body.nav-open {
       padding-top: 3.75em; } }
 
 .benefits__item-title {
-  color: #ea8c2a; }
+  color: #ea8c2a;
+  text-transform: uppercase; }
 
 .benefits__item-text {
   padding-top: 0.25em; }

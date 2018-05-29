@@ -57,7 +57,8 @@ $('.solutions path').each(function(){
 
 // build scene for scrolling line animation on 'benefits'
 var scene = new ScrollMagic.Scene({
-  triggerElement: ".benefits"
+  triggerElement: ".benefits",
+  reverse: false
 })
 .setTween(".benefits__line", 1.5, {width: "84%"}) // trigger a TweenMax.to tween
 
