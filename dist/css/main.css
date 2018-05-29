@@ -1158,7 +1158,7 @@ address {
   */
 .mobile-menu-toggle.is-active:before {
   content: '';
-  background-color: white;
+  background-color: #111111;
   transform: rotate(45deg) scaleX(1.25); }
 
 .mobile-menu-toggle.is-active .mobile-menu-toggle__line {
@@ -1167,7 +1167,7 @@ address {
 
 .mobile-menu-toggle.is-active:after {
   content: '';
-  background-color: white;
+  background-color: #111111;
   transform: rotate(-45deg) scaleX(1.25) translateY(1px); }
 
 /**
@@ -1205,35 +1205,38 @@ address {
 /**
   * NAV MOBILE DROPDOWN 
   */
-.nav-mobile .menu-item-has-children {
-  position: relative; }
-  .nav-mobile .menu-item-has-children li a {
-    display: block;
-    font-size: 90%;
-    text-decoration: none; }
-  .nav-mobile .menu-item-has-children ul.sub-menu.active li {
-    display: block; }
-  .nav-mobile .menu-item-has-children ul.sub-menu li {
-    display: none; }
+.nav-mobile {
+  text-align: center; }
+  .nav-mobile .menu-item-has-children {
+    position: relative; }
+    .nav-mobile .menu-item-has-children li a {
+      display: block;
+      font-size: 90%;
+      text-transform: capitalize;
+      text-decoration: none; }
+    .nav-mobile .menu-item-has-children ul.sub-menu.active li {
+      display: block; }
+    .nav-mobile .menu-item-has-children ul.sub-menu li {
+      display: none; }
 
 .nav-mobile__chevron {
   position: absolute;
-  top: 5px;
+  top: 0;
   right: 10px; }
   .nav-mobile__chevron:after {
     content: '';
     position: absolute;
-    top: 14px;
-    right: 0;
+    top: 30px;
+    right: 30px;
     width: 10px;
     height: 10px;
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
-    transform: rotate(-45deg);
+    border-right: 2px solid #111111;
+    border-bottom: 2px solid #111111;
+    transform: rotate(45deg);
     transition: transform 0.2s ease-out; }
   .nav-mobile__chevron.is-open:after {
     content: '';
-    transform: rotate(45deg); }
+    transform: rotate(-135deg); }
 
 body.nav-open {
   position: fixed;
@@ -1248,14 +1251,14 @@ body.nav-open {
   opacity: 0;
   position: fixed;
   height: 100vh;
-  width: 100%;
+  width: 68%;
   z-index: 40;
-  background: #323a45;
+  background: white;
   top: 0;
   right: 0;
-  padding: 60px 30px 30px;
+  padding: 60px 0;
   overflow-y: scroll;
-  transform: translateX(100%);
+  transform: translateX(68%);
   transition: all 0.3s ease-out; }
   .mobile-menu.is-active {
     opacity: 1;
@@ -1264,10 +1267,12 @@ body.nav-open {
 
 .mobile-menu li a {
   display: block;
-  padding: 0.625em 0;
+  padding: 1.25em;
+  color: #111111;
+  text-transform: uppercase;
   font-size: 1.1em;
   font-weight: 700;
-  border-bottom: 1px solid #4a5563; }
+  border-bottom: 1px solid #cfcfcf; }
 
 /**
   * Button
