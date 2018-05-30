@@ -1,7 +1,7 @@
 <section class="section footer footer--secondary">
  <div class="container">
    <div class="footer__top">
-     <div class="row start-sm between-xs">
+     <div class="row between-xs">
        <div class="col-sm-3">
          <ul class="footer__top-menu">
            <div class="footer__top-title">Company</div>

@@ -968,7 +968,8 @@ address {
   justify-content: space-between; }
   @media (min-width: 768px) {
     .footer__bottom {
-      padding-top: 6.25em; } }
+      padding-top: 6.25em;
+      justify-content: flex-start; } }
 
 .footer__bottom-copy {
   padding-right: 1.5625em; }
