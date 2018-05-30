@@ -1563,7 +1563,7 @@ select {
   border: 0;
   display: block;
   width: 100%;
-  padding: 15px 10px;
+  padding: 5px 15px;
   font-size: 1em;
   background: white;
   color: #111111;
@@ -1592,7 +1592,7 @@ select {
 input[type="checkbox"] {
   display: inline-block;
   width: auto;
-  padding: 5px;
+  padding: 5px 15px;
   appearance: checkbox; }
 
 fieldset {
@@ -1621,20 +1621,32 @@ label {
   color: rgba(255, 255, 255, 0.7) !important; }
 
 /*** BUTTON STYLING ***/
-/*** BUTTON HOVER STYLING ***/
-.gform_wrapper .gform_footer input.button:hover {
-  background: rgba(0, 0, 0, 0.05);
-  border: 2px solid transparent; }
-
-.gform_wrapper form.gf_simple_horizontal label.gfield_label {
-  width: auto !important;
-  height: auto !important;
-  top: -25px !important;
-  color: white;
-  font-weight: normal;
-  font-size: 0.9em; }
-  .gform_wrapper form.gf_simple_horizontal label.gfield_label span {
-    color: white; }
+.gform_wrapper .gform_footer input.button {
+  margin-left: 40px !important;
+  line-height: 34px !important; }
+  .gform_wrapper .gform_footer input.button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #db7a16;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.3s ease-out;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    transition-property: color;
+    transition-duration: 0.3s; }
+  .gform_wrapper .gform_footer input.button:hover, .gform_wrapper .gform_footer input.button:focus {
+    color: white;
+    cursor: pointer; }
+  .gform_wrapper .gform_footer input.button:hover:before {
+    transform: scaleX(1); }
 
 .gf_simple_horizontal_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_first,
 .gf_simple_horizontal_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_middle,
@@ -1646,7 +1658,8 @@ label {
   margin-bottom: 0 !important; }
 
 .gf_simple_horizontal_wrapper li.hidden_label input {
-  margin-top: 0 !important; }
+  margin-top: 0 !important;
+  padding: 5px 15px !important; }
 
 body .gf_simple_horizontal_wrapper .top_label div.ginput_container {
   margin-top: 0 !important; }
@@ -1657,6 +1670,9 @@ body .gf_simple_horizontal_wrapper .top_label div.ginput_container {
 
 .gf_simple_horizontal div.gform_body {
   width: auto !important; }
+
+.gform_body input {
+  padding: 6px 15px !important; }
 
 .gf_simple_horizontal div.gform_footer.top_label input[type="submit"] {
   line-height: 26px;
