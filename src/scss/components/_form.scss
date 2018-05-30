@@ -110,6 +110,19 @@ label {
   padding-top: 0 !important;
 }
 
+.gform_wrapper form.gf_simple_horizontal label.gfield_label {
+  width: auto !important;
+  height: auto !important;
+  top: -21px !important;
+  color: $color__accent !important;
+  font-size: 0.9em !important;
+  font-family: $font__body;
+  font-weight: normal !important;
+  span { // the required asterick
+    color: $color__accent !important;
+  }
+}
+
 .gf_simple_horizontal_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container input[type=text],
 .gf_simple_horizontal_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container select {
   margin-bottom: 0 !important;

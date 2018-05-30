@@ -1654,6 +1654,17 @@ label {
 .gf_simple_horizontal_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_last {
   padding-top: 0 !important; }
 
+.gform_wrapper form.gf_simple_horizontal label.gfield_label {
+  width: auto !important;
+  height: auto !important;
+  top: -21px !important;
+  color: #bfe0f7 !important;
+  font-size: 0.9em !important;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal !important; }
+  .gform_wrapper form.gf_simple_horizontal label.gfield_label span {
+    color: #bfe0f7 !important; }
+
 .gf_simple_horizontal_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container input[type=text],
 .gf_simple_horizontal_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container select {
   margin-bottom: 0 !important; }
