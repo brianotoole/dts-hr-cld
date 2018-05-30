@@ -922,6 +922,10 @@ address {
 /**
   * Footer
   */
+@media (max-width: 768px) {
+  .footer * {
+    font-size: 12px; } }
+
 .footer--secondary {
   background-color: #323a45;
   color: white; }
@@ -947,12 +951,6 @@ address {
     left: 0;
     right: 0; }
 
-@media (max-width: 480px) {
-  .footer__top .row > div:nth-child(odd) {
-    text-align: left; }
-  .footer__top .row > div:nth-child(even) {
-    text-align: right; } }
-
 .footer__top-menu li a {
   display: inline-block;
   color: white;
@@ -964,15 +962,12 @@ address {
   margin-bottom: 1em; }
 
 .footer__bottom {
-  display: block;
+  display: flex;
   padding-top: 1.5625em;
-  text-align: center; }
-  @media (min-width: 480px) {
-    .footer__bottom {
-      display: left; } }
+  text-align: left;
+  justify-content: space-between; }
   @media (min-width: 768px) {
     .footer__bottom {
-      display: flex;
       padding-top: 6.25em; } }
 
 .footer__bottom-copy {
@@ -995,17 +990,6 @@ address {
   margin: 0 1.5625em; }
   .footer__bottom-menu li a:first-child {
     padding-left: 0; }
-
-.footer__info {
-  margin-bottom: 0.5em;
-  word-wrap: break-word; }
-
-.footer__images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.5em;
-  width: 100%; }
 
 /**
   * Section
@@ -1623,8 +1607,10 @@ label {
 
 /*** BUTTON STYLING ***/
 .gform_wrapper .gform_footer input.button {
-  margin-left: 40px !important;
   line-height: 34px !important; }
+  @media (min-width: 768px) {
+    .gform_wrapper .gform_footer input.button {
+      margin-left: 40px !important; } }
   .gform_wrapper .gform_footer input.button:before {
     content: "";
     position: absolute;
@@ -1688,9 +1674,11 @@ body .gf_simple_horizontal_wrapper .top_label div.ginput_container {
 
 .gf_simple_horizontal div.gform_footer.top_label input[type="submit"] {
   line-height: 26px;
-  padding: 0 24px;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
+  padding: 5px 24px;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    .gf_simple_horizontal div.gform_footer.top_label input[type="submit"] {
+      padding: 0 24px; } }
 
 /**
   * -- TEMPLATES

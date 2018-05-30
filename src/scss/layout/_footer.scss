@@ -3,11 +3,17 @@
   */
 
 .footer {
+  @media (max-width: $tablet) {
+    * {
+      font-size: 12px;
+    }
+  }
 
   &--secondary {
     background-color: $color__secondary;
     color: white;
   }
+
 }
 
 .footer a {
@@ -34,18 +40,6 @@
   }
 }
 
-// on phone only, align columns to outset of page for easier mobile viewing
-@media (max-width: $phone) {
-  .footer__top .row > div {
-    &:nth-child(odd) {
-      text-align: left;
-    }
-    &:nth-child(even) {
-      text-align: right;
-    }
-  }
-}
-
 .footer__top-menu {
   li a {
     display: inline-block;
@@ -61,14 +55,11 @@
 }
 
 .footer__bottom {
-  display: block;
+  display: flex;
   padding-top: calc-em(25px);
-  text-align: center;
-  @media (min-width: $phone) {
-    display: left;
-  }
+  text-align: left;
+  justify-content: space-between;
   @media (min-width: $tablet) {
-    display: flex;
     padding-top: calc-em(100px);
   }
   
@@ -99,17 +90,3 @@
     }
   }
 }
-
-.footer__info {
-  margin-bottom: 0.5em;
-  word-wrap: break-word;
-}
-
-.footer__images {
-  display: flex;
-  justify-content:  center;
-  align-items:  center;
-  margin-bottom: 1.5em;
-  width: 100%;
-}
-
