@@ -1,123 +1,127 @@
-/**
-  * Forms
-  * @NOTE: uses Gravity Forms
-  */
+// INPUTS
 
-.gform_wrapper#gform_wrapper_1 {
-  padding-top: 5em;
-}
-
-.gform_wrapper form[method="post"] {
+// global inputs
+input,
+textarea,
+select {
+  outline: 0;
+  border: 0;
+  display: block;
   width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-%input-style {
-  background: #eeeeee;
-  border: none;
-  padding: 1.5em;
-  margin-bottom: 1em;
+  padding: 15px 10px;
+  font-size: calc-em(16px);
+  background: white;
+  color: $color__text;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 0;
+  appearance: none;
+  transition: all 0.3s ease-out;
+  &:active,
   &:focus {
-    outline: none;
+    border-color: $color__primary;
   }
 }
-
-.gform_wrapper .gform_body {
-  // put everything in this scope to increase specificity
-  .gfield_label {
-    font-family: $font__body;
-    font-size: 1.5em;
+textarea {
+  @media (min-width: $tablet) {
+    min-height: 300px;
   }
-
-  .gfield_required {
-    color: $grey;
-  }
-
-  .field_sublabel_below .ginput_complex.ginput_container label {
-    // hide sublabels
-    display: none;
-  }
-
-  input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
-    // i dont like this but it's how gforms targets checkboxes
-    @extend %input-style;
-    height: 4em;
-  }
-
-  textarea.large {
-    @extend %input-style;
-  }
-
-  .gfield_label:empty {
-    display: none;
-  }
-
-  .bottom-checkbox {
-    margin-top: -12px;
-  }
-
-  input[type=checkbox] {
-    visibility: hidden; // replace standard checkbox with custom
-  }
-  .gfield_checkbox li label {
-    position: relative;
-    padding-left: 12px;
-    line-height: 1.3;
-    font-weight: 400;
-    font-size: 1.1em;
-    max-width: 80%;
-
-    &:before {
-      content: '';
-      position: absolute;
-      height: 20px;
-      width: 20px;
-      left: -18px;
-      background: white;
-      border: 2px solid black;
-    }
-    &:after {
-      content: '\2713'; //checkmark symbol
-      position: absolute;
-      left: -18px;
-      top: -5px;
-      font-size: 26px;
-      opacity: 0;
-
-    }
-  }
-
-  ul.gfield_checkbox li input[type=checkbox]:checked + label {
-    font-weight: 400; // by default gforms changes label to bold on :checked - let's not
-    // animate checkmark symbol in when checked
-    &:after {
-      opacity: 1;
-      animation: pop 0.2s linear 1;
-    }
-  }
-
-  @media only screen and (min-width: 641px) {
-    ul.gform_fields li.gfield {
-      padding-right: 0;
-    }
-  }
-} //.gform_wrapper .gform_body
-
-.gform_wrapper .gform_footer .button.gform_button {
-  @extend .btn;
-  @extend .btn--primary;
+}
+select {
+  height: 50px;
+  font-size: calc-em(14px);
+  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+  background-position: 98% 58%;
+  background-repeat: no-repeat;
+}
+input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  padding: 5px;
+  appearance: checkbox;
+}
+fieldset {
   border: none;
-  padding-top: 1.1em !important;
-  padding-bottom: 1.1em !important;
+}
+label {
+  display: inline-block;
+  margin-bottom: 2px;
+  color: $color__text;
+}
 
-  &:focus {
-    outline: none;
+/*** PLACEHOLDER ***/
+::-webkit-input-placeholder {
+  /* Chrome */
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+:-moz-placeholder {
+  /* Firefox 4 - 18 */
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+// Gravity Forms
+
+
+/*** BUTTON STYLING ***/
+.gform_wrapper .gform_footer input.button {
+ @extend .btn;
+ @extend .btn--primary;
+}
+/*** BUTTON HOVER STYLING ***/
+.gform_wrapper .gform_footer input.button:hover {
+ background: rgba(0, 0, 0, 0.05);
+ border: 2px solid transparent;
+}
+.gform_wrapper form.gf_simple_horizontal label.gfield_label {
+  width: auto!important;
+  height: auto!important;
+  top: -25px!important;
+  color: white;
+  font-weight: normal;
+  font-size: 0.9em;
+  span {
+    color: white;
   }
 }
 
-@keyframes pop {
-  50% {
-    transform: scale(1.5);
-  }
+.gf_simple_horizontal_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_first,
+.gf_simple_horizontal_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_middle,
+.gf_simple_horizontal_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_last {
+  padding-top: 0 !important;
+}
+
+.gf_simple_horizontal_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container input[type=text],
+.gf_simple_horizontal_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container select {
+  margin-bottom: 0 !important;
+}
+
+.gf_simple_horizontal_wrapper li.hidden_label input {
+  margin-top: 0 !important;
+}
+
+body .gf_simple_horizontal_wrapper .top_label div.ginput_container {
+  margin-top: 0 !important;
+}
+
+.gf_simple_horizontal div.gform_footer.top_label {
+  width: auto !important;
+  vertical-align: top !important;
+}
+
+.gf_simple_horizontal div.gform_body {
+  width: auto !important;
+}
+
+.gf_simple_horizontal div.gform_footer.top_label input[type="submit"] {
+  line-height: 26px;
+  padding: 0 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px
 }
