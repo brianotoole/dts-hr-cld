@@ -15,7 +15,7 @@ $cta_button_link = get_field('cta_button_link');
       </div>
       <div class="col-sm-8 col-xs-12">
         <div class="cta__form">
-          <?php echo do_shortcode('[gravityform id=1 title=false description=false]'); ?>
+          <?php echo do_shortcode('[gravityform id=1 title=false description=false ajax=true]'); ?>
         </div>
       </div>
     </div>
