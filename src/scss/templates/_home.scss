@@ -56,9 +56,8 @@
 .benefits__line {
   position: absolute;
   left: 8%;
-  top: 50%;
+  top: calc(50% - 40px);
   width: auto; //uses animations.js tween to set width on scrollTo
-  //width: 46%;
   height: 4px;
   background: $color__accent;
   z-index: 1;
@@ -78,6 +77,20 @@
   }
   &--has-border {
     border: 4px solid $color__accent;
+  }
+}
+
+/**
+  * CTA Section
+  */
+
+.cta__title {
+  color: $color__accent;
+  text-transform: uppercase;
+}
+.cta__form {
+  @media (min-width: $tablet) {
+    margin-top: calc-em(-30px);
   }
 }
 
