@@ -196,6 +196,11 @@ body .gf_simple_horizontal_wrapper .top_label div.ginput_container {
   }
 }
 
+// confirmation message wrapper 
+.gform_confirmation_message {
+  margin: 25px auto;
+}
+
 // spinner 
 // the image is enqueued in functions
 body img.gform_ajax_spinner {

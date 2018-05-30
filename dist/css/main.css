@@ -1707,6 +1707,9 @@ body .gf_simple_horizontal_wrapper .top_label div.ginput_container {
   .gform_wrapper li.gfield.gfield_error.gfield_contains_required {
     margin-bottom: 0 !important; } }
 
+.gform_confirmation_message {
+  margin: 25px auto; }
+
 body img.gform_ajax_spinner {
   display: block;
   margin: 10px 0 0 10px;
