@@ -17,7 +17,7 @@ include_function('add-custom-post-types');
 
 include_function('add-svg-upload-support');
 
-//include_function('add-gform-button');
+include_function('add-gform-overrides');
 
 include_function('remove-head-junk');
 
