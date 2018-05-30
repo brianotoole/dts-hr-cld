@@ -1293,7 +1293,6 @@ body.nav-open {
   min-width: 115px;
   font-size: 1em;
   transition: all 0.3s ease-out;
-  display: inline-block;
   vertical-align: middle;
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -1565,7 +1564,7 @@ select {
   border: 0;
   display: block;
   width: 100%;
-  padding: 5px 15px;
+  padding: 6px 20px;
   font-size: 1em;
   background: white;
   color: #111111;
@@ -1594,7 +1593,7 @@ select {
 input[type="checkbox"] {
   display: inline-block;
   width: auto;
-  padding: 5px 15px;
+  padding: 6px 20px;
   appearance: checkbox; }
 
 fieldset {
@@ -1674,7 +1673,7 @@ body .gf_simple_horizontal_wrapper .top_label div.ginput_container {
   width: auto !important; }
 
 .gform_body input {
-  padding: 6px 15px !important; }
+  padding: 6px 20px !important; }
 
 .gf_simple_horizontal div.gform_footer.top_label input[type="submit"] {
   line-height: 26px;

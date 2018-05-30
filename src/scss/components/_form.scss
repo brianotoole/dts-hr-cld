@@ -8,7 +8,7 @@ select {
   border: 0;
   display: block;
   width: 100%;
-  padding: 5px 15px;
+  padding: 6px 20px;
   font-size: calc-em(16px);
   background: white;
   color: $color__text;
@@ -36,7 +36,7 @@ select {
 input[type="checkbox"] {
   display: inline-block;
   width: auto;
-  padding: 5px 15px;
+  padding: 6px 20px;
   appearance: checkbox;
 }
 fieldset {
@@ -134,7 +134,7 @@ body .gf_simple_horizontal_wrapper .top_label div.ginput_container {
 }
 
 .gform_body input {
-  padding: 6px 15px !important;
+  padding: 6px 20px !important;
 }
 
 .gf_simple_horizontal div.gform_footer.top_label input[type="submit"] {
