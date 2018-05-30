@@ -73,8 +73,10 @@ label {
 .gform_wrapper .gform_footer input.button {
   @extend .btn;
   @extend .btn--primary;
-  margin-left: 40px !important;
   line-height: 34px !important;
+  @media (min-width: $tablet) {
+    margin-left: 40px !important;
+  }
   &:before {
     content: "";
     position: absolute;
@@ -152,7 +154,9 @@ body .gf_simple_horizontal_wrapper .top_label div.ginput_container {
 
 .gf_simple_horizontal div.gform_footer.top_label input[type="submit"] {
   line-height: 26px;
-  padding: 0 24px;
+  padding: 5px 24px;
   text-transform: uppercase;
-  letter-spacing: 1px
+  @media (min-width: $tablet) {
+    padding: 0 24px;
+  }
 }
