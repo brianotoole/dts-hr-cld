@@ -14489,18 +14489,23 @@ $('.solutions path').each(function () {
   var tweenSvg = _TweenMax2.default.from($(this), 1, {
     //autoAlpha: 0, 
     //scale: 0.95, 
-    fill: '#999', //color__border--dark
+    fill: '#323a45', //color__secondary
     ease: Power1.easeNone
   });
 
   var myScene = new _ScrollMagic2.default.Scene({
     triggerElement: this,
     triggerHook: 0.5,
-    reverse: false //dont repeat scene on scroll back up 
+    reverse: true //dont repeat scene on scroll back up 
   }).setTween(tweenSvg).setClassToggle(this, 'active')
   //.addIndicators() //to debug, comment out when done
   .addTo(controller);
 });
+
+/*var shape = document.querySelector('.a path');
+var shapeLength = shape.getTotalLength();
+console.log(shapeLength); //89.26751708984375
+*/
 
 // build scene for scrolling line animation on 'benefits'
 var scene = new _ScrollMagic2.default.Scene({

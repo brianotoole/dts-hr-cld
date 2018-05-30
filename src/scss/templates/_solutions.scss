@@ -21,10 +21,10 @@
     fill: $color__border;
     stroke: transparent;
     stroke-width: 1px;
-    stroke-dasharray: 1009;
-    visibility: hidden;
+   // stroke-dasharray: 90;
+     visibility: hidden;
     &.active {
-      animation: draw 5s reverse linear;
+      //animation: draw 5s reverse linear;
       visibility: visible;
     }
   }
@@ -32,7 +32,7 @@
 
 @keyframes draw {
   from {stroke-dashoffset: 0;}
-  to {stroke-dashoffset: 1009;}
+  to {stroke-dashoffset: 90;}
 }
 
 .solution__item {

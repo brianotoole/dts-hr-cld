@@ -1949,17 +1949,15 @@ body .gf_simple_horizontal_wrapper .top_label div.ginput_container {
     fill: #cfcfcf;
     stroke: transparent;
     stroke-width: 1px;
-    stroke-dasharray: 1009;
     visibility: hidden; }
     .solutions__line path.active {
-      animation: draw 5s reverse linear;
       visibility: visible; }
 
 @keyframes draw {
   from {
     stroke-dashoffset: 0; }
   to {
-    stroke-dashoffset: 1009; } }
+    stroke-dashoffset: 90; } }
 
 .solution__item {
   margin-top: 1.5625em;
