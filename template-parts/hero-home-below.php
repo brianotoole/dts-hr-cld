@@ -9,7 +9,18 @@
     <div class="row hero-below">
       <div class="col-sm-6 col-xs-12">
         <div class="hero-below__image">
-          <img src="<?php echo get_template_directory_uri() . '/dist/img/home-macbook.png'; ?>">
+          <!--<img src=" echo get_template_directory_uri() . '/dist/img/home-macbook.png';>">-->
+          <div class="macbook">
+            <div class="macbook__screen">
+              <div class="macbook__viewport">
+                <video muted loop autoplay class="macbook__video">
+                  <source src="<?php echo get_template_directory_uri() . '/dist/video/home.mov';?>">
+                </video>
+              </div>
+            </div>
+            <div class="macbook__base"></div>
+            <div class="macbook__notch"></div>
+          </div>
         </div>
       </div>
       <div class="col-sm-6 col-xs-12">
