@@ -11,6 +11,7 @@ $navy:   #1a2940;
 $white:  #ffffff;
 $black:  #111111;
 $grey:   #cfcfcf;
+$red:    #ff3434;
 
 // brand colors
 $color__primary:     $orange;
@@ -26,6 +27,9 @@ $color__secondary--dark: darken($color__secondary, 7%);
 $color__tertiary--dark: darken($color__tertiary, 7%);
 $color__text--dark: darken($color__text, 7%);
 $color__border--dark: darken($color__border, 7%);
+
+// components
+$color__error: red;
 
 // fonts
 $font__heading: 'Open Sans', sans-serif;
