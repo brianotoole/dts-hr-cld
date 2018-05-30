@@ -9,7 +9,7 @@ function spx_scripts() {
   wp_enqueue_script( 'spx-scripts', get_theme_file_uri( '/dist/js/main.js' ), array('jquery'), $ver, true );
 
   // slick carousel
-  wp_enqueue_script( 'slick-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js', array('jquery'), '1.8.1', true );
+  wp_enqueue_script( 'slick-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js', array('jquery'), '1.8.1', false );
 }
 add_action( 'wp_enqueue_scripts', 'spx_scripts' );
 
