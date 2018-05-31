@@ -14281,7 +14281,7 @@ $(document).on('click', '.unified__item', function (e) {
  * Append popup video class to wp menu item
  */
 $(function () {
-  $('li.js-watch-demo a').attr('id', 'js-watch-demo');
+  $('li.js-watch-demo a').attr('class', 'js-watch-demo');
 });
 
 /**
