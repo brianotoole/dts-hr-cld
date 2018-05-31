@@ -34,7 +34,7 @@ function spinner_url( $image_src, $form ) {
 function gform_post_to_pardot($entry, $form) {
     $post_url = 'http://go.datis.com/l/106012/2018-05-31/3mg413'; // Form handler endpoint URL
     $body = array(
-        'firstname' => rgar($entry, '1'),
+        'firstname' => rgar($entry, '1'), //'firstname' == name in pardot; '1' == id of form field IN GF admin
         'email' => rgar($entry, '2'),
     );
     $request = new WP_Http();
