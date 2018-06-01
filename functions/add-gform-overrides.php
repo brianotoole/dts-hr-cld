@@ -42,3 +42,16 @@ function gform_post_to_pardot($entry, $form) {
 }
 // Add function to form (or whichever form you need)
 add_action('gform_after_submission', 'gform_post_to_pardot', 10, 2);
+
+
+
+/**
+ * gform_confirmation_anchor
+ *
+ * Customize the confirmation anchor behavior that automatically
+ * scrolls the page upon submission/validation
+ *
+ * https://www.gravityhelp.com/documentation/article/gform_confirmation_anchor/
+ */
+// Disable scroll on form
+add_filter('gform_confirmation_anchor', '__return_false');
