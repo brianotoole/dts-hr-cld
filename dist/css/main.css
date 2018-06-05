@@ -236,6 +236,19 @@ h3, .h3 {
   margin-bottom: 0.7em;
   text-transform: uppercase; }
 
+h4, .h4 {
+  font-size: 1.25em;
+  margin-bottom: 0.6em;
+  text-transform: uppercase; }
+
+h5, .h5 {
+  font-size: 1.125em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase; }
+
+h6, .h6 {
+  text-transform: uppercase; }
+
 address {
   line-height: 1.5;
   font-style: normal; }
@@ -1541,6 +1554,36 @@ body.nav-open {
       cursor: pointer; }
   .slick-dots li.slick-active button {
     background: white; }
+
+/**
+  * Card
+  */
+.cards {
+  display: flex;
+  flex-wrap: wrap; }
+
+.card {
+  position: relative;
+  height: 250px;
+  padding: 15px;
+  text-align: left; }
+  .card a {
+    width: 100%;
+    height: 100%;
+    padding: 0.9375em;
+    display: block; }
+
+.card__type {
+  text-transform: capitalize;
+  padding-bottom: 0.3125em; }
+
+.card__more {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0.9375em;
+  text-transform: uppercase; }
 
 input,
 textarea,

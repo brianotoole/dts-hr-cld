@@ -1,13 +1,25 @@
 <?php
+
+function get_resource_terms($id) {
+  $terms = get_terms($id); 
+  $count = count($terms); 
+  if ( $count > 0 ) { 
+    foreach ( $terms as $term ) { 
+      echo $term->name; 
+    } 
+  } 
+}
+
 // Build Resource Card
 function get_the_resource_card($id) {
 
-  // $type = get_field( 'resource_type', $hc_id );
+  $thumb = 'http://localhost:3000/datis/wp-content/uploads/2018/05/benefits2.png';
 
   $card_html = '
-  <a href="'. get_the_permalink($id) .'" class="ont-card resource hc">'.
-    '<div class="card__overlay"></div>'.
-    '<h3 class="card__title">'. get_the_title($id) .'</h3>'.
+  <a href="'. get_the_permalink($id) .'" class="resource hc" style="background-image:url('. $thumb .')">'.
+    '<h5 class="card__type">Type</h5>'.
+    '<h4 class="card__title">'. get_the_title($id) .'</h4>'.
+    '<span class="card__more">View</span>'.
   '</a>';
 
   return $card_html;
@@ -71,11 +83,9 @@ function ont_get_resources() {
   if($resQuery->have_posts()) :
     while ( $resQuery->have_posts() ) :
       $resQuery->the_post(); ?>
-    <ul class="row cards">
-      <li class="col-sm-3 col-xs-12">
+      <li class="col-sm-3 col-xs-12 card">
         <?php the_resource_card(get_the_ID()) ?>
       </li>
-
       <?php
     endwhile;
   endif;

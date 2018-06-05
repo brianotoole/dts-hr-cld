@@ -9,46 +9,51 @@ Field Group Name: Section - All Resources
 
 ?>
 
-<section class="ont-module resources-list">
+<section class="section--resource-list">
   <div class="container">
+  
     <div class="filters">
       <?php $topics = get_terms(array('taxonomy' => 'topic', 'hide_empty' => false)) ?>
-      <div>
-        <div class="ont-select">
+      <div class="row center-xs">
+        <div class="col-sm-4 col-xs-6 select">
           <select class="topic">
             <option value="All">All Topics</option>
             <?php foreach ($topics as $topic): ?>
               <option value="<?php echo $topic->term_id ?>"><?php echo $topic->name ?></option>
             <?php endforeach ?>
           </select>
-        </div>
-      </div>
-      <div>
+        </div><!--/.col.select-->
       <?php $types = get_terms(array('taxonomy' => 'type', 'hide_empty' => false)) ?>
-        <div class="ont-select">
-          <select class="topic">
+        <div class="col-sm-4 col-xs-6 select">
+          <select class="type">
             <option value="All">All Types</option>
             <?php foreach ($types as $type): ?>
               <option value="<?php echo $type->term_id ?>"><?php echo $type->name ?></option>
             <?php endforeach ?>
           </select>
-        </div>
-      </div>
-    </div>
-    <ul class="list re-li"></ul>
-    <div class="load-more tac">
+        </div><!--/.select-->
+      </div><!--/.row-->
+
+    </div><!--/.filters-->
+
+    <ul id="js-resources-list" class="row center-xs cards"></ul>
+
+
+    <div class="load-more u-text-center">
       <a id="js-load-more" class="btn btn--primary">Load More</a>
     </div>
     <img class="loading-spinner tac" src="<?php echo get_template_directory_uri() . '/dist/img/loading.svg'; ?>">
-    <div class="all-shown">all resources are shown</div>
-    <div class="none-shown">no resources found</div>
-  </div>
+    <div class="all-shown">All resources are shown.</div>
+    <div class="none-shown">No resources found.</div>
+
+
+
 
   <script type="text/javascript">
     jQuery(document).ready(function($) {
 
       var admin_ajax = '<?php echo admin_url( 'admin-ajax.php' ) ?>',
-        ppp = 6,
+        ppp = 16,
         page = 1;
 
       var get_resources = function(ppp, page, type, topic) {
@@ -59,7 +64,7 @@ Field Group Name: Section - All Resources
         console.log('get_resources', ppp, page, type, topic);
 
         $('.loading-spinner').show();
-        $('.load-more').hide();
+        $('#js-load-more').hide();
         $('.all-shown').hide();
         $('.none-shown').hide();
         $('.filters select').attr('disabled', true);
@@ -76,14 +81,15 @@ Field Group Name: Section - All Resources
           },
           success: function(res) {
 
-            $('.resources-list .list').append(res);
+            $('#js-resources-list').append(res);
             $('.loading-spinner').hide();
             if (total_resources == 0) {
               $('.loading-spinner').hide();
               $('.none-shown').show();
-            } else if ($('.resources-list .list li').length == total_resources) {
+            } else if ($('#js-resources-list li').length == total_resources) {
               $('.loading-spinner').hide();
               $('.all-shown').show();
+              $('#js-load-more').hide();
             } else {
               $('#js-load-more').show();
             }
@@ -98,7 +104,7 @@ Field Group Name: Section - All Resources
 
       $('.filters select').on('change', function() {
 
-        $('.resources-list .list').html('');
+        $('#js-resources-list').html('');
 
         get_resources(ppp, page, $('.filters select.type').val(), $('.filters select.topic').val());
       });
@@ -119,4 +125,6 @@ Field Group Name: Section - All Resources
 
     });
   </script>
+
+  </div><!--/.container-->
 </section>
