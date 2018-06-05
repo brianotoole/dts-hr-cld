@@ -1,4 +1,25 @@
 <?php
+// Build Resource Card
+function get_the_resource_card($id) {
+
+  // $type = get_field( 'resource_type', $hc_id );
+
+  $card_html = '
+  <a href="'. get_the_permalink($id) .'" class="ont-card resource hc">'.
+    '<div class="card__overlay"></div>'.
+    '<h3 class="card__title">'. get_the_title($id) .'</h3>'.
+  '</a>';
+
+  return $card_html;
+
+}
+
+function the_resource_card($id) {
+  echo get_the_resource_card($id);
+}
+
+
+
 // Get Resources
 add_action('wp_ajax_nopriv_ont_get_resources', 'ont_get_resources');
 add_action('wp_ajax_ont_get_resources', 'ont_get_resources');
@@ -50,9 +71,9 @@ function ont_get_resources() {
   if($resQuery->have_posts()) :
     while ( $resQuery->have_posts() ) :
       $resQuery->the_post(); ?>
-      
-      <li>
-        hello
+    <ul class="row cards">
+      <li class="col-sm-3 col-xs-12>
+        <?php the_resource_card(get_the_ID()) ?>
       </li>
 
       <?php
