@@ -72,7 +72,7 @@ function ont_get_resources() {
     while ( $resQuery->have_posts() ) :
       $resQuery->the_post(); ?>
     <ul class="row cards">
-      <li class="col-sm-3 col-xs-12>
+      <li class="col-sm-3 col-xs-12">
         <?php the_resource_card(get_the_ID()) ?>
       </li>
 
