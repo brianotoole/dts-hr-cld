@@ -16,7 +16,7 @@ function get_the_resource_card($id) {
   $thumb = 'http://localhost:3000/datis/wp-content/uploads/2018/05/benefits2.png';
 
   $card_html = '
-  <a href="'. get_the_permalink($id) .'" class="resource hc" style="background-image:url('. $thumb .')">'.
+  <a href="'. get_the_permalink($id) .'" class="card__overlay" style="background:url('. $thumb .')">'.
     '<h5 class="card__type">Type</h5>'.
     '<h4 class="card__title">'. get_the_title($id) .'</h4>'.
     '<span class="card__more">View</span>'.

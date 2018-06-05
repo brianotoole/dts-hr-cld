@@ -9,17 +9,18 @@
 
 .card {
   position: relative;
-  //background: $color__secondary;
   //flex: 1 0 calc(25% - 30px);
   //margin: 15px;
-  height: 250px;
+  height: 275px;
   padding: 15px;
   text-align: left;
   a { //clickable
+    position: relative;
+    display: block;
     width: 100%;
     height: 100%;
     padding: calc-em(15px);
-    display: block;
+    color: white;
   }
 }
 
@@ -35,9 +36,8 @@
 .card__more {
   display: inline-block;
   position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: calc-em(15px);
+  right: calc-em(15px);
+  bottom: calc-em(15px);
   text-transform: uppercase;
 }
 
