@@ -1,5 +1,5 @@
 /*
-* Solutions
+** Solutions
 */
 
 .solutions {
@@ -122,5 +122,27 @@
   &:hover:before {
     left: 0;
     right: 0;
+  }
+}
+
+/*
+** Solutions-Single
+*/
+
+.single-solution .solution__item {
+  margin-top: calc-em(50px);
+  margin-bottom: calc-em(50px);
+  @media (min-width: $tablet) {
+    text-align: left;
+  }
+}
+.single-solution .solution__item.reverse {
+  @media (min-width: $tablet) {
+    text-align: right;
+  }
+}
+.single-solution .solution__img-wrap--0 {
+  @media (min-width: $tablet) {
+    margin-top: calc-em(-150px);
   }
 }

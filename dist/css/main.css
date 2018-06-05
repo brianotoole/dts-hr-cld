@@ -2055,7 +2055,7 @@ body img.gform_ajax_spinner {
     width: 75%; }
 
 /*
-* Solutions
+** Solutions
 */
 .solutions {
   position: relative;
@@ -2159,3 +2159,21 @@ body img.gform_ajax_spinner {
   .solution__btn:hover:before {
     left: 0;
     right: 0; }
+
+/*
+** Solutions-Single
+*/
+.single-solution .solution__item {
+  margin-top: 3.125em;
+  margin-bottom: 3.125em; }
+  @media (min-width: 768px) {
+    .single-solution .solution__item {
+      text-align: left; } }
+
+@media (min-width: 768px) {
+  .single-solution .solution__item.reverse {
+    text-align: right; } }
+
+@media (min-width: 768px) {
+  .single-solution .solution__img-wrap--0 {
+    margin-top: -9.375em; } }
