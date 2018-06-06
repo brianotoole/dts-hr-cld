@@ -71,13 +71,27 @@ function ont_get_resources() {
   $type = $_POST["type"];
   $topic = $_POST["topic"];
 
+  // default for all
   $args = array(
     'post_type' => 'resource',
     'posts_per_page' => $ppp,
     'paged' => $page,
-    'order' => 'DESC'
+    'order' => 'DESC',
   );
-  // if topic
+
+  // if no filers, or == all
+  if ($topic == 'All' && $type == 'All') {
+    $args = array(
+      'post_type' => 'resource',
+      'posts_per_page' => $ppp,
+      'paged' => $page,
+      'order' => 'DESC',
+      'relation' => 'AND',
+      'meta_key' => 'is_resource_featured',
+      'meta_value' => '1' //if is featured
+    );
+  }
+  // if topic is filtered
   if ($topic != 'All') {
     $args["tax_query"] = array(
       'relation' => 'AND',
@@ -88,7 +102,7 @@ function ont_get_resources() {
       )
     );
   }
-  // if type
+  // if type is filtered
   if ($type != 'All') {
     $args["tax_query"] = array(
       'relation' => 'AND',
