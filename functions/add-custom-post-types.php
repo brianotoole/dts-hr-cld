@@ -127,9 +127,9 @@ function create_resource_cpt() {
 
 	$labels = array(
 		'name' => __( 'Resources', 'Post Type General Name', 'spx' ),
-		'singular_name' => __( 'resource', 'Post Type Singular Name', 'spx' ),
+		'singular_name' => __( 'Resource', 'Post Type Singular Name', 'spx' ),
 		'menu_name' => __( 'Resources', 'spx' ),
-		'name_admin_bar' => __( 'resource', 'spx' ),
+		'name_admin_bar' => __( 'Resource', 'spx' ),
 		'archives' => __( 'resource Archives', 'spx' ),
 		'attributes' => __( 'resource Attributes', 'spx' ),
 		'parent_item_colon' => __( 'Parent resource:', 'spx' ),
@@ -155,7 +155,7 @@ function create_resource_cpt() {
 		'filter_items_list' => __( 'Filter resources list', 'spx' ),
 	);
 	$args = array(
-		'label' => __( 'resource', 'spx' ),
+		'label' => __( 'Resource', 'spx' ),
 		'description' => __( 'Resources for the site', 'spx' ),
 		'labels' => $labels,
 		'menu_icon' => 'dashicons-book',
