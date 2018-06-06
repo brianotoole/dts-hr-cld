@@ -21,7 +21,7 @@ $featArgs = array(
 $featQuery = new WP_Query($featArgs);
 ?>
 
-<section class="section section--resource-featured">
+<section class="section section--pad section--resource-featured">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 u-text-center">
@@ -35,8 +35,8 @@ $featQuery = new WP_Query($featArgs);
           while ( $featQuery->have_posts() ) :
             $featQuery->the_post(); ?>
             <li class="col-sm-4 col-xs-12 card card--has-footer">
-              <a href="<?php the_permalink(); ?>" class="card__overlay" style="background:linear-gradient( rgba(191, 224, 247, 0.8), rgba(191, 224, 247, 0.99)), url(/datis/wp-content/uploads/2018/05/benefits2.png)">
-                <h5 class="card__type">Type</h5>
+              <a href="<?php the_permalink(); ?>" class="card__overlay" style="background:linear-gradient( rgba(191, 224, 247, 0.7), rgba(191, 224, 247, 0.9)), url(/datis/wp-content/uploads/2018/05/benefits2.png)">
+                <h5 class="card__type"><?php echo get_tax_name($id); ?></h5>
                 <h4 class="card__title"><?php the_title(); ?></h4>
               </a><!--/.card__overlay-->
               <div class="card__footer">
@@ -66,7 +66,7 @@ $featQuery = new WP_Query($featArgs);
       <div class="row center-xs">
         <div class="col-sm-3 col-xs-6 custom-select">
           <select class="topic">
-            <option value="All">All Topics</option>
+            <option value="All">Topic</option>
             <?php foreach ($topics as $topic): ?>
               <option value="<?php echo $topic->term_id ?>"><?php echo $topic->name ?></option>
             <?php endforeach ?>
@@ -75,7 +75,7 @@ $featQuery = new WP_Query($featArgs);
       <?php $types = get_terms(array('taxonomy' => 'type', 'hide_empty' => false)) ?>
         <div class="col-sm-3 col-xs-6 custom-select">
           <select class="type">
-            <option value="All">All Types</option>
+            <option value="All">Type</option>
             <?php foreach ($types as $type): ?>
               <option value="<?php echo $type->term_id ?>"><?php echo $type->name ?></option>
             <?php endforeach ?>

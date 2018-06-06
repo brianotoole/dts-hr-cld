@@ -39,14 +39,24 @@ function get_rgba($color) {
   return ak_convert_hex2rgba($color);
 }
 
+// Get Custom Taxonomy Term Name: Type
+function get_tax_name($id) {
+  $terms = get_the_terms( $post->ID, 'type' );
+  if ( !empty( $terms ) ){
+      // get the first term
+      $term = array_shift( $terms );
+      return $term->slug;
+  }
+}
+
 // Build Resource Card
 function get_the_resource_card($id) {
 
   $thumb = 'http://localhost:3000/datis/wp-content/uploads/2018/05/benefits2.png';
 
   $card_html = '
-  <a href="'. get_the_permalink($id) .'" class="card__overlay" style="background:linear-gradient( '. get_rgba($color) .', 0.8), '. get_rgba($color) .', 0.99)), url('. $thumb .')">'.
-    '<h5 class="card__type">Type</h5>'.
+  <a href="'. get_the_permalink($id) .'" class="card__overlay" style="background:linear-gradient( '. get_rgba($color) .', 0.7), '. get_rgba($color) .', 0.9)), url('. $thumb .')">'.
+    '<h5 class="card__type">'. get_tax_name($id) .'</h5>'.
     '<h4 class="card__title">'. get_the_title($id) .'</h4>'.
     '<span class="card__more">View</span>'.
   '</a>';
