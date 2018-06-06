@@ -1,13 +1,41 @@
 <?php
 
-function get_resource_terms($id) {
-  $terms = get_terms($id); 
-  $count = count($terms); 
-  if ( $count > 0 ) { 
-    foreach ( $terms as $term ) { 
-      echo $term->name; 
-    } 
-  } 
+// Convert HEX to RGBA
+function ak_convert_hex2rgba($color, $opacity = false) {
+  $default = 'rgb(0,0,0)';    
+  
+  if (empty($color))
+      return $default;    
+
+  if ($color[0] == '#')
+      $color = substr($color, 1);
+  
+  if (strlen($color) == 6)
+      $hex = array($color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5]);
+  
+  elseif (strlen($color) == 3)
+      $hex = array($color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2]);
+  
+  else
+      return $default;
+     
+  $rgb = array_map('hexdec', $hex);    
+
+  if ($opacity) {
+      if (abs($opacity) > 1)
+          $opacity = 1.0;
+
+      $output = 'rgba(' . implode(",", $rgb) . ',' . $opacity . '';
+  } else {
+      $output = 'rgba(' . implode(",", $rgb) . '';
+  }    
+  return $output;
+}
+
+// Return RGBA
+function get_rgba($color) {
+  $color = '#323a45';
+  return ak_convert_hex2rgba($color);
 }
 
 // Build Resource Card
@@ -16,7 +44,7 @@ function get_the_resource_card($id) {
   $thumb = 'http://localhost:3000/datis/wp-content/uploads/2018/05/benefits2.png';
 
   $card_html = '
-  <a href="'. get_the_permalink($id) .'" class="card__overlay" style="background:url('. $thumb .')">'.
+  <a href="'. get_the_permalink($id) .'" class="card__overlay" style="background:linear-gradient( '. get_rgba($color) .', 0.8), '. get_rgba($color) .', 0.8)), url('. $thumb .')">'.
     '<h5 class="card__type">Type</h5>'.
     '<h4 class="card__title">'. get_the_title($id) .'</h4>'.
     '<span class="card__more">View</span>'.
