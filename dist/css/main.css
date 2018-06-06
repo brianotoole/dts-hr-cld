@@ -294,6 +294,10 @@ address {
   font-size: 1.2em !important;
   line-height: 1.7; }
 
+.u-re-li {
+  padding: 0;
+  list-style: none; }
+
 .u-text-bold {
   font-weight: bold; }
 
@@ -1567,26 +1571,42 @@ body.nav-open {
   height: 275px;
   padding: 15px;
   text-align: left; }
-  .card a {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 0.9375em;
-    color: white;
-    background-size: cover !important;
-    transition: all 0.3s ease-out; }
+
+.card a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.9375em;
+  color: white;
+  background-size: cover !important;
+  transition: all 0.3s ease-out; }
 
 .card__type {
   text-transform: capitalize;
-  padding-bottom: 0.3125em; }
+  padding-bottom: 0.625em; }
 
 .card__more {
   display: inline-block;
   position: absolute;
   right: 0.9375em;
   bottom: 0.9375em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.card--has-footer {
+  height: auto; }
+
+.card--has-footer a {
+  height: auto; }
+
+.card--has-footer .card__more a {
+  color: #ea8c2a; }
+
+.card__footer {
+  position: relative;
+  padding: 0.9375em;
+  background: #cfcfcf; }
 
 input,
 textarea,
@@ -1665,6 +1685,8 @@ label {
     cursor: pointer;
     background-color: #ea8c2a;
     color: white; }
+    .custom-select select:hover {
+      background-color: #db7a16; }
 
 /*** PLACEHOLDER ***/
 ::-webkit-input-placeholder {

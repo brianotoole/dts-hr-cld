@@ -7,12 +7,59 @@ Field Group Name: Section - All Resources
 // $total_resources = wp_count_posts('resources');
 // $total_resources = $total_resources->publish;
 
+// Featured Section Args
+$featArgs = array(
+  'post_type' => 'resource',
+  'posts_per_page' => 3, //limit
+  //'paged' => $page,
+  'order' => 'DESC',
+  //'relation' => 'AND',
+  'meta_key' => 'is_resource_featured',
+  'meta_value' => '1' //if is featured is yes (value returns 1)
+);
+
+$featQuery = new WP_Query($featArgs);
 ?>
+
+<section class="section section--resource-featured">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 u-text-center">
+        <h2 class="title u-color-primary">Featured</h2>
+      </div>
+    </div>
+    <div class="row u-re-li">
+
+      <?php
+        if($featQuery->have_posts()) :
+          while ( $featQuery->have_posts() ) :
+            $featQuery->the_post(); ?>
+            <li class="col-sm-4 col-xs-12 card card--has-footer">
+              <a href="<?php the_permalink(); ?>" class="card__overlay" style="background:linear-gradient( rgba(191, 224, 247, 0.8), rgba(191, 224, 247, 0.99)), url(/datis/wp-content/uploads/2018/05/benefits2.png)">
+                <h5 class="card__type">Type</h5>
+                <h4 class="card__title"><?php the_title(); ?></h4>
+              </a><!--/.card__overlay-->
+              <div class="card__footer">
+                <p><?php echo wp_trim_words( get_the_content() , '25', '…' ); ?></p>
+                <span class="card__more"><a href="<?php the_permalink(); ?>">View</a></span>
+              </div><!--/.card__footer-->
+            </li><!--/.card-->
+            <?php
+          endwhile;
+        endif;
+
+        wp_reset_query();
+    
+      ?>
+
+    </div><!--/.row-->
+  </div><!--/.container-->
+</section>
 
 <section class="section section--resource-list">
   <div class="container">
 
-  <p class="col-sm-offset-1 col-sm-10">See a sampling of our most popular resources below. Or, use the filters to browse through our full library.</p>
+  <p class="col-sm-offset-1 col-sm-10 col-xs-12 u-text-center">See a sampling of our most popular resources below. Or, use the filters to browse through our full library.</p>
   
     <div class="filters">
       <?php $topics = get_terms(array('taxonomy' => 'topic', 'hide_empty' => false)) ?>

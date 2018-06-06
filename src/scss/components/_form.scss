@@ -82,7 +82,9 @@ label {
     cursor: pointer;
     background-color: $color__primary;
     color: white;
-
+    &:hover {
+      background-color: $color__primary--dark;
+    }
   }
 }
 

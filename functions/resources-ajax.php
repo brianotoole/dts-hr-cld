@@ -87,8 +87,8 @@ function ont_get_resources() {
       'paged' => $page,
       'order' => 'DESC',
       'relation' => 'AND',
-      'meta_key' => 'is_resource_featured',
-      'meta_value' => '1' //if is featured
+      'meta_key' => 'is_resource_popular',
+      'meta_value' => '1' //if is checked as popular section
     );
   }
   // if topic is filtered
