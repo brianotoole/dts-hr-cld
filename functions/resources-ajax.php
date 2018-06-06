@@ -49,13 +49,17 @@ function get_tax_name($id) {
   }
 }
 
+// Get Single-item's Featured Img URL
+function get_thumb_img($id) {
+  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); 
+  return $image[0];
+}
+
 // Build Resource Card
 function get_the_resource_card($id) {
 
-  $thumb = 'http://localhost:3000/datis/wp-content/uploads/2018/05/benefits2.png';
-
   $card_html = '
-  <a href="'. get_the_permalink($id) .'" class="card__overlay" style="background:linear-gradient( '. get_rgba($color) .', 0.7), '. get_rgba($color) .', 0.9)), url('. $thumb .')">'.
+  <a href="'. get_the_permalink($id) .'" class="card__overlay" style="background:linear-gradient(to bottom right, '. get_rgba($color) .', 0.2), '. get_rgba($color) .', 0.6)), url('. get_thumb_img($id) .')">'.
     '<h5 class="card__type">'. get_tax_name($id) .'</h5>'.
     '<h4 class="card__title">'. get_the_title($id) .'</h4>'.
     '<span class="card__more">View</span>'.
