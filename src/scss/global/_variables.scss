@@ -11,6 +11,7 @@ $navy:   #1a2940;
 $white:  #ffffff;
 $black:  #111111;
 $grey:   #cfcfcf;
+$l-grey: #e6e6e6;
 $red:    #ff3434;
 
 // brand colors
@@ -20,6 +21,7 @@ $color__tertiary:    $navy;
 $color__accent:      $l-blue;
 $color__text:        $black;
 $color__border:      $grey;
+$color__grey:        $l-grey; 
 
 // brand colors--darkens
 $color__primary--dark: darken($color__primary, 7%);
