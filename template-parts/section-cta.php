@@ -1,17 +1,19 @@
 <?php
+// Field Group == Component: CTA
 $cta_heading = get_field('cta_heading');
-$cta_button_text = get_field('cta_button_text');
-$cta_button_link = get_field('cta_button_link');
+$cta_button = get_field('cta_button');
 ?>
 <?php if ($cta_heading) : ?>
- <div class="cta">
+<section class="section section--pad-md-even section--tertiary section--cta">
+ <div class="col-xs-12 cta u-text-center">
   <div class="cta__inner">
     <div class="container">
       <div class="cta__heading-wrapper">
-        <h2 class="u-text-white js-fit-text"><?php echo $cta_heading; ?></h2>
+        <h2 class="cta__title"><?php echo $cta_heading; ?></h2>
       </div>
     </div>
-    <a href="<?php if (!empty($cta_button_link)) { echo $cta_button_link['url']; } else { echo get_site_url() . '/contact'; } ?>" class="btn btn--large btn--primary"><?php echo $cta_button_text; ?></a>
+    <a href="<?php if (!empty($cta_button['url'])) { echo $cta_button['url']; } else { echo get_site_url() . '/contact'; } ?>" class="btn btn--primary"><?php echo $cta_button['title']; ?></a>
   </div>
-</div>
+  </div>
+</section>
 <?php endif; ?>

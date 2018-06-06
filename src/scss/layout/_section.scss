@@ -30,6 +30,10 @@
     padding: 6em 0 3em;
   }
 
+  &--pad-md-even {
+    padding: 6em 0;
+  }
+
   &--pad-top-xl {
     @media (min-width: $tablet) {
       padding-top: 10em;
@@ -49,6 +53,10 @@
   }
   &--accent {
     background-color: $color__accent;
+  }
+  &--tertiary {
+    background-color: $color__tertiary;
+    color: white;
   }
   &--white {
     background-color: white;

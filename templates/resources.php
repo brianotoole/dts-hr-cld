@@ -6,8 +6,13 @@
 // HERO
 get_template_part('template-parts/hero', '');
 
-// SOLUTIONS LIST
+// RESOURCES LIST
 get_template_part('template-parts/resources', 'all');
+
+// CTA (if yes)
+if (get_field('has_cta') == 'true') :
+get_template_part('template-parts/section', 'cta');
+endif;
 
 ?>
 
