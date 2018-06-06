@@ -79,6 +79,8 @@ label {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    text-align: center;
+    text-align-last: center;
     cursor: pointer;
     background-color: $color__primary;
     color: white;
