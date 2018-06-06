@@ -9,12 +9,12 @@
 
 .card {
   position: relative;
-  height: 275px;
+  height: 280px;
   padding: 15px;
   text-align: left;
 }
 
-.card a {
+.card > a {
   position: relative;
   display: block;
   width: 100%;
@@ -23,6 +23,9 @@
   color: white;
   background-size: cover !important;
   transition: all 0.3s ease-out;
+  &:hover {
+    
+  }
 }
 
 .card__type {
@@ -48,8 +51,8 @@
   height: auto;
 }
 
-.card--has-footer a {
-  height: auto;
+.card--has-footer > a {
+  height: 200px;
 }
 
 .card--has-footer .card__more a {

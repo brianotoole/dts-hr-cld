@@ -1568,11 +1568,11 @@ body.nav-open {
 
 .card {
   position: relative;
-  height: 275px;
+  height: 280px;
   padding: 15px;
   text-align: left; }
 
-.card a {
+.card > a {
   position: relative;
   display: block;
   width: 100%;
@@ -1597,11 +1597,12 @@ body.nav-open {
 .card--has-footer {
   height: auto; }
 
-.card--has-footer a {
-  height: auto; }
+.card--has-footer > a {
+  height: 200px; }
 
 .card--has-footer .card__more a {
-  color: #ea8c2a; }
+  color: #ea8c2a;
+  padding: 0; }
 
 .card__footer {
   position: relative;
@@ -1682,6 +1683,8 @@ label {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    text-align: center;
+    text-align-last: center;
     cursor: pointer;
     background-color: #ea8c2a;
     color: white; }

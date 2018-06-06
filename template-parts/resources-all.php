@@ -35,12 +35,12 @@ $featQuery = new WP_Query($featArgs);
           while ( $featQuery->have_posts() ) :
             $featQuery->the_post(); ?>
             <li class="col-sm-4 col-xs-12 card card--has-footer">
-              <a href="<?php the_permalink(); ?>" class="card__overlay" style="background:linear-gradient( rgba(191, 224, 247, 0.7), rgba(191, 224, 247, 0.9)), url(/datis/wp-content/uploads/2018/05/benefits2.png)">
+              <a href="<?php the_permalink(); ?>" class="card__overlay" style="background:linear-gradient(to bottom right, rgba(110, 154, 185, 0.2), rgba(110, 154, 185, 0.6)), url('<?php echo get_thumb_img($id); ?>')">
                 <h5 class="card__type"><?php echo get_tax_name($id); ?></h5>
                 <h4 class="card__title"><?php the_title(); ?></h4>
               </a><!--/.card__overlay-->
               <div class="card__footer">
-                <p><?php echo wp_trim_words( get_the_content() , '25', '…' ); ?></p>
+                <p><?php echo wp_trim_words( get_the_content() , '20', '…' ); ?></p>
                 <span class="card__more"><a href="<?php the_permalink(); ?>">View</a></span>
               </div><!--/.card__footer-->
             </li><!--/.card-->
