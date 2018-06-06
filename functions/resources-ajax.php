@@ -34,7 +34,8 @@ function ak_convert_hex2rgba($color, $opacity = false) {
 
 // Return RGBA
 function get_rgba($color) {
-  $color = '#323a45';
+  //$color = '#323a45';
+  $color = get_field('overlay_color');
   return ak_convert_hex2rgba($color);
 }
 
@@ -44,7 +45,7 @@ function get_the_resource_card($id) {
   $thumb = 'http://localhost:3000/datis/wp-content/uploads/2018/05/benefits2.png';
 
   $card_html = '
-  <a href="'. get_the_permalink($id) .'" class="card__overlay" style="background:linear-gradient( '. get_rgba($color) .', 0.8), '. get_rgba($color) .', 0.8)), url('. $thumb .')">'.
+  <a href="'. get_the_permalink($id) .'" class="card__overlay" style="background:linear-gradient( '. get_rgba($color) .', 0.8), '. get_rgba($color) .', 0.99)), url('. $thumb .')">'.
     '<h5 class="card__type">Type</h5>'.
     '<h4 class="card__title">'. get_the_title($id) .'</h4>'.
     '<span class="card__more">View</span>'.

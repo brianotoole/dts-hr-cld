@@ -9,13 +9,15 @@ Field Group Name: Section - All Resources
 
 ?>
 
-<section class="section--resource-list">
+<section class="section section--resource-list">
   <div class="container">
+
+  <p class="col-sm-offset-1 col-sm-10">See a sampling of our most popular resources below. Or, use the filters to browse through our full library.</p>
   
     <div class="filters">
       <?php $topics = get_terms(array('taxonomy' => 'topic', 'hide_empty' => false)) ?>
       <div class="row center-xs">
-        <div class="col-sm-4 col-xs-6 select">
+        <div class="col-sm-3 col-xs-6 custom-select">
           <select class="topic">
             <option value="All">All Topics</option>
             <?php foreach ($topics as $topic): ?>
@@ -24,7 +26,7 @@ Field Group Name: Section - All Resources
           </select>
         </div><!--/.col.select-->
       <?php $types = get_terms(array('taxonomy' => 'type', 'hide_empty' => false)) ?>
-        <div class="col-sm-4 col-xs-6 select">
+        <div class="col-sm-3 col-xs-6 custom-select">
           <select class="type">
             <option value="All">All Types</option>
             <?php foreach ($types as $type): ?>
@@ -36,17 +38,16 @@ Field Group Name: Section - All Resources
 
     </div><!--/.filters-->
 
-    <ul id="js-resources-list" class="row center-xs cards"></ul>
+    <ul id="js-resources-list" class="row start-xs cards"></ul>
 
-
-    <div class="load-more u-text-center">
-      <a id="js-load-more" class="btn btn--primary">Load More</a>
+    <div class="u-text-center">
+        <div class="load-more">
+          <a id="js-load-more" class="btn btn--primary">Load More</a>
+        </div>
+        <img class="loading-spinner tac" src="<?php echo get_template_directory_uri() . '/dist/img/loading.svg'; ?>">
+        <div class="all-shown">All resources are shown.</div>
+        <div class="none-shown">No resources found.</div>
     </div>
-    <img class="loading-spinner tac" src="<?php echo get_template_directory_uri() . '/dist/img/loading.svg'; ?>">
-    <div class="all-shown">All resources are shown.</div>
-    <div class="none-shown">No resources found.</div>
-
-
 
 
   <script type="text/javascript">
@@ -61,7 +62,7 @@ Field Group Name: Section - All Resources
         type = (typeof type == 'undefined' ? 'All' : type);
         topic = (typeof topic == 'undefined' ? 'All' : topic);
 
-        console.log('get_resources', ppp, page, type, topic);
+        //console.log('get_resources', ppp, page, type, topic);
 
         $('.loading-spinner').show();
         $('#js-load-more').hide();
