@@ -130,13 +130,14 @@
 */
 
 .single-solution .solution__item {
+  align-items: center;
   margin-top: calc-em(50px);
   margin-bottom: calc-em(50px);
   @media (min-width: $tablet) {
     text-align: left;
   }
 }
-.single-solution .solution__item.reverse {
+.single-solution .solution__item.reverse .solution__wrap {
   @media (min-width: $tablet) {
     text-align: right;
   }

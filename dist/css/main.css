@@ -2350,6 +2350,7 @@ body img.gform_ajax_spinner {
 ** Solutions-Single
 */
 .single-solution .solution__item {
+  align-items: center;
   margin-top: 3.125em;
   margin-bottom: 3.125em; }
   @media (min-width: 768px) {
@@ -2357,7 +2358,7 @@ body img.gform_ajax_spinner {
       text-align: left; } }
 
 @media (min-width: 768px) {
-  .single-solution .solution__item.reverse {
+  .single-solution .solution__item.reverse .solution__wrap {
     text-align: right; } }
 
 @media (min-width: 768px) {
