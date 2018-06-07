@@ -65,8 +65,25 @@ function get_the_resource_card($id) {
     '<span class="card__more">View</span>'.
   '</a>';
 
-  return $card_html;
+  $gated_card_html = '
+  <div class="card-flip">'.
+  '<a class="card__overlay flip">'.
+    '<div class="front" style="background:linear-gradient(to bottom right, '. get_rgba($color) .', 0.8), '. get_rgba($color) .', 0.99)), url('. get_thumb_img($id) .')">'.
+      '<h5 class="card__type">'. get_tax_name($id) .'</h5>'.
+      '<h4 class="card__title">'. get_the_title($id) .'</h4>'.
+      '<span class="card__more">View</span>'.
+    '</div>'. //.front
+    '<div class="back">'.
+      '<div class="card__form">'. get_field('gated_form_embed') .'</div>'.
+    '</div>'. //.back
+  '</a>'. //.card
+  '</div>'; //.card-flip
 
+  if (get_field('is_resource_gated') == 'true') :
+    return $gated_card_html;
+  else : 
+    return $card_html;
+  endif;
 }
 
 function the_resource_card($id) {
