@@ -14514,6 +14514,25 @@ var shapeLength = shape.getTotalLength();
 console.log(shapeLength); //89.26751708984375
 */
 
+$('.solution__item').each(function () {
+  //build tween
+  var tween = _TweenMax2.default.from($(this), 1, {
+    autoAlpha: 0,
+    //scale: 0.95, 
+    y: '+=10',
+    ease: Power1.easeOut
+  });
+  //build scene
+  var projectScene = new _ScrollMagic2.default.Scene({
+    //scene options
+    triggerElement: this,
+    triggerHook: 0.8,
+    reverse: false //dont repeat scene on scroll back up 
+  }).setTween(tween) //trigger tween
+  //.addIndicators({name: 'tween:module',}) //DEBUG ONLY; uses plugin
+  .addTo(controller);
+});
+
 // build scene for scrolling line animation on 'benefits'
 var scene = new _ScrollMagic2.default.Scene({
   triggerElement: ".benefits",
