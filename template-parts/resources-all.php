@@ -92,7 +92,7 @@ $featQuery = new WP_Query($featArgs);
           <a id="js-load-more" class="btn btn--primary">Load More</a>
         </div>
         <img class="loading-spinner tac" src="<?php echo get_template_directory_uri() . '/dist/img/loading.svg'; ?>">
-        <div class="all-shown">All resources are shown.</div>
+        <!--<div class="all-shown">All resources are shown.</div>-->
         <div class="none-shown">No resources found.</div>
     </div>
 
@@ -113,7 +113,7 @@ $featQuery = new WP_Query($featArgs);
 
         $('.loading-spinner').show();
         $('#js-load-more').hide();
-        $('.all-shown').hide();
+        //$('.all-shown').hide();
         $('.none-shown').hide();
         $('.filters select').attr('disabled', true);
 
@@ -136,7 +136,7 @@ $featQuery = new WP_Query($featArgs);
               $('.none-shown').show();
             } else if ($('#js-resources-list li').length == total_resources) {
               $('.loading-spinner').hide();
-              $('.all-shown').show();
+              //$('.all-shown').show();
               $('#js-load-more').hide();
             } else {
               $('#js-load-more').show();
