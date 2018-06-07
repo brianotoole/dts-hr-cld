@@ -2,7 +2,7 @@
   * Card
   */
 
-$card__shadow: rgba($color__border, 0.7) 0px 0px 20px 0px;
+$card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
 
 .cards {
   display: flex;
@@ -29,6 +29,7 @@ $card__shadow: rgba($color__border, 0.7) 0px 0px 20px 0px;
   transition: all 0.25s ease-out;
   &:hover {
     background-color: rgba(white, 0);
+    color: white;
     background-blend-mode: screen;	
     box-shadow: $card__shadow;
     .card__more {
@@ -157,3 +158,6 @@ $card__shadow: rgba($color__border, 0.7) 0px 0px 20px 0px;
   background: $color__grey;
   color: $color__text;
 }
+
+.grow { transition: transform 0.2s ease-out; transform: scale(1);-webkit-backface-visibility: hidden; }
+.grow:hover { transform: scale(1.025); }
