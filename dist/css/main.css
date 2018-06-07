@@ -1589,7 +1589,7 @@ body.nav-open {
   .card > a:hover {
     background-color: rgba(255, 255, 255, 0);
     background-blend-mode: screen;
-    box-shadow: rgba(207, 207, 207, 0.95) 0px 0px 20px 0px; }
+    box-shadow: rgba(207, 207, 207, 0.4) 0px 0px 20px 0px; }
     .card > a:hover .card__more:before {
       content: "";
       position: absolute;
@@ -1651,6 +1651,50 @@ body.nav-open {
   position: relative;
   padding: 0.9375em;
   background: #e6e6e6; }
+
+.card-flip {
+  perspective: 1000px; }
+  .card-flip > a {
+    position: relative;
+    z-index: 0; }
+  .card-flip:hover .flip {
+    transform: rotateY(180deg);
+    box-shadow: rgba(207, 207, 207, 0.4) 0px 0px 20px 0px; }
+
+.card-flip,
+.front,
+.back {
+  width: 100%;
+  height: 100%; }
+
+.flip {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  transform-style: preserve-3d; }
+
+.front,
+.back {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0.9375em;
+  color: white;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.front {
+  transform: rotateY(0deg);
+  z-index: 2; }
+
+.back {
+  transform: rotateY(180deg);
+  background: #e6e6e6;
+  color: #111111; }
 
 input,
 textarea,
