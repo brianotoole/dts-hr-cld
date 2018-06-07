@@ -1,6 +1,7 @@
 const path = require('path');
-var ExtractText = require('extract-text-webpack-plugin');
-var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const ExtractText = require('extract-text-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 var config = {
   entry: ['./src/js/main.js', './src/scss/main.scss'],
@@ -13,7 +14,7 @@ var config = {
       { // STYLE LOADERS
         test: /\.(css|sass|scss)$/,
         use: ExtractText.extract({
-          use: ['css-loader', 'sass-loader'],
+          use: ['css-loader', 'postcss-loader', 'sass-loader'],
         })
       },
       { // SCRIPT LOADERS
