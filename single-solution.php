@@ -12,6 +12,9 @@ if (get_field('has_cta') == 'true') :
 get_template_part('template-parts/section', 'cta');
 endif;
 
+// RELATED RESOURCES
+get_template_part('template-parts/section', 'related_resources');
+
 ?>
 
 <?php get_footer(); ?>
