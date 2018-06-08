@@ -79,9 +79,30 @@ function get_the_resource_card($id) {
   '</a>'. //.card
   '</div>'; //.card-flip
 
-  if (get_field('is_resource_gated') == 'true') :
+  $related_card_html = '
+  <a href="'. get_the_permalink($id) .'" class="card__overlay grow" style="background:linear-gradient(to bottom right, '. get_rgba($color) .', 0.99), '. get_rgba($color) .', 0.99)), url('. get_thumb_img($id) .')">'.
+    '<span class="card__more">'. get_tax_name($id) .' <i class="fas fa-long-arrow-alt-right"></i></span>'.
+  '</a>';
+
+  $related_gated_card_html = '
+  <div class="card-flip">'.
+  '<a class="flip">'.
+    '<div class="card__overlay front" style="background:linear-gradient(to bottom right, '. get_rgba($color) .', 0.99), '. get_rgba($color) .', 0.99)), url('. get_thumb_img($id) .')">'.
+    '<span class="card__more">'. get_tax_name($id) .' <i class="fas fa-long-arrow-alt-right"></i></span>'.
+    '</div>'. //.front
+    '<div class="back">'.
+      '<div class="card__form">'. get_field('gated_form_embed') .'</div>'.
+    '</div>'. //.back
+  '</a>'. //.card
+  '</div>'; //.card-flip
+
+  if (is_singular() && get_field('is_resource_gated') == 'true' ) :
+    return $related_gated_card_html;
+  elseif (is_singular() ) :
+      return $related_card_html;
+  elseif (get_field('is_resource_gated') == 'true' ) :
     return $gated_card_html;
-  else : 
+  else :
     return $card_html;
   endif;
 }
