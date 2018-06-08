@@ -334,6 +334,13 @@ address {
 .bg-tertiary {
   background-color: #1a2940; }
 
+.u-pad {
+  padding-top: 2em;
+  padding-bottom: 2em; }
+
+.u-pad-top {
+  padding-top: 2em; }
+
 /**
   * -- LAYOUT
   */
@@ -1726,6 +1733,8 @@ body.nav-open {
   height: 280px;
   padding: 15px;
   text-align: left; }
+  .card--related {
+    height: 375px; }
 
 .card__overlay {
   position: relative;
