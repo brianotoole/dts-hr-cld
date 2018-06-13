@@ -14285,7 +14285,7 @@ $(function () {
 });
 
 /**
- * On click of resource gated card item, add active class to "flip" it
+ * g
  */
 $(document).on('click', '.card-flip', function () {
   console.log('click');
