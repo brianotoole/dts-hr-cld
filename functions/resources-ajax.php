@@ -99,7 +99,7 @@ function get_the_resource_card($id) {
   if (is_singular() && get_field('is_resource_gated') == 'true' ) :
     return $related_gated_card_html;
   elseif (is_singular() ) :
-      return $related_card_html;
+    return $related_card_html;
   elseif (get_field('is_resource_gated') == 'true' ) :
     return $gated_card_html;
   else :

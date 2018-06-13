@@ -14285,6 +14285,14 @@ $(function () {
 });
 
 /**
+ * On click of resource gated card item, add active class to "flip" it
+ */
+$(document).on('click', '.card-flip', function () {
+  console.log('click');
+  $(this).toggleClass('active');
+});
+
+/**
  * Events that fire on Window Scroll
  */
 

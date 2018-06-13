@@ -1827,7 +1827,7 @@ body.nav-open {
 .card-flip {
   -webkit-perspective: 800px;
           perspective: 800px; }
-  .card-flip:hover .flip {
+  .card-flip.active .flip {
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
     -webkit-box-shadow: rgba(207, 207, 207, 0.4) 0px 0px 20px 0px;
