@@ -2494,32 +2494,34 @@ body img.gform_ajax_spinner {
 
 .solutions__line {
   position: absolute;
-  top: 10em;
+  top: 5em;
   width: 100%;
   height: auto; }
   .solutions__line svg {
     display: block;
     margin: 0 auto;
-    max-width: 59%; }
+    max-width: 73%; }
   .solutions__line path {
-    fill: #cfcfcf;
-    stroke: transparent;
-    stroke-width: 1px;
+    fill: transparent;
+    stroke: #cfcfcf;
+    stroke-width: 2px;
+    stroke-dasharray: 2000;
     visibility: hidden; }
     .solutions__line path.active {
+      animation: draw 5s reverse linear;
       visibility: visible; }
 
 @-webkit-keyframes draw {
   from {
     stroke-dashoffset: 0; }
   to {
-    stroke-dashoffset: 90; } }
+    stroke-dashoffset: 2000; } }
 
 @keyframes draw {
   from {
     stroke-dashoffset: 0; }
   to {
-    stroke-dashoffset: 90; } }
+    stroke-dashoffset: 2000; } }
 
 .solution__item {
   margin-top: 1.5625em;

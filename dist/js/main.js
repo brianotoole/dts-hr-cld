@@ -14504,7 +14504,7 @@ $('.solutions path').each(function () {
   var tweenSvg = _TweenMax2.default.from($(this), 1, {
     //autoAlpha: 0, 
     //scale: 0.95, 
-    fill: '#323a45', //color__secondary
+    stroke: '#b7b7b7',
     ease: Power1.easeNone
   });
 
@@ -14517,9 +14517,10 @@ $('.solutions path').each(function () {
   .addTo(controller);
 });
 
-/*var shape = document.querySelector('.a path');
+/* get path length 
+var shape = document.querySelector('.a path');
 var shapeLength = shape.getTotalLength();
-console.log(shapeLength); //89.26751708984375
+console.log(shapeLength);
 */
 
 $('.solution__item').each(function () {
