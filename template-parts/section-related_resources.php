@@ -42,7 +42,6 @@ $relatedQuery = new WP_Query($relatedArgs);
         <a href="<?php echo home_url(); ?>/resources" class="btn btn--primary">View All Resources</a>
       </div><!--/.col-->
     </div><!--/.row-->
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id repellat pariatur fuga in dolorem nemo consectetur expedita laborum? Ratione beatae unde hic sit, sed assumenda est perspiciatis nam adipisci.
-
+    
   </div><!--/.container-->
 </section>
