@@ -66,7 +66,7 @@ function get_the_resource_card($id) {
   '</a>';
 
   $gated_card_html = '
-  <div class="card-flip">'.
+  <div class="card-flip grow">'.
   '<a class="flip">'.
     '<div class="card__overlay front" style="background:linear-gradient(to bottom right, '. get_rgba($color) .', 0.99), '. get_rgba($color) .', 0.99)), url('. get_thumb_img($id) .')">'.
       '<h5 class="card__type">'. get_tax_name($id) .'</h5>'.
@@ -85,7 +85,7 @@ function get_the_resource_card($id) {
   '</a>';
 
   $related_gated_card_html = '
-  <div class="card-flip">'.
+  <div class="card-flip grow">'.
   '<a class="flip">'.
     '<div class="card__overlay front" style="background:linear-gradient(to bottom right, '. get_rgba($color) .', 0.99), '. get_rgba($color) .', 0.99)), url('. get_thumb_img($id) .')">'.
     '<span class="card__more">'. get_tax_name($id) .' <i class="fas fa-long-arrow-alt-right"></i></span>'.
