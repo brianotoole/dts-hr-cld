@@ -2,6 +2,7 @@
 // Field Group == Component: CTA
 $cta_heading = get_field('cta_heading');
 $cta_button = get_field('cta_button');
+$cta_form = get_field('cta_form_embed')
 ?>
 <?php if ($cta_heading) : ?>
 <section class="section section--pad-md-even section--tertiary section--cta">
@@ -12,7 +13,8 @@ $cta_button = get_field('cta_button');
         <h2 class="cta__title"><?php echo $cta_heading; ?></h2>
       </div>
     </div>
-    <a href="<?php if (!empty($cta_button['url'])) { echo $cta_button['url']; } else { echo get_site_url() . '/contact'; } ?>" class="btn btn--primary"><?php echo $cta_button['title']; ?></a>
+    <a id="js-expand" class="btn btn--primary"><?php echo $cta_button; ?></a>
+    <div class="cta__form" style="display: none;"><?php echo $cta_form; ?></div>
   </div>
   </div>
 </section>

@@ -341,6 +341,12 @@ address {
 .u-pad-top {
   padding-top: 2em; }
 
+.u-visible {
+  visibility: visible; }
+
+.u-hidden {
+  visibility: hidden; }
+
 /**
   * -- LAYOUT
   */

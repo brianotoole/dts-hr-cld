@@ -14285,11 +14285,19 @@ $(function () {
 });
 
 /**
- * g
+ * Card flip for gated content
  */
 $(document).on('click', '.card-flip', function () {
   console.log('click');
   $(this).toggleClass('active');
+});
+
+/**
+ * CTA button on click expand to show content (form)
+ */
+$('#js-expand').click(function (e) {
+  $('.cta__form').slideToggle();
+  $(this).toggleClass('u-hidden');
 });
 
 /**
