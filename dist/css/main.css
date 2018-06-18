@@ -1584,7 +1584,9 @@ body.nav-open {
   bottom: -20%;
   right: 0;
   width: 500px;
+  width: 45vw;
   height: 75%;
+  height: 75vh;
   z-index: 9; }
 
 /**
