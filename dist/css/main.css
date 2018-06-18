@@ -2488,6 +2488,18 @@ body img.gform_ajax_spinner {
 /*
 ** About
 */
+.row--stats {
+  padding-top: 3em; }
+
+.row--text-blocks {
+  padding-top: 5em; }
+
+.row--icon-blocks {
+  padding-top: 3em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .stat {
   height: 100%;
   background: #cfcfcf;
@@ -2495,6 +2507,15 @@ body img.gform_ajax_spinner {
 
 .stat__number {
   color: #323a45; }
+
+.icon-block {
+  position: relative; }
+
+.icon-block img {
+  max-width: 90%; }
+
+.icon-block__title {
+  height: 100%; }
 
 /*
 ** Solutions

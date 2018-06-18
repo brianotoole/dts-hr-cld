@@ -2,6 +2,19 @@
 ** About
 */
 
+.row--stats {
+  padding-top: 3em;
+}
+
+.row--text-blocks {
+  padding-top: 5em;
+}
+
+.row--icon-blocks {
+  padding-top: 3em;
+  align-items: center;
+}
+
 .stat {
   height: 100%; //equal height content
   background: $color__border;
@@ -10,4 +23,16 @@
 
 .stat__number {
   color: $color__secondary;
+}
+
+.icon-block {
+  position: relative;
+}
+
+.icon-block img {
+  max-width:90%;
+}
+
+.icon-block__title {
+  height: 100%;
 }
