@@ -1563,8 +1563,8 @@ body.nav-open {
           align-items: flex-start; }
 
 .hero--about .hero__text {
-  padding-top: 5em;
-  height: calc(88vh - 80px);
+  padding-top: 3.75em;
+  height: calc(96vh - 80px);
   position: relative; }
 
 .hero--about .hero__button {

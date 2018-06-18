@@ -79,8 +79,8 @@ $header__height: 80px;
 }
 
 .hero--about .hero__text {
-  padding-top: calc-em(80px);
-  height: calc(88vh - #{$header__height});
+  padding-top: calc-em(60px);
+  height: calc(96vh - #{$header__height});
   position: relative;
 }
 
