@@ -59,8 +59,37 @@ $header__height: 80px;
 }
 
 /**
- * About Page Side Image
+ * About Page Hero
  */
+
+
+.hero--about .hero__bg {
+  &--is-full-height {
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    @media (min-width: $tablet) {
+      height: calc(96vh - #{$header__height});
+    }
+  }
+}
+
+.hero--about .hero__inner {
+  align-items: flex-start;
+}
+
+.hero--about .hero__text {
+  padding-top: calc-em(80px);
+  height: calc(88vh - #{$header__height});
+  position: relative;
+}
+
+.hero--about .hero__button {
+  position: absolute;
+  bottom: calc-em(80px);
+}
+
+// the abs. positioned side img
 .hero__side-img {
   background-size: cover;
   background-repeat: no-repeat;
@@ -68,7 +97,7 @@ $header__height: 80px;
   bottom: -20%;
   right: 0;
   width: 500px;
-  height: 85%;
+  height: 75%;
   z-index: 9;
 }
 

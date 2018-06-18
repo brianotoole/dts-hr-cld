@@ -15,7 +15,7 @@ $hero_button = get_field('hero_button');
   endif; 
 ?>
 
-<div class="hero">
+<div class="hero <?php if (is_page('about')) : echo 'hero--about'; endif; ?>">
   <div class="hero__bg hero__bg--is-full-height" style="background-image: url(<?php echo $hero_background; ?>);">
     <div class="hero__inner">
       <div class="container">
