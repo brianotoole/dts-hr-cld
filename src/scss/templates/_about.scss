@@ -1,0 +1,13 @@
+/*
+** About
+*/
+
+.stat {
+  height: 100%; //equal height content
+  background: $color__border;
+  padding: calc-em(30px) calc-em(15px);
+}
+
+.stat__number {
+  color: $color__secondary;
+}

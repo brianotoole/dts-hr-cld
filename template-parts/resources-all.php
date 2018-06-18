@@ -91,7 +91,7 @@ $featQuery = new WP_Query($featArgs);
         <div class="load-more">
           <a id="js-load-more" class="btn btn--primary">Load More</a>
         </div>
-        <img class="loading-spinner tac" src="<?php echo get_template_directory_uri() . '/dist/img/loading.svg'; ?>">
+        <img class="loading-spinner" src="<?php echo get_template_directory_uri() . '/dist/img/loading.svg'; ?>">
         <!--<div class="all-shown">All resources are shown.</div>-->
         <div class="none-shown">No resources found.</div>
     </div>

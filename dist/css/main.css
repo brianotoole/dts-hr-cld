@@ -2486,6 +2486,17 @@ body img.gform_ajax_spinner {
     width: 75%; }
 
 /*
+** About
+*/
+.stat {
+  height: 100%;
+  background: #cfcfcf;
+  padding: 1.875em 0.9375em; }
+
+.stat__number {
+  color: #323a45; }
+
+/*
 ** Solutions
 */
 .solutions {
