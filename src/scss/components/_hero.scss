@@ -58,6 +58,20 @@ $header__height: 80px;
   }
 }
 
+/**
+ * About Page Side Image
+ */
+.hero__side-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -20%;
+  right: 0;
+  width: 500px;
+  height: 85%;
+  z-index: 9;
+}
+
 
 /**
   * Page Hero
