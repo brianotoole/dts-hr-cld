@@ -69,7 +69,7 @@ $header__height: 80px;
     background-position: center center;
     background-size: cover;
     @media (min-width: $tablet) {
-      height: calc(96vh - #{$header__height});
+      height: calc(100vh - #{$header__height});
     }
   }
 }
@@ -80,7 +80,7 @@ $header__height: 80px;
 
 .hero--about .hero__text {
   padding-top: calc-em(60px);
-  height: calc(96vh - #{$header__height});
+  height: calc(100vh - #{$header__height});
   position: relative;
 }
 

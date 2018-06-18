@@ -1555,7 +1555,7 @@ body.nav-open {
   background-size: cover; }
   @media (min-width: 768px) {
     .hero--about .hero__bg--is-full-height {
-      height: calc(96vh - 80px); } }
+      height: calc(100vh - 80px); } }
 
 .hero--about .hero__inner {
   -webkit-box-align: start;
@@ -1564,7 +1564,7 @@ body.nav-open {
 
 .hero--about .hero__text {
   padding-top: 3.75em;
-  height: calc(96vh - 80px);
+  height: calc(100vh - 80px);
   position: relative; }
 
 .hero--about .hero__button {
