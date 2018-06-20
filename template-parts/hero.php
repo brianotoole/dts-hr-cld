@@ -27,10 +27,13 @@ $hero_button = get_field('hero_button');
           ?>
           <div class="col-sm-10 col-xs-12">
             <div class="hero__text">
+              <?php if (is_singular('resource')) : ?>
+              <h4 class="hero__category"><?php echo get_tax_name(); ?></h4>
+              <?php endif; ?>
               <h1 class="hero__heading h2 u-text-bold u-text-upper"><?php the_field('hero_heading'); ?></h1>
               <p class="hero__subheading"><?php the_field('hero_subheading'); ?></p>
               <?php if ( get_field( 'hero_button' ) ) : ?>
-                <div class="hero__button"><a class="js-watch-demo btn btn--primary" target="<?php echo $hero_button['target']; ?>"><?php echo $hero_button['title']; ?></a></div>
+                <div class="hero__button"><a class="<?php if (!is_singular('resource')) : echo 'js-watch-demo'; endif; ?> btn btn--primary" target="<?php echo $hero_button['target']; ?>"><?php echo $hero_button['title']; ?></a></div>
               <?php endif; ?>
             </div><!--/.hero__text-->
           </div>
