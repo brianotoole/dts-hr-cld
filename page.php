@@ -4,17 +4,21 @@
 // HERO
 get_template_part('template-parts/hero', '');
 ?>
-
+<section class="section section--default">
 <div class="container">
-  <?php
-  if ( have_posts() ) :
-    while ( have_posts() ) :
-      the_post();
-      the_content();
-  ?>
-  <?php endwhile; else : ?>
+  <div class="row">
+    <div clas="col-xs-12">
+      <?php
+      if ( have_posts() ) :
+        while ( have_posts() ) :
+          the_post();
+          the_content();
+      ?>
+      <?php endwhile; else : ?>
 
-  <?php endif; ?>
+      <?php endif; ?>
+    </div><!--/.col-->
+  </div><!--/.row-->   
 </div><!--/.container-->
-
+</section>
 <?php get_footer(); ?>
