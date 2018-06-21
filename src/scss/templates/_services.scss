@@ -1,0 +1,35 @@
+/*
+** Services
+*/
+
+.icon {
+  position: relative;
+}
+
+.icon__image img {
+  width: 150px;
+}
+
+.icon__image--centered {
+  margin: 0 auto;
+}
+
+.service-item {
+  position: relative;
+  min-height: 500px; //debug only
+}
+
+.service-item__bg {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.service-item--reverse .service-item__bg {
+  right: initial;
+  left: 0;
+}
