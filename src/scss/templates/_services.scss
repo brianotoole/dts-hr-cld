@@ -46,15 +46,7 @@
 
 .service-item__content {
   @media (min-width: $tablet) {
-    padding-left: 0;
-    padding-right: 3%;
-  }
-}
-
-.service-item--reverse .service-item__content {
-  @media (min-width: $tablet) {
-    padding-left: 3%;
-    padding-right: 0;
+    padding: 3%;
   }
 }
 
@@ -68,4 +60,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  @media (min-width: $tablet) {
+   display: none;
+  }
 }

@@ -3981,13 +3981,7 @@ body img.gform_ajax_spinner {
 
 @media (min-width: 768px) {
   .service-item__content {
-    padding-left: 0;
-    padding-right: 3%; } }
-
-@media (min-width: 768px) {
-  .service-item--reverse .service-item__content {
-    padding-left: 3%;
-    padding-right: 0; } }
+    padding: 3%; } }
 
 .service-item__title {
   padding-top: 1.25em;
@@ -3998,6 +3992,9 @@ body img.gform_ajax_spinner {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
+  @media (min-width: 768px) {
+    .service-item__img--mobile {
+      display: none; } }
 
 /*
 ** Resources
