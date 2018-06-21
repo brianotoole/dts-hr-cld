@@ -64,9 +64,16 @@
       <div class="row service-item <?php if($reverse == true) : echo 'service-item--reverse'; endif; ?>" id="service-item--<?php echo $i; ?>">
         <div class="service-item__bg" style="background-image:url('<?php echo $service_image['url']; ?>')"></div>
         <div class="container">
-          <div class="row">
-            <div class="col-sm-6"><?php echo $service_excerpt; ?></div>
-          </div>
+          <div class="row <?php if($reverse == true) : echo 'reverse'; endif; ?>">
+            <img class="service-item__img service-item__img--mobile u-hidden-desktop col-xs-12" style="background-image:url('<?php echo $service_image['url']; ?>')">
+            <div class="service-item__content col-sm-6 col-xs-12">
+              <h4 class="service-item__title"><?php echo $service_title; ?></h4>
+              <?php echo $service_excerpt; ?>
+              <div class"service-item__btn-wrap">
+                <a href="<?php the_permalink(); ?>" class="service-item__btn solution__btn"><?php echo $service_button_title; ?> <i class="fas fa-long-arrow-alt-right"></i></a>
+              </div>
+            </div><!--/.col-->
+          </div><!--/.row-->
         </div><!--/.container-->
       </div><!--/.service-item-->
         
