@@ -254,4 +254,65 @@ add_action( 'init', 'create_type_tax' );
 
 
 
+// Register Custom Post Type Service
+// Post Type Key: service
+function create_service_cpt() {
+
+	$labels = array(
+		'name' => __( 'Services', 'Post Type General Name', 'spx' ),
+		'singular_name' => __( 'Service', 'Post Type Singular Name', 'spx' ),
+		'menu_name' => __( 'Services', 'spx' ),
+		'name_admin_bar' => __( 'Service', 'spx' ),
+		'archives' => __( 'Service Archives', 'spx' ),
+		'attributes' => __( 'Service Attributes', 'spx' ),
+		'parent_item_colon' => __( 'Parent Service:', 'spx' ),
+		'all_items' => __( 'All Services', 'spx' ),
+		'add_new_item' => __( 'Add New Service', 'spx' ),
+		'add_new' => __( 'Add New', 'spx' ),
+		'new_item' => __( 'New Service', 'spx' ),
+		'edit_item' => __( 'Edit Service', 'spx' ),
+		'update_item' => __( 'Update Service', 'spx' ),
+		'view_item' => __( 'View Service', 'spx' ),
+		'view_items' => __( 'View Services', 'spx' ),
+		'search_items' => __( 'Search Service', 'spx' ),
+		'not_found' => __( 'Not found', 'spx' ),
+		'not_found_in_trash' => __( 'Not found in Trash', 'spx' ),
+		'featured_image' => __( 'Featured Image', 'spx' ),
+		'set_featured_image' => __( 'Set featured image', 'spx' ),
+		'remove_featured_image' => __( 'Remove featured image', 'spx' ),
+		'use_featured_image' => __( 'Use as featured image', 'spx' ),
+		'insert_into_item' => __( 'Insert into Service', 'spx' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Service', 'spx' ),
+		'items_list' => __( 'Services list', 'spx' ),
+		'items_list_navigation' => __( 'Services list navigation', 'spx' ),
+		'filter_items_list' => __( 'Filter Services list', 'spx' ),
+	);
+	$args = array(
+		'label' => __( 'Service', 'spx' ),
+		'description' => __( '', 'spx' ),
+		'labels' => $labels,
+		'menu_icon' => 'dashicons-portfolio',
+		'supports' => array('title', 'editor', ),
+		'taxonomies' => array(),
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'menu_position' => 5,
+		'show_in_admin_bar' => true,
+		'show_in_nav_menus' => true,
+		'can_export' => true,
+		'has_archive' => true,
+		'hierarchical' => false,
+		'exclude_from_search' => false,
+		'show_in_rest' => true,
+		'publicly_queryable' => true,
+		'capability_type' => 'post',
+	);
+	register_post_type( 'service', $args );
+
+}
+add_action( 'init', 'create_service_cpt', 0 );
+
+
+
 ?>
