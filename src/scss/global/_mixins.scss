@@ -31,7 +31,7 @@
 /**
   * Viewport based responsive text
   */
-@mixin fluid-text($min:20, $max:30, $start: $phone, $end: $desktop) {
+@mixin fluid-text($min:20, $max:30, $start: 480, $end: 920) {
   @include fluid-property(font-size, $min, $max, $start, $end);
 }
 
