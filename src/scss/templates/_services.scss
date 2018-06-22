@@ -20,10 +20,11 @@
  */
 .service-item {
   position: relative;
-  min-height: 450px; //debug only
-  + .service-item {
-    padding-top: 4em;
-  }
+  min-height: 440px;
+}
+
+.service-item--is-padded {
+  margin-bottom: 3em;
 }
 
 .service-item__bg {
@@ -31,7 +32,7 @@
   @media (min-width: $tablet) {
     position: absolute;
     right: 0;
-    width: 47%;
+    width: calc(50% - 3em); //minus item's content padding
     height: 100%;
     background-size: cover;
     background-position: center;
@@ -46,7 +47,7 @@
 
 .service-item__content {
   @media (min-width: $tablet) {
-    padding: 3%;
+    padding: 3em;
   }
 }
 
@@ -56,7 +57,7 @@
 }
 
 .service-item__img--mobile {
-  height: 250px;
+  height: 220px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

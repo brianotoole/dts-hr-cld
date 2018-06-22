@@ -39,7 +39,7 @@
 
 <section class="section section--services-list section--white">
   
-  <div class="services">
+  <div class="services u-pt-20">
     <?php
       $service_args = array(
         'post_type'   => 'service',
@@ -61,11 +61,11 @@
           $reverse = true;
           endif;
       ?>
-      <div class="row service-item <?php if($reverse == true) : echo 'service-item--reverse'; endif; ?>" id="service-item--<?php echo $i; ?>">
+      <div class="row service-item service-item--is-padded <?php if($reverse == true) : echo 'service-item--reverse'; endif; ?>" id="service-item--<?php echo $i; ?>">
         <div class="service-item__bg" style="background-image:url('<?php echo $service_image['url']; ?>')"></div>
         <div class="container">
           <div class="row <?php if($reverse == true) : echo 'reverse'; endif; ?>">
-            <img class="service-item__img service-item__img--mobile u-hidden-desktop col-xs-12" style="background-image:url('<?php echo $service_image['url']; ?>')">
+            <img class="service-item__img service-item__img--mobile col-xs-12" style="background-image:url('<?php echo $service_image['url']; ?>')">
             <div class="service-item__content col-sm-6 col-xs-12">
               <h4 class="service-item__title"><?php echo $service_title; ?></h4>
               <?php echo $service_excerpt; ?>
