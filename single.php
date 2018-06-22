@@ -1,9 +1,18 @@
 <?php get_header(); ?>
 
-<?php get_template_part('template-parts/section','page-hero'); ?>
+<?php
+// HERO
+get_template_part('template-parts/hero', '');
 
-<div class="container content">
-  <?php get_template_part('template-parts/loop','content'); ?>
-</div>
+// SOLUTIONS LIST
+get_template_part('template-parts/resources', 'single');
+
+// RELATED RESOURCES
+//get_template_part('template-parts/section', 'related_resources');
+
+// CTA 
+get_template_part('template-parts/section', 'cta');
+
+?>
 
 <?php get_footer(); ?>
