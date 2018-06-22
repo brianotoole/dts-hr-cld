@@ -1,12 +1,33 @@
 <?php
 // Section Related Resources
 
+
+$terms = wp_get_post_terms( $post->ID, 'type'); 
+$terms_ids = [];
+
+foreach ( $terms as $term ) {
+    $terms_ids[] = $term->term_id;
+}
+
+$current_id = get_the_ID();
+
 // default for all
 $relatedArgs = array(
   'post_type' => 'resource',
   'posts_per_page' => 3,
+  'post__not_in' => array($current_id),
   'order' => 'DESC',
-);
+  'orderby' => 'title',
+  'no_found_rows' => true, // Skip pagination
+  'tax_query' => array(
+  'relation' => 'AND',
+    array(
+        'taxonomy' => 'type',
+        'field'    => 'term_id',
+        'terms'    => $terms_ids
+         )
+    ),
+ );
 $relatedQuery = new WP_Query($relatedArgs);
 ?>
 
@@ -33,7 +54,7 @@ $relatedQuery = new WP_Query($relatedArgs);
           <?php 
         endwhile;
       endif; 
-      wp_reset_query();
+      //wp_reset_query();
 
   elseif( have_rows('related_resources') ):
 
