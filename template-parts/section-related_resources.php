@@ -1,11 +1,6 @@
 <?php
 // Section Related Resources
 
-//Custom Field Group == Page: Home
-//$cta_heading = get_field('cta_heading');
-//$cta_button_text = get_field('cta_button_text');
-//$cta_button_link = get_field('cta_button_link');
-
 // default for all
 $relatedArgs = array(
   'post_type' => 'resource',
@@ -23,18 +18,40 @@ $relatedQuery = new WP_Query($relatedArgs);
         <h2 class="related__title u-color-white">Related Resources</h2>
       </div><!--/.col-->
     </div><!--/.row-->
-
+  
     <div class="row related u-re-li">
-    <?php if( $relatedQuery->have_posts() ) :
-      while ( $relatedQuery->have_posts() ) :
-        $relatedQuery->the_post(); ?>
-        <li class="col-sm-4 col-xs-12 card card--related">
-          <?php the_resource_card(get_the_ID()) ?>
-        </li>
-        <?php
-      endwhile;
-    endif; 
-    wp_reset_query();?>
+    <?php 
+
+  if (!get_field('resources_is_selected')) : //if manual selection IS NOT set, run default
+
+      if( $relatedQuery->have_posts() ) :
+        while ( $relatedQuery->have_posts() ) :
+          $relatedQuery->the_post(); ?>
+          <li class="col-sm-4 col-xs-12 card card--related">
+            <?php the_resource_card(get_the_ID()) ?>
+          </li>
+          <?php 
+        endwhile;
+      endif; 
+      wp_reset_query();
+
+  elseif( have_rows('related_resources') ):
+
+    while ( have_rows('related_resources') ) : the_row(); ?>
+      <li class="col-sm-4 col-xs-12 card card--related">
+        <?php 
+          $post_object = get_sub_field('resource');
+          $post = $post_object;
+          setup_postdata($post);
+          the_resource_card($post);
+          //print_r($post);
+          wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
+        ?>
+      </li>
+  <?php
+    endwhile;
+  endif;
+  ?>
     </div><!--/.row-->
 
     <div class="row u-pad">

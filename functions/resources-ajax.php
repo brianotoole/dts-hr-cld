@@ -80,7 +80,7 @@ function get_the_resource_card($id) {
   '</div>'; //.card-flip
 
   $related_card_html = '
-  <a href="'. get_the_permalink($id) .'" class="card__overlay grow" style="background:linear-gradient('. get_rgba($color) .', 1), '. get_rgba($color) .', 1)), url('. get_thumb_img($id) .')">'.
+  <a href="'. get_the_permalink($id, $post_object_id) .'" class="card__overlay grow" style="background:linear-gradient('. get_rgba($color) .', 1), '. get_rgba($color) .', 1)), url('. get_thumb_img($id) .')">'.
     '<span class="card__more">'. get_tax_name($id) .' <i class="fas fa-long-arrow-alt-right"></i></span>'.
   '</a>';
 
