@@ -3005,8 +3005,10 @@ body.nav-open {
   height: 280px;
   padding: 15px;
   text-align: left; }
+
+@media (min-width: 768px) {
   .card--related {
-    height: 375px; }
+    height: 375px; } }
 
 .card__overlay {
   position: relative;
@@ -3784,7 +3786,9 @@ body img.gform_ajax_spinner {
   position: relative; }
 
 .icon-block img {
-  max-width: 90%; }
+  max-width: 120px;
+  max-height: 75px;
+  margin-bottom: 1em; }
 
 .icon-block__title {
   height: 100%; }
@@ -3949,7 +3953,9 @@ body img.gform_ajax_spinner {
   position: relative; }
 
 .icon__image img {
-  width: 150px; }
+  max-width: 150px;
+  max-height: 95px;
+  margin-bottom: 1em; }
 
 .icon__image--centered {
   margin: 0 auto; }
