@@ -2736,8 +2736,7 @@ body.nav-open {
   * Hero
   */
 .hero {
-  position: relative;
-  background: red; }
+  position: relative; }
 
 .hero__bg {
   width: 100%;
