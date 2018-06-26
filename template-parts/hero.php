@@ -36,11 +36,12 @@ $hero_button = get_field('hero_button');
                 <div class="hero__button"><a class="<?php if (!is_singular('resource')) : echo 'js-watch-demo'; endif; ?> btn btn--primary" target="<?php echo $hero_button['target']; ?>"><?php echo $hero_button['title']; ?></a></div>
               <?php endif; ?>
             </div><!--/.hero__text-->
-          </div>
+          </div><!--/.col-->
           <?php
             endwhile;
           endif;
           ?>
+          </div><!--/.row-->
         </div><!--/.container-->
     </div><!--/.hero__inner-->
   </div><!--/.hero__bg-->
