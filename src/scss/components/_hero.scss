@@ -63,16 +63,13 @@ $header__height: 80px;
 /**
  * About Page Hero
  */
-
-
-.hero--about .hero__bg {
-  &--is-full-height {
-    height: 100vh;
-    background-position: center center;
-    background-size: cover;
-    @media (min-width: $tablet) {
-      height: calc(100vh - #{$header__height});
-    }
+.hero--about {
+  width: 100%;
+  height: auto;
+  background-position: center center;
+  background-size: cover;
+  @media (min-width: $tablet) {
+    height: calc(100vh - #{$header__height});
   }
 }
 

@@ -2789,12 +2789,13 @@ body.nav-open {
 /**
  * About Page Hero
  */
-.hero--about .hero__bg--is-full-height {
-  height: 100vh;
+.hero--about {
+  width: 100%;
+  height: auto;
   background-position: center center;
   background-size: cover; }
   @media (min-width: 768px) {
-    .hero--about .hero__bg--is-full-height {
+    .hero--about {
       height: calc(100vh - 80px); } }
 
 .hero--about .hero__inner {
