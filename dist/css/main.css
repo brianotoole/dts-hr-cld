@@ -2767,6 +2767,7 @@ body.nav-open {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  padding-top: 2.5em;
   padding-bottom: 2.5em; }
   @media (min-width: 768px) {
     .hero__inner {

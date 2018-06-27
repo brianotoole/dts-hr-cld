@@ -16,7 +16,15 @@ $hero_button = get_field('hero_button');
 ?>
 
 <div class="hero <?php if (is_page('about')) : echo 'hero--about'; endif; ?>">
-  <?php echo wp_get_attachment_image( $hero_background['id'], 'full', false, array( 'class' => 'hero__img' )); ?>
+
+  <img class="hero__img"
+  src="<?php echo $hero_background['sizes']['hero-small']; ?>"
+  sizes="(min-width: 70em) 1000px, (min-width: 50em) 750px, (min-width: 31.5em), 500px, 100vw"
+  srcset="
+    <?php echo $hero_background['sizes']['hero-small']; ?> 500w,
+    <?php echo $hero_background['sizes']['hero-medium']; ?> 750w,
+    <?php echo $hero_background['sizes']['hero-large']; ?> 1000w"
+  alt="">
     
     <div class="hero__inner">
       <div class="container">

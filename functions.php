@@ -26,3 +26,7 @@ include_function('remove-autoformatting');
 include_function('remove-wpversion-nag');
 
 include_function('resources-ajax');
+
+add_image_size('hero-small', 500);
+add_image_size('hero-medium', 768);
+add_image_size('hero-large', 1300);

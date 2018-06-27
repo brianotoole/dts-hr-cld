@@ -34,6 +34,7 @@ $header__height: 80px;
   top: 0;
   display: flex;
   align-items: flex-end;
+  padding-top: calc-em(40px);
   padding-bottom: calc-em(40px);
   @media (min-width: $tablet) {
     position: relative;
