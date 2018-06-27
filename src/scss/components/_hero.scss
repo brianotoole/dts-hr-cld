@@ -5,33 +5,35 @@
 $header__height: 80px;
 
 .hero {
+  width: 100%;
+  height: auto;
   position: relative;
+  overflow: hidden;
+  @media (min-width: $tablet) {
+    height: calc(88vh - #{$header__height});
+  }
 }
 
-.hero__bg {
+.hero__img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-size: cover;
+  height: auto;
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center center;
-  position: relative;
-  @media (min-width: $tablet) {
-    background-position: center top;
-  }
-
-  &--is-full-height {
-    height: 100vh;
-    @media (min-width: $tablet) {
-      height: calc(88vh - #{$header__height});
-    }
-  }
-
 }
 
 .hero__inner {
+  height: 100%;
+  position: relative;
   display: flex;
   align-items: flex-end;
-  height: 100%;
-  padding-bottom: calc-em(80px);
+  padding-bottom: calc-em(10px);
+  @media (min-width: $tablet) {
+    padding-bottom: calc-em(80px);
+  }
 }
 
 .hero__text {

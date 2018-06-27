@@ -16,7 +16,8 @@ $hero_button = get_field('hero_button');
 ?>
 
 <div class="hero <?php if (is_page('about')) : echo 'hero--about'; endif; ?>">
-  <div class="hero__bg hero__bg--is-full-height" style="background-image: url(<?php echo $hero_background; ?>);">
+  <?php echo wp_get_attachment_image( $hero_background['id'], 'full', false, array( 'class' => 'hero__img' )); ?>
+    
     <div class="hero__inner">
       <div class="container">
         <div class="row">
@@ -44,7 +45,7 @@ $hero_button = get_field('hero_button');
           </div><!--/.row-->
         </div><!--/.container-->
     </div><!--/.hero__inner-->
-  </div><!--/.hero__bg-->
+
   <?php if (is_page('about')) : 
     $hero_side_bg = get_field('hero_side_image');
   ?>
