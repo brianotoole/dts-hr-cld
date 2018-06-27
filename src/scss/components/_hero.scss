@@ -15,7 +15,7 @@ $header__height: 80px;
 }
 
 .hero__img {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -23,15 +23,20 @@ $header__height: 80px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  @media (min-width: $tablet) {
+    position: absolute;
+  }
 }
 
 .hero__inner {
   height: 100%;
-  position: relative;
+  position: absolute;
+  top: 0;
   display: flex;
   align-items: flex-end;
-  padding: 5vw 0;
+  padding-bottom: calc-em(40px);
   @media (min-width: $tablet) {
+    position: relative;
     padding: 0;
     padding-bottom: calc-em(80px);
   }
@@ -42,9 +47,9 @@ $header__height: 80px;
 }
 
 .hero__heading {
-  padding-bottom: calc-em(5px);
   @media (min-width: $tablet) {
     max-width: 42%;
+    padding-bottom: calc-em(5px);
   }
 }
 
