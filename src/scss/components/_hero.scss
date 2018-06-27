@@ -32,6 +32,7 @@ $header__height: 80px;
   align-items: flex-end;
   padding: 5vw 0;
   @media (min-width: $tablet) {
+    padding: 0;
     padding-bottom: calc-em(80px);
   }
 }
