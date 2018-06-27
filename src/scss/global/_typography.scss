@@ -23,42 +23,36 @@ p, .p {
 h1, h2, h3, h4, h5, h6 { 
   line-height: 1.1;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 h1, .h1 { 
-  font-size: 3em; 
-  //@include fluid-property(font-size, 40, 64);
+  //font-size: 3em; 
+  @include fluid-type(28px, 64px);
   margin-bottom: 0.9em;
-  text-transform: uppercase;
 }
 
 h2,.h2 {
-  font-size: 2.5em;
+  @include fluid-type(24px, 44px);
   margin-bottom: 0.8em;
-  text-transform: uppercase;
 }
 
 h3, .h3 {
-  font-size: 1.5em;
+  @include fluid-type(22px, 38px);
   margin-bottom: 0.7em;
-  text-transform: uppercase;
 }
 
 h4, .h4 {
-  font-size: 1.25em;
+  @include fluid-type(20px, 32px);
   margin-bottom: 0.6em;
-  text-transform: uppercase;
 }
 
 h5, .h5 {
-  font-size: 1.125em;
+  @include fluid-type(18px, 28px);
   margin-bottom: 0.5em;
-  text-transform: uppercase;
 }
 
-h6, .h6 {
-  text-transform: uppercase;
-}
+h6, .h6 {}
 
 address {
   line-height: 1.5;
