@@ -30,7 +30,7 @@ $header__height: 80px;
   position: relative;
   display: flex;
   align-items: flex-end;
-  padding-bottom: calc-em(10px);
+  padding: 5vw 0;
   @media (min-width: $tablet) {
     padding-bottom: calc-em(80px);
   }
@@ -47,9 +47,7 @@ $header__height: 80px;
   }
 }
 
-.hero__subheading {
-
-}
+.hero__subheading {}
 
 .hero__button {
   &--end {
