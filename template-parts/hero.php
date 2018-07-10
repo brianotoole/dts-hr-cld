@@ -41,9 +41,18 @@ $hero_button = get_field('hero_button');
               <?php endif; ?>
               <h1 class="hero__heading h2 u-text-bold u-text-upper"><?php the_field('hero_heading'); ?></h1>
               <p class="hero__subheading"><?php the_field('hero_subheading'); ?></p>
-              <?php if ( get_field( 'hero_button' ) ) : ?>
-                <div class="hero__button"><a class="<?php if (!is_singular('resource')) : echo 'js-watch-demo'; endif; ?> btn btn--primary" target="<?php echo $hero_button['target']; ?>"><?php echo $hero_button['title']; ?></a></div>
+
+              <?php if (get_field('hero_button_type') == 'video') : ?>
+                <div class="hero__button">
+                  <a class="js-watch-demo btn btn--primary">Watch Video</a>
+                </div><!--/.hero__button-->
+              <?php elseif (get_field('hero_button_type') != 'video' && get_field('hero_button_link')) : ?>
+                <div class="hero__button">
+                <?php $hero_button_link = get_field('hero_button_link'); ?>
+                  <a class="btn btn--primary" href="<?php echo $hero_button_link['url']; ?>" target="<?php echo $hero_button_link['target']; ?>"><?php echo $hero_button_link['title']; ?></a>
+                </div><!--/.hero__button-->
               <?php endif; ?>
+
             </div><!--/.hero__text-->
           </div><!--/.col-->
           <?php

@@ -65,13 +65,46 @@
             "new_lines": ""
         },
         {
-            "key": "field_5afda28afc73c",
-            "label": "Hero Button",
-            "name": "hero_button",
-            "type": "link",
+            "key": "field_5b454247390c5",
+            "label": "Hero Button Type",
+            "name": "hero_button_type",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "video": "Video",
+                "link": "Link"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5afda28afc73c",
+            "label": "Hero Button Link",
+            "name": "hero_button_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b454247390c5",
+                        "operator": "==",
+                        "value": "link"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -125,5 +158,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531265436
+    "modified": 1531265757
 }
