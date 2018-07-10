@@ -27,6 +27,12 @@ include_function('remove-wpversion-nag');
 
 include_function('resources-ajax');
 
+//remove default post type from admin
+add_action('admin_menu','remove_default_post_type');
+function remove_default_post_type() {
+	remove_menu_page('edit.php');
+}
+
 add_image_size('hero-small', 500);
 add_image_size('hero-medium', 768);
 add_image_size('hero-large', 1300);
