@@ -36,7 +36,7 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
   &:hover {
     background-color: rgba(white, 0);
     color: white;
-    background-blend-mode: screen;	
+    //background-blend-mode: screen;	
     box-shadow: $card__shadow;
     .card__more {
       &:before {
