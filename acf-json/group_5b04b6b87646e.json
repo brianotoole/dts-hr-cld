@@ -1,0 +1,39 @@
+{
+    "key": "group_5b04b6b87646e",
+    "title": "Page: Solutions",
+    "fields": [
+        {
+            "key": "field_5b04b6bc57e9c",
+            "label": "Solutions Main Button",
+            "name": "solutions_main_button",
+            "type": "link",
+            "instructions": "The button that appears at end of Solutions-main template",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "5"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1531265479
+}

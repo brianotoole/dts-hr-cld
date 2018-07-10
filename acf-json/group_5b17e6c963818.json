@@ -1,0 +1,179 @@
+{
+    "key": "group_5b17e6c963818",
+    "title": "PostType: Resource",
+    "fields": [
+        {
+            "key": "field_5b17ffc3be970",
+            "label": "Filtering Options",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5b1820f79f2a8",
+            "label": "Is Featured Resource?",
+            "name": "is_resource_featured",
+            "type": "radio",
+            "instructions": "If \"yes\", will display on resources-main \"Featured\" section. Can only show a total of 3 items here, so make sure to uncheck any old ones.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": [
+                "No",
+                "Yes"
+            ],
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5b17fc7aaac9e",
+            "label": "Is Popular Resource?",
+            "name": "is_resource_popular",
+            "type": "radio",
+            "instructions": "If \"yes\", will display on resources-main, before filtering.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": [
+                "No",
+                "Yes"
+            ],
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5b1887426c4fc",
+            "label": "Is Gated Resource?",
+            "name": "is_resource_gated",
+            "type": "true_false",
+            "instructions": "Is this resource gated?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b1887fc6c4fd",
+            "label": "Gated Form Embed \/ Code",
+            "name": "gated_form_embed",
+            "type": "textarea",
+            "instructions": "Embed the form embed code here",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b1887426c4fc",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5b17e71343499",
+            "label": "Overlay Color",
+            "name": "overlay_color",
+            "type": "select",
+            "instructions": "Choose which color you'd like to use as the overlay. If none set, will use \"orange\".",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#ea8c2a": "Orange",
+                "#1c2c44": "Default Blue",
+                "#28d0db": "Light Blue",
+                "#24226e": "Dark Blue"
+            },
+            "default_value": [
+                "#ea8c2a"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b2a5f527b309",
+            "label": "Download Button",
+            "name": "resource_single_button",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "resource"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1531265491
+}
