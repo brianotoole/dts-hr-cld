@@ -10,8 +10,10 @@ get_template_part('template-parts/resources', 'single');
 // RELATED RESOURCES
 get_template_part('template-parts/section', 'related_resources');
 
-// CTA 
-get_template_part('template-parts/section', 'cta');
+// CTA (if yes)
+if (get_field('has_cta') == 'true') :
+  get_template_part('template-parts/section', 'cta');
+endif;
 
 ?>
 
