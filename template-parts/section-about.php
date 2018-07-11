@@ -43,7 +43,7 @@
     ?>
       <div class="col-sm-4 col-xs-12">
         <div class="text-block">
-          <h4 class="text-block__title u-color-primary"><?php echo $text_title; ?></h4>
+          <h5 class="text-block__title u-color-primary"><?php echo $text_title; ?></h5>
           <p class="text-block__content"><?php echo $text_content; ?></p>
         </div><!--/.stat-->
       </div><!--/.col-->
@@ -72,7 +72,7 @@
       <div class="col-sm-4 col-xs-12">
         <div class="icon-block">
           <img src="<?php echo $icon_img; ?>">
-          <h4 class="icon-block__title u-color-primary"><?php echo $icon_title; ?></h4>
+          <h5 class="icon-block__title u-color-primary"><?php echo $icon_title; ?></h5>
         </div><!--/.icon-block-->
       </div><!--/.col-->
       <?php endwhile; ?>

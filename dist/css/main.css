@@ -3817,7 +3817,8 @@ body img.gform_ajax_spinner {
   color: #323a45; }
 
 .icon-block {
-  position: relative; }
+  position: relative;
+  margin-bottom: 3.75em; }
 
 .icon-block img {
   max-width: 120px;
