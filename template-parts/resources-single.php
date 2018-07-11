@@ -1,14 +1,12 @@
 <?php // Resource single content
 
-if ( have_posts() ) {
-  while ( have_posts() ) { ?>
+if ( have_posts() ) : ?>
+  <?php while ( have_posts() ) : the_post(); ?>
   <section class="section section--single">
   <div class="container">
     <div class="row">
       <div class="single__content col-xs-12">
-      <?php  the_post();
-        the_content();
-      } ?>
+      <?php the_content(); ?>
         <?php $single_btn = get_field('resource_single_button'); ?>
         <?php if ($single_btn) : ?>
         <div class="single__button u-text-center u-pad-top">
@@ -21,4 +19,5 @@ if ( have_posts() ) {
   </div><!--/.container-->
   </section>
 
-<?php } ?>
+<?php endwhile; ?>
+<?php endif; ?>
