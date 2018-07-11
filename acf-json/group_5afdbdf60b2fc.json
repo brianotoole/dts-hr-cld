@@ -3,6 +3,61 @@
     "title": "Page: Home",
     "fields": [
         {
+            "key": "field_5b454a9f1d6e2",
+            "label": "Below Hero",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5b454a51bba11",
+            "label": "Below Hero Title",
+            "name": "home_below_hero_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b454ab81d6e3",
+            "label": "Below Hero Text",
+            "name": "home_below_hero_text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": ""
+        },
+        {
             "key": "field_5b04683bc2cbe",
             "label": "Benefits Section",
             "name": "",
@@ -465,5 +520,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531265454
+    "modified": 1531267882
 }

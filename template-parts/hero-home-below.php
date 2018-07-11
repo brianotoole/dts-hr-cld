@@ -22,8 +22,8 @@
         </div>
       </div>
       <div class="col-sm-6 col-xs-12">
-        <h6 class="hero-below__title u-text-primary">Unify Your Workspace</h6>
-        <p class="hero-below__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut animi velit aliquid suscipit at ad dignissimos praesentium! Alias quidem quaerat, voluptatem, ea amet cupiditate quisquam vero officiis commodi temporibus necessitatibus?</p>
+        <h6 class="hero-below__title u-text-primary"><?php the_field('home_below_hero_title'); ?></h6>
+        <p class="hero-below__text"><?php the_field('home_below_hero_text'); ?></p>
       </div><!--/.col-->
     </div><!--/.row-->
   </div><!--/.container-->
