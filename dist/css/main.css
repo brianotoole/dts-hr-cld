@@ -3453,8 +3453,11 @@ body img.gform_ajax_spinner {
 
 .macbook {
   padding: 0;
-  margin: 0 auto;
+  margin: 20px auto 60px;
   max-width: 800px; }
+  @media (min-width: 768px) {
+    .macbook {
+      margin: 0 auto; } }
 
 .macbook__screen {
   background: #000;
