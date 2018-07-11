@@ -9,9 +9,9 @@ $hero_button = get_field('hero_button');
 ?>
 
 <?php 
-  // set hero background: if acf field is not set, use thumbnail
+  // set hero background: if acf field is not set, use feat img thumb
   if ($hero_background) : $hero_background = $hero_background; 
-  else : $hero_background = the_post_thumbnail_url(); 
+  else : $hero_background = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
   endif; 
 ?>
 
