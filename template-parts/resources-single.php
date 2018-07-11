@@ -1,7 +1,6 @@
 <?php // Resource single content
+?>
 
-if ( have_posts() ) : ?>
-  <?php while ( have_posts() ) : the_post(); ?>
   <section class="section section--single">
   <div class="container">
     <div class="row">
@@ -19,5 +18,4 @@ if ( have_posts() ) : ?>
   </div><!--/.container-->
   </section>
 
-<?php endwhile; ?>
-<?php endif; ?>
+
