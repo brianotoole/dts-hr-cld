@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -2881,6 +2881,57 @@ module.exports = g;
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Global Variables and Methods
+ */
+
+var viewport_width = exports.viewport_width = $(window).width();
+
+/**
+ * Determine if the target element is in view and if so return true
+ */
+var is_in_view = exports.is_in_view = function is_in_view(target) {
+  var el_offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+  var amount_scrolled = $(window).scrollTop();
+  var el_position = $(target).offset();
+  el_position = el_position ? el_position.top : '';
+
+  var offset = el_offset;
+  var trigger_position = el_position - offset;
+  if (amount_scrolled >= trigger_position) {
+    return true;
+  }
+};
+
+/**
+ * Adds the :onScreen pseudo selector to jQuery to affect elements visible in the viewport.
+ */
+(function ($) {
+  $.expr[":"].onScreen = function (elem) {
+    var $window = $(window);
+    var viewport_top = $window.scrollTop();
+    var viewport_height = $window.height();
+    var viewport_bottom = viewport_top + viewport_height;
+    var $elem = $(elem);
+    var top = $elem.offset().top;
+    var height = $elem.height();
+    var bottom = top + height;
+
+    return top >= viewport_top && top < viewport_bottom || bottom > viewport_top && bottom <= viewport_bottom || height > viewport_height && top <= viewport_top && bottom >= viewport_bottom;
+  };
+})(jQuery);
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10864,7 +10915,7 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -12177,10 +12228,10 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		return (_gsScope.GreenSockGlobals || _gsScope)[name];
 	};
 	if (typeof(module) !== "undefined" && module.exports) { //node
-		__webpack_require__(4); //dependency
+		__webpack_require__(5); //dependency
 		module.exports = getGlobal();
 	} else if (true) { //AMD
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4)], __WEBPACK_AMD_DEFINE_FACTORY__ = (getGlobal),
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(5)], __WEBPACK_AMD_DEFINE_FACTORY__ = (getGlobal),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -12189,7 +12240,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -14138,23 +14189,12 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(6);
-module.exports = __webpack_require__(12);
-
-
-/***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
 __webpack_require__(7);
-__webpack_require__(8);
-__webpack_require__(9);
+module.exports = __webpack_require__(15);
+
 
 /***/ }),
 /* 7 */
@@ -14163,11 +14203,22 @@ __webpack_require__(9);
 "use strict";
 
 
-var _globals = __webpack_require__(13);
+__webpack_require__(8);
+__webpack_require__(11);
+__webpack_require__(12);
 
-var _parallax = __webpack_require__(14);
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
 
-var _fitText = __webpack_require__(15);
+"use strict";
+
+
+var _globals = __webpack_require__(2);
+
+var _parallax = __webpack_require__(9);
+
+var _fitText = __webpack_require__(10);
 
 /**
   * These functions execute in order.
@@ -14278,7 +14329,80 @@ $(window).scroll(function () {
 }); // /.scroll
 
 /***/ }),
-/* 8 */
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+  * Simple parallax effect
+  */
+var parallax = exports.parallax = function parallax(target) {
+  var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+
+  var amount_scrolled = $(window).scrollTop();
+
+  $(target).each(function () {
+    var speed = $(this).data('scroll-speed');
+
+    if (isNaN(speed)) {
+      speed = 5;
+    }
+
+    $(this).css('transform', 'translateY(' + (amount_scrolled * (speed / 10) * -1 + offset) + 'px)');
+  });
+};
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fitText = undefined;
+
+var _globals = __webpack_require__(2);
+
+var fitText = exports.fitText = function fitText() {
+  var elements = void 0;
+
+  function calcSize(item) {
+    var parentWidth = void 0,
+        percentage = void 0,
+        size = void 0;
+
+    item.style.display = 'inline-block';
+    item.style.fontSize = '1px';
+    parentWidth = item.parentNode.offsetWidth;
+    percentage = parentWidth / item.offsetWidth;
+    size = 0;
+
+    while (item.offsetWidth < parentWidth) {
+      size += 1;
+      item.style.fontSize = size + 'px';
+    }
+
+    item.style.fontSize = size - 1 + 'px';
+  }
+
+  elements = document.querySelectorAll('.js-fit-text');
+
+  if (_globals.viewport_width <= 460) {
+    Array.prototype.forEach.call(elements, calcSize);
+  }
+};
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14332,7 +14456,7 @@ child.on('click', function (e) {
 });
 
 /***/ }),
-/* 9 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14342,15 +14466,15 @@ var _ScrollMagic = __webpack_require__(0);
 
 var _ScrollMagic2 = _interopRequireDefault(_ScrollMagic);
 
-__webpack_require__(10);
+__webpack_require__(13);
 
-__webpack_require__(11);
+__webpack_require__(14);
 
-var _TweenMax = __webpack_require__(2);
+var _TweenMax = __webpack_require__(3);
 
 var _TweenMax2 = _interopRequireDefault(_TweenMax);
 
-var _TimelineMax = __webpack_require__(3);
+var _TimelineMax = __webpack_require__(4);
 
 var _TimelineMax2 = _interopRequireDefault(_TimelineMax);
 
@@ -14457,7 +14581,7 @@ $('.solutions .row').each(function () {
 */
 
 /***/ }),
-/* 10 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -14490,7 +14614,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 (function (root, factory) {
 	if (true) {
 		// AMD. Register as an anonymous module.
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(2), __webpack_require__(3)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(3), __webpack_require__(4)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -14775,7 +14899,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 /***/ }),
-/* 11 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15455,134 +15579,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 /***/ }),
-/* 12 */
+/* 15 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-/**
- * Global Variables and Methods
- */
-
-var viewport_width = exports.viewport_width = $(window).width();
-
-/**
- * Determine if the target element is in view and if so return true
- */
-var is_in_view = exports.is_in_view = function is_in_view(target) {
-  var el_offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-
-  var amount_scrolled = $(window).scrollTop();
-  var el_position = $(target).offset();
-  el_position = el_position ? el_position.top : '';
-
-  var offset = el_offset;
-  var trigger_position = el_position - offset;
-  if (amount_scrolled >= trigger_position) {
-    return true;
-  }
-};
-
-/**
- * Adds the :onScreen pseudo selector to jQuery to affect elements visible in the viewport.
- */
-(function ($) {
-  $.expr[":"].onScreen = function (elem) {
-    var $window = $(window);
-    var viewport_top = $window.scrollTop();
-    var viewport_height = $window.height();
-    var viewport_bottom = viewport_top + viewport_height;
-    var $elem = $(elem);
-    var top = $elem.offset().top;
-    var height = $elem.height();
-    var bottom = top + height;
-
-    return top >= viewport_top && top < viewport_bottom || bottom > viewport_top && bottom <= viewport_bottom || height > viewport_height && top <= viewport_top && bottom >= viewport_bottom;
-  };
-})(jQuery);
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-/**
-  * Simple parallax effect
-  */
-var parallax = exports.parallax = function parallax(target) {
-  var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-
-
-  var amount_scrolled = $(window).scrollTop();
-
-  $(target).each(function () {
-    var speed = $(this).data('scroll-speed');
-
-    if (isNaN(speed)) {
-      speed = 5;
-    }
-
-    $(this).css('transform', 'translateY(' + (amount_scrolled * (speed / 10) * -1 + offset) + 'px)');
-  });
-};
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.fitText = undefined;
-
-var _globals = __webpack_require__(13);
-
-var fitText = exports.fitText = function fitText() {
-  var elements = void 0;
-
-  function calcSize(item) {
-    var parentWidth = void 0,
-        percentage = void 0,
-        size = void 0;
-
-    item.style.display = 'inline-block';
-    item.style.fontSize = '1px';
-    parentWidth = item.parentNode.offsetWidth;
-    percentage = parentWidth / item.offsetWidth;
-    size = 0;
-
-    while (item.offsetWidth < parentWidth) {
-      size += 1;
-      item.style.fontSize = size + 'px';
-    }
-
-    item.style.fontSize = size - 1 + 'px';
-  }
-
-  elements = document.querySelectorAll('.js-fit-text');
-
-  if (_globals.viewport_width <= 460) {
-    Array.prototype.forEach.call(elements, calcSize);
-  }
-};
 
 /***/ })
 /******/ ]);
