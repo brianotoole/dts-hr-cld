@@ -18,7 +18,7 @@ $teamQuery = new WP_Query($teamArgs);
             $teamQuery->the_post(); ?>
            
             <div class="card-image" style="background-image:url(<?php the_field('team_image'); ?>)">
-              <div class="card-image__content card-image__content--bio-shown">
+              <div class="card-image__content">
                 <h6 class="card-image__name"><?php the_title(); ?></h6>
                 <p class="card-image__title"><?php the_field('team_title'); ?></p>
                 <p class="card-image__bio"><?php the_content(); ?></p>
@@ -42,9 +42,11 @@ $teamQuery = new WP_Query($teamArgs);
 
 <script>
 $(function() {
-  $('.card-image').on('click', function(e) {
-    e.preventDefault();
-    $('.card-image__content').toggleClass('card-image__content--bio-shown');
-  });
+  if ($(window).width() <= 768) {
+    $('.card-image').on('click', function() {
+      var this_card = $(this).find('.card-image__content');
+      this_card.toggleClass('card-image__content--bio-shown');
+    });
+  }
 });
 </script>

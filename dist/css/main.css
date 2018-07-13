@@ -3834,17 +3834,37 @@ body img.gform_ajax_spinner {
 .row--team {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .card-image {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 33.333%;
-          flex: 0 0 33.333%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   height: 350px;
+  margin: 0.9375em;
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
   cursor: pointer; }
+  @media (min-width: 768px) {
+    .card-image {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 33.333%;
+              flex: 0 0 33.333%;
+      margin: 0; } }
+  @media (min-width: 768px) {
+    .card-image:hover .card-image__content {
+      height: 100%; }
+    .card-image:hover .card-image__bio {
+      visibility: visible; } }
 
 .card-image__content {
   position: absolute;
@@ -3855,8 +3875,8 @@ body img.gform_ajax_spinner {
   color: white;
   width: 100%;
   height: 90px;
-  -webkit-transition: height 0.15s linear;
-  transition: height 0.15s linear; }
+  -webkit-transition: height 0.2s linear;
+  transition: height 0.2s linear; }
   .card-image__content--bio-shown {
     height: 100%; }
 
@@ -3867,7 +3887,10 @@ body img.gform_ajax_spinner {
   margin-top: 0.9375em; }
 
 .card-image__bio {
-  margin-top: -0.625em; }
+  margin-top: -0.625em;
+  visibility: hidden; }
+  .card-image__content--bio-shown .card-image__bio {
+    visibility: visible; }
 
 /*
 ** Solutions
