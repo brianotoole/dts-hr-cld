@@ -12,6 +12,9 @@ $header__height: 80px;
   @media (min-width: $tablet) {
     height: calc(88vh - #{$header__height});
   }
+  .single-resource & {
+    height: 300px;
+  }
 }
 
 .hero__img {

@@ -2766,6 +2766,8 @@ body.nav-open {
   @media (min-width: 768px) {
     .hero {
       height: calc(88vh - 80px); } }
+  .single-resource .hero {
+    height: 300px; }
 
 .hero__img {
   position: relative;
