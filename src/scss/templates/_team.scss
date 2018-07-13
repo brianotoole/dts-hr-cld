@@ -7,6 +7,7 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
 .row--team {
   display: flex;
   flex-wrap: wrap;
+  padding-top: rem(30);
 }
 
 .card-image {
