@@ -4116,3 +4116,17 @@ body img.gform_ajax_spinner {
 */
 .filters {
   margin-bottom: 3.125em; }
+
+/*
+** SINGLE
+*/
+.single__content {
+  line-height: 1.8; }
+
+.single__content ul {
+  list-style-type: disc;
+  padding-left: 1.25em;
+  margin: 1.25em 0; }
+
+.single__content p {
+  margin: 1.25em 0; }

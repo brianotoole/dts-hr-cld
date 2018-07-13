@@ -4,7 +4,7 @@
   <section class="section section--single">
   <div class="container">
     <div class="row">
-      <div class="single__content col-xs-12">
+      <div class="single__content col-sm-8 col-sm-offset-2 col-xs-12">
       <?php the_content(); ?>
         <?php $single_btn = get_field('resource_single_button'); ?>
         <?php if ($single_btn) : ?>

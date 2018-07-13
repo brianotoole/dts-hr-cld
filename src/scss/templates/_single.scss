@@ -1,0 +1,18 @@
+/*
+** SINGLE
+*/
+
+// Single content default (entry content)
+.single__content {
+  line-height: 1.8;
+}
+
+.single__content ul {
+  list-style-type: disc;
+  padding-left: calc-em(20);
+  margin: calc-em(20) 0;
+}
+
+.single__content p {
+  margin: calc-em(20) 0;
+}
