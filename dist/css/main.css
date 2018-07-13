@@ -3846,7 +3846,7 @@ body img.gform_ajax_spinner {
 .card-image {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  height: 350px;
+  height: 400px;
   margin: 0.9375em;
   position: relative;
   background-size: cover;
@@ -3889,10 +3889,12 @@ body img.gform_ajax_spinner {
   font-weight: 700; }
 
 .card-image__title {
-  margin-top: 0.9375em; }
+  margin-top: 0.9375em;
+  margin-bottom: 0;
+  line-height: 1.1; }
 
 .card-image__bio {
-  margin-top: -0.625em;
+  margin-top: 0.9375em;
   visibility: hidden; }
   .card-image__content--bio-shown .card-image__bio {
     visibility: visible; }
