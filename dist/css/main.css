@@ -351,6 +351,9 @@ address {
 .u-color-secondary {
   color: #323a45 !important; }
 
+.u-color-text {
+  color: #111111 !important; }
+
 .bg-tertiary {
   background-color: #1a2940; }
 

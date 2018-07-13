@@ -37,7 +37,19 @@ $teamQuery = new WP_Query($teamArgs);
       
     </div><!--/.row-->
 
-  </div>
+  </div><!-- /.container -->
+</section>
+
+<section class="section section--cta-home section--accent">
+  <div class="container">
+    <div class="row cta u-text-center">
+      <div class="col-xs-12">
+        <h4 class="cta__title u-color-text">Join the Team</h4>
+        <p>Think you have what it takes to work with us? Cool. Check out our job postings below.</p>
+        <a href="" class="btn btn--primary">View Open Positions</a>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- .container -->
 </section>
 
 <script>
