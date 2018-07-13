@@ -3837,7 +3837,8 @@ body img.gform_ajax_spinner {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-top: rem(30); }
+  padding-top: rem(30);
+  padding-bottom: rem(30); }
 
 .card-image {
   -ms-flex-preferred-size: 100%;
