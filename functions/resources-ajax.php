@@ -40,7 +40,7 @@ function get_rgba($color) {
 }
 
 // Get Custom Taxonomy Term Name: Type
-function get_tax_name($id) {
+function get_tax_name() {
   $terms = get_the_terms( $post->ID, 'type' );
   if ( !empty( $terms ) ){
       // get the first term
