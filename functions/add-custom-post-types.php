@@ -200,7 +200,7 @@ function create_topic_tax() {
 	$args = array(
 		'labels' => $labels,
 		'description' => __( 'Topic taxonomy for "Resource" Post Type', 'spx' ),
-		'hierarchical' => false,
+		'hierarchical' => true,
 		'public' => true,
 		'publicly_queryable' => true,
 		'show_ui' => true,
@@ -236,7 +236,7 @@ function create_type_tax() {
 	$args = array(
 		'labels' => $labels,
 		'description' => __( 'Type taxonomy for "Resource" Post Type', 'spx' ),
-		'hierarchical' => false,
+		'hierarchical' => true,
 		'public' => true,
 		'publicly_queryable' => true,
 		'show_ui' => true,
