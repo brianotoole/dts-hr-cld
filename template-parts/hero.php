@@ -44,7 +44,9 @@ $hero_button = get_field('hero_button');
 
               <?php if (get_field('hero_button_type') == 'video') : ?>
                 <div class="hero__button">
-                  <a class="js-watch-demo btn btn--primary">Watch Video</a>
+                  <!--<a class="js-watch-demo btn btn--primary">Watch Video</a>-->
+                  <a style="color: #fff!important;" href="//fast.wistia.net/embed/iframe/yzhn558bcf?popover=true" class="btn btn--primary wistia-popover[height=388,playerColor=7b796a,width=640]">Watch Video</a>
+<script src="//fast.wistia.com/assets/external/popover-v1.js" charset="ISO-8859-1"></script>
                 </div><!--/.hero__button-->
               <?php elseif (get_field('hero_button_type') != 'video' && get_field('hero_button_link')) : ?>
                 <div class="hero__button">
