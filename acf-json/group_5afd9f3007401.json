@@ -90,6 +90,33 @@
             "placeholder": ""
         },
         {
+            "key": "field_5b4d513eded60",
+            "label": "Video Wistia ID",
+            "name": "hero_wistia_id",
+            "type": "text",
+            "instructions": "Add the Wistia Video ID (Ex. = yzhn558bcf)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b454247390c5",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "yzhn558bcf",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5afda28afc73c",
             "label": "Hero Button Link",
             "name": "hero_button_link",
@@ -158,5 +185,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531265757
+    "modified": 1531793790
 }
