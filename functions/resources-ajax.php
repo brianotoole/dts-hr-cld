@@ -1,5 +1,27 @@
 <?php
 
+// Function like "in_category" for custom taxonomies
+// USAGE: if (has_type('blog')) 
+function has_type( $type, $_post = null ) {
+  if ( empty( $type) )
+      return false;
+
+  if ( $_post )
+      $_post = get_post( $_post );
+  else
+      $_post =& $GLOBALS['post'];
+
+  if ( !$_post )
+      return false;
+
+  $r = is_object_in_term( $_post->ID, 'type', $type);
+
+  if ( is_wp_error( $r ) )
+      return false;
+
+  return $r;
+}
+
 // Convert HEX to RGBA
 function ak_convert_hex2rgba($color, $opacity = false) {
   $default = 'rgb(0,0,0)';    
