@@ -6,7 +6,8 @@ const autoprefixer = require('autoprefixer');
 var config = {
   entry: ['./src/js/main.js', './src/scss/main.scss'],
   output: {
-    filename: 'dist/js/[name].js'
+    filename: 'dist/js/[name].js',
+    publicPath: '../../'
   },
   module: {
 
