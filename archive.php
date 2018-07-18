@@ -8,9 +8,13 @@ get_template_part('template-parts/hero', '');
   if ( have_posts() ) :
     while ( have_posts() ) :
       the_post();
-      the_content();
+      //the_content();
+      get_template_part('template-parts/content', 'excerpt');
   ?>
-  <?php endwhile; else : ?>
+  <?php endwhile; 
+  else : 
+      get_template_part( 'template-parts/content', 'none' );
+  ?>
 
   <?php endif; ?>
 </div>

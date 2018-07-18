@@ -2,6 +2,12 @@
 ** Solutions
 */
 
+.section--solutions-list {
+  background-image: url('../img/bg-icons.png');
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+
 .solutions {
   position: relative;
   overflow: hidden;

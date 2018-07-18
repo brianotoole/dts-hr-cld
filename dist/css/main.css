@@ -3937,6 +3937,11 @@ body img.gform_ajax_spinner {
 /*
 ** Solutions
 */
+.section--solutions-list {
+  background-image: url(../../dist/img/bg-icons.png);
+  background-repeat: repeat-y;
+  background-size: cover; }
+
 .solutions {
   position: relative;
   overflow: hidden; }
