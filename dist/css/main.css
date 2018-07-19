@@ -2569,7 +2569,7 @@ address {
     position: absolute;
     margin-top: 2px;
     margin-left: -20px;
-    padding-top: 20px;
+    padding-top: 24px;
     padding-left: 0;
     list-style-type: none; }
     .nav-primary ul.sub-menu.active {
@@ -2586,7 +2586,7 @@ address {
       padding: 10px;
       color: #111111;
       background: white;
-      border-top: 1px solid #cfcfcf;
+      border-top: 1px solid rgba(207, 207, 207, 0.25);
       border-bottom: none;
       text-align: center;
       -webkit-transition: all 0.3s ease-out;
