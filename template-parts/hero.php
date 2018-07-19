@@ -66,9 +66,4 @@ $hero_button = get_field('hero_button');
         </div><!--/.container-->
     </div><!--/.hero__inner-->
 
-  <?php if (is_page('about')) : 
-    $hero_side_bg = get_field('hero_side_image');
-  ?>
-    <div class="hero__side-img u-visible-desktop" style="background-image: url(<?php echo $hero_side_bg; ?>);"></div>
-  <?php endif; ?>
 </div><!--/.hero-->

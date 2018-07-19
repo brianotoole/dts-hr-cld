@@ -2,6 +2,8 @@
 // Section About
 ?>
 <section class="section section--about-intro">
+
+  <div class="hero__side-img u-visible-desktop" style="background-image: url(<?php the_field('hero_side_image') ?>"></div>
   <div class="container">
 
     <div class="row row--intro">
