@@ -13,11 +13,7 @@ $hero_button = get_field('hero_button');
     <div class="hero__inner">
       <div class="container">
         <div class="row">
-         <?php
-          if ( have_posts() ) :
-            while ( have_posts() ) :
-              the_post();
-          ?>
+
           <div class="col-sm-10 col-xs-12">
             <div class="hero__text">
               <h1 class="hero__heading h2 u-text-bold u-text-upper">
@@ -28,7 +24,7 @@ $hero_button = get_field('hero_button');
                 <?php elseif ( is_404() ) : ?>
                   <?php printf( esc_html__( 'Page Not Found: 404', 'spx' )); ?>
                 <?php elseif ( is_author() ) : ?>
-                  <?php printf( esc_html__( 'Articles by: name', 'spx' )); ?>
+                  jfkdjsfdkl
                 <?php else : ?>
                   <?php the_title(); ?>
                 <?php endif; ?>
@@ -51,10 +47,7 @@ $hero_button = get_field('hero_button');
 
             </div><!--/.hero__text-->
           </div><!--/.col-->
-          <?php
-            endwhile;
-          endif;
-          ?>
+
           </div><!--/.row-->
         </div><!--/.container-->
     </div><!--/.hero__inner-->
