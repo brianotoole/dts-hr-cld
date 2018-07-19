@@ -1,4 +1,14 @@
 <?php
+// Function to include custom post types in archive or author.php 
+function author_for_resource( $query ) {
+  if( is_author() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'resource'
+    ));
+    return $query;
+  }
+}
+add_filter( 'pre_get_posts', 'author_for_resource' );
 
 // Function like "in_category" for custom taxonomies
 // USAGE: if (has_type('blog')) 
