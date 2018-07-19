@@ -31,7 +31,7 @@
         <div class="audience">
           <div class="row">
             <div class="audience__description col-sm-6 col-xs-12">
-            <h2 class="audience__title u-width-sm"><?php echo $item_title; ?></h2>
+            <h2 class="audience__title u-width-sm">Executives Empowered</h2>
             
               <p><?php echo $item_text; ?></p>
               <a href="<?php echo $item_button['url']; ?>" class="audience_button btn btn--primary" target="<?php echo $item_button['target']; ?>"><?php echo $item_button['title']; ?></a>
