@@ -3180,8 +3180,7 @@ body.nav-open {
           transform: rotateY(180deg);
   padding: 0 0.9375em;
   background: #e6e6e6;
-  color: #111111;
-  overflow-y: scroll; }
+  color: #111111; }
 
 .grow {
   -webkit-transition: -webkit-transform 0.2s ease-out;
