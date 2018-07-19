@@ -3,7 +3,7 @@
 
 $teamArgs = array(
   'post_type' => 'team',
-  //'posts_per_page' => 3, //limit
+  'posts_per_page' => -1,
 );
 $teamQuery = new WP_Query($teamArgs);
 ?>
