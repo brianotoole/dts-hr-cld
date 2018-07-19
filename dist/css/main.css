@@ -2724,6 +2724,9 @@ body.nav-open {
   .btn:hover:before, .gform_wrapper .gform_footer input.button:hover:before {
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
+  @media (max-width: 480px) {
+    .btn, .gform_wrapper .gform_footer input.button {
+      display: block; } }
 
 .btn--large {
   padding-top: 1.2em;
@@ -3832,6 +3835,11 @@ body img.gform_ajax_spinner {
 /*
 ** About
 */
+@media (max-width: 768px) {
+  .section--about-values h2, .section--about-values .testimonial__name {
+    text-align: center;
+    width: 100%; } }
+
 .row--stats {
   padding-top: 3em; }
 
@@ -3845,9 +3853,14 @@ body img.gform_ajax_spinner {
           align-items: center; }
 
 .stat {
-  height: 100%;
+  height: auto;
   background: #cfcfcf;
+  margin-bottom: 0.9375em;
   padding: 1.875em 0.9375em; }
+  @media (min-width: 768px) {
+    .stat {
+      height: 100%;
+      margin: 0; } }
 
 .stat__number {
   color: #323a45; }

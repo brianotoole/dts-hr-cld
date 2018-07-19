@@ -35,6 +35,9 @@
   &:hover:before {
     transform: scaleX(1);
   }
+  @media (max-width: $mobile) {
+    display: block;
+  }
 }
 
 .btn--large {

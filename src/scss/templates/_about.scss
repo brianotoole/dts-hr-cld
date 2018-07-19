@@ -2,6 +2,13 @@
 ** About
 */
 
+.section--about-values h2 {
+  @media (max-width: $tablet) {
+    text-align: center;
+    width: 100%;
+  }
+}
+
 .row--stats {
   padding-top: 3em;
 }
@@ -16,9 +23,14 @@
 }
 
 .stat {
-  height: 100%; //equal height content
+  height: auto;
   background: $color__border;
+  margin-bottom: calc-em(15px);
   padding: calc-em(30px) calc-em(15px);
+  @media (min-width: $tablet) {
+    height: 100%;//equal height content
+    margin: 0;
+  }
 }
 
 .stat__number {

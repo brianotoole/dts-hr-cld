@@ -71,7 +71,7 @@
       $icon_img = get_sub_field('iconblock_img');
       $icon_title = get_sub_field('iconblock_title');
     ?>
-      <div class="col-sm-4 col-xs-12">
+      <div class="col-sm-4 col-xs-6">
         <div class="icon-block">
           <img src="<?php echo $icon_img; ?>">
           <h5 class="icon-block__title u-color-primary"><?php echo $icon_title; ?></h5>
