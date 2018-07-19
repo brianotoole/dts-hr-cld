@@ -159,7 +159,7 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
 
 .back {
   transform: rotateY(180deg);
-  padding: 0 calc-em(15px);
+  padding: calc-em(6px) calc-em(17px);
   background: $color__grey;
   color: $color__text;
 }

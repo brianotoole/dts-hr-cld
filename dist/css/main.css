@@ -3178,7 +3178,7 @@ body.nav-open {
 .back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  padding: 0 0.9375em;
+  padding: 0.375em 1.0625em;
   background: #e6e6e6;
   color: #111111; }
 
