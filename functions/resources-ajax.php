@@ -198,6 +198,23 @@ function ont_get_resources() {
     );
   }
 
+  // if type is filtered
+  if ($type != 'All' && $topic != 'All') {
+    $args["tax_query"] = array(
+      'relation' => 'AND',
+      array(
+        'field' => 'ID',
+        'taxonomy' => 'type',
+        'terms' => $type
+      ),
+      array(
+        'field' => 'ID',
+        'taxonomy' => 'topic',
+        'terms' => $topic
+      )
+    );
+  }
+
   $resQuery = new WP_Query($args);
 
 ?>
