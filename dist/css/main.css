@@ -4108,11 +4108,18 @@ body img.gform_ajax_spinner {
 */
 .icon {
   position: relative; }
+  @media (max-width: 768px) {
+    .icon {
+      margin-top: 1.875em; } }
 
 .icon__image img {
   max-width: 150px;
   max-height: 95px;
   margin-bottom: 1em; }
+  @media (max-width: 768px) {
+    .icon__image img {
+      max-width: 135px;
+      max-height: 75px; } }
 
 .icon__image--centered {
   margin: 0 auto; }

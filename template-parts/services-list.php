@@ -22,7 +22,7 @@
       $image = get_sub_field('image');
       $title = get_sub_field('title');
     ?>
-      <div class="col-sm-3 col-xs-12">
+      <div class="col-sm-3 col-xs-6">
         <div class="icon">
           <div class="icon__image icon__image--centered"><img src="<?php echo $image; ?>"></div>
           <h5 class="icon__title"><?php echo $title; ?></h5>

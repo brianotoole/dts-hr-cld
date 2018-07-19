@@ -4,12 +4,19 @@
 
 .icon {
   position: relative;
+  @media (max-width: $tablet) {
+    margin-top: calc-em(30px);
+  }
 }
 
 .icon__image img {
   max-width: 150px;
   max-height: 95px;
   margin-bottom: 1em;
+  @media (max-width: $tablet) {
+    max-width: 135px;
+    max-height: 75px;
+  }
 }
 
 .icon__image--centered {
