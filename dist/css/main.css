@@ -3084,8 +3084,12 @@ body.nav-open {
       right: 0; }
 
 .card__type {
+  font-weight: normal;
   text-transform: capitalize;
   padding-bottom: 0.625em; }
+  @media (min-width: 768px) {
+    .card__type {
+      font-weight: 1.125em; } }
 
 .card__more {
   display: inline-block;

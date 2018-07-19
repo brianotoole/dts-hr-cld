@@ -61,8 +61,12 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
 }
 
 .card__type {
+  font-weight: normal;
   text-transform: capitalize;
   padding-bottom: calc-em(10px);
+  @media (min-width: $tablet) {
+    font-weight: calc-em(18);
+  }
 }
 
 .card__more {
