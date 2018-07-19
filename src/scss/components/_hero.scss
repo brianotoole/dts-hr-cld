@@ -44,6 +44,9 @@ $header__height: 80px;
     max-width: 42%;
     padding-bottom: calc-em(5px);
   }
+  .single-resource & {
+    max-width: 100%;
+  }
 }
 
 .hero__subheading {}

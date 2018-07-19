@@ -2806,6 +2806,9 @@ body.nav-open {
     max-width: 42%;
     padding-bottom: 0.3125em; } }
 
+.single-resource .hero__heading {
+  max-width: 100%; }
+
 @media (min-width: 768px) {
   .hero__button--end {
     display: -webkit-box;
