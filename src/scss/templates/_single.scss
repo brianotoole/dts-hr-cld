@@ -16,3 +16,12 @@
 .single__content p {
   margin: calc-em(20) 0;
 }
+
+// Single - infographic
+.infographic__img {
+  width: 100%;
+  @media (min-width: $tablet) {
+    width: 800px;
+    height: auto;
+  }
+}

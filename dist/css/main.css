@@ -4172,3 +4172,10 @@ body img.gform_ajax_spinner {
 
 .single__content p {
   margin: 1.25em 0; }
+
+.infographic__img {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .infographic__img {
+      width: 800px;
+      height: auto; } }

@@ -15,6 +15,13 @@
         <?php endif; ?>
       </div><!--/.col-->
     </div><!--/.row-->
+    <?php if (get_field('resource_infographic')) : ?>
+    <div class="row row--infographic">
+      <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+        <img class="infographic__img" src="<?php the_field('resource_infographic'); ?>">
+      </div>
+    </div>
+    <?php endif; ?>
     <?php if (has_type('blog')) : ?>
     <div class="row row--author">
       <div class="col-sm-8 col-sm-offset-2 col-xs-12">
