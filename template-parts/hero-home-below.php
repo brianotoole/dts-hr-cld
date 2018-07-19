@@ -13,7 +13,7 @@
           <div class="macbook">
             <div class="macbook__screen">
               <div class="macbook__viewport">
-                <img src="<?php echo get_template_directory_uri() . '/dist/img/home-demo.gif';?>">
+                <img src="<?php the_field('home_below_hero_gif'); ?>">
               </div>
             </div>
             <div class="macbook__base"></div>
