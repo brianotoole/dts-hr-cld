@@ -5,7 +5,17 @@
   <div class="container">
     <div class="row">
       <div class="single__content col-sm-8 col-sm-offset-2 col-xs-12">
-      <?php the_content(); ?>
+      <?php // default content
+        if ( have_posts() ) :
+          while ( have_posts() ) :
+            the_post();
+            //the_content();
+            get_template_part('template-parts/content', '');
+        ?>
+        <?php endwhile; 
+        else : 
+        ?>
+        <?php endif; ?>
         <?php $single_btn = get_field('resource_single_button'); ?>
         <?php if ($single_btn) : ?>
         <div class="single__button u-text-center u-pad-top">
@@ -19,8 +29,8 @@
     <div class="row row--infographic">
       <div class="col-sm-8 col-sm-offset-2 col-xs-12">
         <img class="infographic__img" src="<?php the_field('resource_infographic'); ?>">
-      </div>
-    </div>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
     <?php endif; ?>
     <?php if (has_type('blog')) : ?>
     <div class="row row--author">
