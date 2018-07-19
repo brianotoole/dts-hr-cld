@@ -83,7 +83,7 @@ function get_the_resource_card($id) {
   $card_html = '
   <a href="'. get_the_permalink($id) .'" class="card__overlay grow" style="background:linear-gradient('. get_rgba($color) .', 1), '. get_rgba($color) .', 1)), url('. get_thumb_img($id) .')">'.
     '<h5 class="card__type">'. get_tax_name($id) .'</h5>'.
-    '<h4 class="card__title">'. get_the_title($id) .'</h4>'.
+    '<h5 class="card__title">'. get_the_title($id) .'</h5>'.
     '<span class="card__more">View</span>'.
   '</a>';
 
@@ -92,7 +92,7 @@ function get_the_resource_card($id) {
   '<a class="flip">'.
     '<div class="card__overlay front" style="background:linear-gradient('. get_rgba($color) .', 1), '. get_rgba($color) .', 1)), url('. get_thumb_img($id) .')">'.
       '<h5 class="card__type">'. get_tax_name($id) .'</h5>'.
-      '<h4 class="card__title">'. get_the_title($id) .'</h4>'.
+      '<h5 class="card__title">'. get_the_title($id) .'</h5>'.
       '<span class="card__more">View</span>'.
     '</div>'. //.front
     '<div class="back">'.

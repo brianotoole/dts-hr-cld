@@ -37,7 +37,7 @@ $featQuery = new WP_Query($featArgs);
             <li class="col-sm-4 col-xs-12 card card--has-footer grow">
               <a href="<?php the_permalink(); ?>" class="card__overlay" style="background:linear-gradient(rgba(110, 154, 185, 1), rgba(110, 154, 185, 1)), url('<?php echo get_thumb_img($id); ?>')">
                 <h5 class="card__type"><?php echo get_tax_name($id); ?></h5>
-                <h4 class="card__title"><?php the_title(); ?></h4>
+                <h5 class="card__title"><?php the_title(); ?></h5>
               </a><!--/.card__overlay-->
               <div class="card__footer">
                 <p><?php echo wp_trim_words( get_the_content() , '20', '…' ); ?></p>
