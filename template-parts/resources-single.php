@@ -25,20 +25,20 @@
     <?php if (has_type('blog')) : ?>
     <div class="row row--author">
       <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-        <div class="author">
-          <div class="author__image">
+        <div class="author-detail">
+          <div class="author-detail__image">
           <?php if($avatar = get_avatar(get_the_author_meta('ID')) !== false): ?>
             <img src="<?php echo $avatar; ?>">
           <?php else: ?>
           <?php endif; ?>
-          </div><!-- /.author__image -->
-          <div class="author__bio">
-            <h6 class="author__bio-heading">Written by <?php the_author(); ?></h6>
-            <p class="author__bio-content"><?php the_author_description(); ?></p>
+          </div><!-- /.author-detail__image -->
+          <div class="author-detail__bio">
+            <h6 class="author-detail__bio-heading">Written by <?php the_author(); ?></h6>
+            <p class="author-detail__bio-content"><?php the_author_description(); ?></p>
             <i class="fas fa-file"></i>
             <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">Read others posts by <?php the_author(); ?></a>
           </div>
-        </div><!-- /.author -->
+        </div><!-- /.author-detail -->
       </div><!-- /.col -->
     </div><!-- /.row -->
     <?php endif; ?>

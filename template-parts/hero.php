@@ -23,6 +23,12 @@ $hero_button = get_field('hero_button');
               <h1 class="hero__heading h2 u-text-bold u-text-upper">
                 <?php if ($hero_heading) : ?>
                   <?php echo $hero_heading; ?>
+                <?php elseif ( is_search() ) : ?>
+                  <?php printf( esc_html__( 'Results for: %s', 'spx' ), '<strong>' . get_search_query() . '</strong>' ); ?>
+                <?php elseif ( is_404() ) : ?>
+                  <?php printf( esc_html__( 'Page Not Found: 404', 'spx' )); ?>
+                <?php elseif ( is_author() ) : ?>
+                  <?php printf( esc_html__( 'Articles by: name', 'spx' )); ?>
                 <?php else : ?>
                   <?php the_title(); ?>
                 <?php endif; ?>

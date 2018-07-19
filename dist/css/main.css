@@ -3438,7 +3438,7 @@ body img.gform_ajax_spinner {
 .row--author {
   margin-top: 2.5em; }
 
-.author {
+.author-detail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3447,20 +3447,20 @@ body img.gform_ajax_spinner {
           align-items: center;
   height: 100%; }
 
-.author__image img {
+.author-detail__image img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   padding-right: 2.5em; }
 
-.author__bio {
+.author-detail__bio {
   width: 100%;
   margin: 0.625em 0; }
 
-.author__bio-content {
+.author-detail__bio-content {
   margin: 0.625em 0; }
 
-.author__bio i {
+.author-detail__bio i {
   color: #cfcfcf;
   font-size: 0.8125em;
   padding-right: 0.3125em; }

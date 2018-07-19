@@ -5,36 +5,34 @@
 .row--author {
   margin-top: calc-em(40px);
 }
-.author {
+.author-detail {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-.author__image img {
+.author-detail__image img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   padding-right: calc-em(40px);
 }
 
-.author__bio {
+.author-detail__bio {
   width: 100%;
   margin: calc-em(10px) 0;
 }
 
-.author__bio-content {
+.author-detail__bio-content {
   margin: calc-em(10px) 0;
 }
 
-.author__bio i {
+.author-detail__bio i {
   color: $color__border;
   font-size: calc-em(13px);
   padding-right: calc-em(5px);
 }
 
-.author__bio-heading {}
+.author-detail__bio-heading {}
 
-.author__bio-more {}
-
-
+.author-detail__bio-more {}
