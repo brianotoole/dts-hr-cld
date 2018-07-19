@@ -8,23 +8,7 @@ $hero_subheading = get_field('hero_subheading');
 $hero_button = get_field('hero_button');
 ?>
 
-<?php 
-  // set hero background: if acf field is not set, use feat img thumb
-  if ($hero_background) : $hero_background = $hero_background; 
-  else : $hero_background = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-  endif; 
-?>
-
-<div class="hero <?php if (is_page('about')) : echo 'hero--about'; endif; ?>">
-
-  <img class="hero__img"
-  src="<?php echo $hero_background['sizes']['hero-small']; ?>"
-  sizes="(min-width: 70em) 1000px, (min-width: 50em) 750px, (min-width: 31.5em), 500px, 100vw"
-  srcset="
-    <?php echo $hero_background['sizes']['hero-small']; ?> 500w,
-    <?php echo $hero_background['sizes']['hero-medium']; ?> 750w,
-    <?php echo $hero_background['sizes']['hero-large']; ?> 1000w"
-  alt="">
+<div class="hero <?php if (is_page('about')) : echo 'hero--about'; endif; ?>" <?php if ($hero_background) : ?>style="background-image:url('<?php echo $hero_background['url']; ?>')" <?php endif; ?>>
     
     <div class="hero__inner">
       <div class="container">
@@ -36,9 +20,6 @@ $hero_button = get_field('hero_button');
           ?>
           <div class="col-sm-10 col-xs-12">
             <div class="hero__text">
-              <?php if (is_singular('resource')) : ?>
-              <h4 class="hero__category"><?php echo get_tax_name(); ?></h4>
-              <?php endif; ?>
               <h1 class="hero__heading h2 u-text-bold u-text-upper"><?php the_field('hero_heading'); ?></h1>
               <p class="hero__subheading"><?php the_field('hero_subheading'); ?></p>
 

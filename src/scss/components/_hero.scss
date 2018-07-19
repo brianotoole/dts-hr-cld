@@ -5,29 +5,17 @@
 $header__height: 80px;
 
 .hero {
-  width: 100%;
-  height: auto;
-  position: relative;
-  overflow: hidden;
-  @media (min-width: $tablet) {
-    height: calc(88vh - #{$header__height});
-  }
-  .single-resource & {
-    height: 300px;
-  }
-}
-
-.hero__img {
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
-  background-repeat: no-repeat;
+  height: calc(88vh - #{$header__height});
   background-size: cover;
   background-position: center center;
-  @media (min-width: $tablet) {
-    position: absolute;
+  background-repeat: no-repeat;
+  .single-resource & {
+    height: 300px;
+    background-image: url('../img/hero-resource-default.jpg');
   }
 }
 
