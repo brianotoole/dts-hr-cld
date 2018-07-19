@@ -383,9 +383,9 @@
     width: 445px;
     padding-bottom: calc-em(20px);
     transition: width 0.2s ease-out;
-    @media (min-width: $desktop-lg) {
+    /*@media (min-width: $desktop-lg) {
       width: 47%;
-    }
+    }*/
   }
 }
 

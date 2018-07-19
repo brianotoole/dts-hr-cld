@@ -3818,10 +3818,10 @@ body img.gform_ajax_spinner {
     width: 445px;
     padding-bottom: 1.25em;
     -webkit-transition: width 0.2s ease-out;
-    transition: width 0.2s ease-out; }
-    @media (min-width: 1400px) {
-      .unified__img img {
-        width: 47%; } }
+    transition: width 0.2s ease-out;
+    /*@media (min-width: $desktop-lg) {
+      width: 47%;
+    }*/ }
 
 .unified__img--mobile {
   position: relative;
