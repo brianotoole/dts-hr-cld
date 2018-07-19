@@ -21,7 +21,9 @@
 .infographic__img {
   width: 100%;
   @media (min-width: $tablet) {
-    width: 800px;
+    display: block;
+    width: 600px;
     height: auto;
+    margin: 0 auto;
   }
 }
