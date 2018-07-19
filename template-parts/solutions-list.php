@@ -44,9 +44,9 @@ $solutions_main_button = get_field('solutions_main_button');
           </div>
         </div><!--/.col-->
         <div class="col-sm-3 col-sm-offset-1 col-xs-12 first-xs last-sm">
-          <div class="solution__icon-wrap">
+          <a class="solution__icon-wrap" href="<?php the_permalink(); ?>">
             <img src="<?php echo $solution_icon['url']; ?>" class="solution__icon">
-          </div>
+          </a>
         </div><!--/.col-->
       </div><!--/.solution__item-->
         
