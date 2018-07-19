@@ -20,6 +20,44 @@
             "endpoint": 0
         },
         {
+            "key": "field_5b4fe307aa525",
+            "label": "Intro Title",
+            "name": "about_intro_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b4fe321aa526",
+            "label": "Intro Text",
+            "name": "about_intro_text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_5b27ead06a51d",
             "label": "Stat Blocks",
             "name": "stat_blocks",
@@ -236,5 +274,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531265506
+    "modified": 1531962235
 }

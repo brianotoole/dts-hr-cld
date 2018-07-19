@@ -6,13 +6,13 @@
 
     <div class="row row--intro">
       <div class="col-xs-12">
-        <h4 class="about__title u-color-primary">Industry Expertise</h4>
+        <h4 class="about__title u-color-primary"><?php the_field('about_intro_title'); ?></h4>
       </div><!--/.col-->
     </div><!--/.row-->
 
     <div class="row row--intro">
       <div class="col-sm-5 col-xs-12">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia ex ipsum illo eligendi ipsa necessitatibus qui voluptas officia, est molestias explicabo deleniti, accusantium sunt harum ad, vitae nesciunt? Iste, accusamus?</p>
+        <p><?php the_field('about_intro_text'); ?></p>
       </div><!--/.col-->
     </div><!--/.row-->
    
