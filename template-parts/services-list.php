@@ -6,8 +6,8 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h4 class="about__title u-color-primary">Superior Service<br/>From Experts Who Care</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt repellat sequi esse sapiente velit maxime consequuntur exercitationem, quibusdam numquam optio facilis odio iste aut blanditiis excepturi consectetur tempore officia minima.</p>
+        <h4 class="about__title u-color-primary"><?php the_field('service_intro_title'); ?></h4>
+        <p><?php the_field('service_intro_text'); ?></p>
       </div><!--/.col-->
     </div><!--/.row-->
   </div><!--/.container-->
@@ -25,7 +25,7 @@
       <div class="col-sm-3 col-xs-12">
         <div class="icon">
           <div class="icon__image icon__image--centered"><img src="<?php echo $image; ?>"></div>
-          <h4 class="icon__title"><?php echo $title; ?></h4>
+          <h5 class="icon__title"><?php echo $title; ?></h5>
         </div><!--/.icon-->
       </div><!--/.col-->
       <?php endwhile; ?>
