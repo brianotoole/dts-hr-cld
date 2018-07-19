@@ -5,23 +5,23 @@
        <div class="col-sm-3">
          <ul class="footer__top-menu">
            <div class="footer__top-title">Company</div>
-           <li><a>Company</a></li>
-           <li><a>About</a></li>
-           <li><a>Blog</a></li>
-           <li><a>Careers</a></li>
+           <li><a href="<?php echo home_url(); ?>/team">Team</a></li>
+           <li><a href="<?php echo home_url(); ?>/about">About</a></li>
+           <li><a href="<?php echo home_url(); ?>/resources">Blog</a></li>
+           <li><a href="<?php echo home_url(); ?>/careers">Careers</a></li>
          </ul>
        </div>
        <div class="col-sm-3">
          <ul class="footer__top-menu">
            <div class="footer__top-title">Solutions</div>
-           <li><a>Overview</a></li>
-           <li><a>Position Control</a></li>
-           <li><a>Recruiting</a></li>
-           <li><a>Time &amp; Attendance</a></li>
-           <li><a>Benefits Administration</a></li>
-           <li><a>Payroll</a></li>
-           <li><a>Talent Management</a></li>
-           <li><a>Workforce Analytics</a></li>
+           <li><a href="<?php echo home_url(); ?>/solutions">Overview</a></li>
+           <li><a href="<?php echo home_url(); ?>/solution/position-control">Position Control</a></li>
+           <li><a href="<?php echo home_url(); ?>/solution/recruiting">Recruiting</a></li>
+           <li><a href="<?php echo home_url(); ?>/solution/time-and-attendance">Time &amp; Attendance</a></li>
+           <li><a href="<?php echo home_url(); ?>/solution-benefits-administration">Benefits Administration</a></li>
+           <li><a href="<?php echo home_url(); ?>/payroll">Payroll</a></li>
+           <li><a href="<?php echo home_url(); ?>/talent-management">Talent Management</a></li>
+           <li><a href="<?php echo home_url(); ?>/workforce-analytics">Workforce Analytics</a></li>
          </ul>
        </div>
        <div class="col-sm-3">
@@ -48,9 +48,9 @@
      <div class="footer__bottom-copy">&copy; <?php echo bloginfo('name'); ?> <?php echo the_date('Y'); ?></div>
      <div class="footer__bottom-menu">
        <ul>
-         <li><a>Sitemap</a></li>
-         <li><a>Terms of Use</a></li>
-         <li><a>Privacy Policy</a></li>
+         <li><a href="<?php echo home_url(); ?>/sitemap">Sitemap</a></li>
+         <li><a href="<?php echo home_url(); ?>/terms">Terms of Use</a></li>
+         <li><a href="<?php echo home_url(); ?>/privacy">Privacy Policy</a></li>
        </ul>
      </div><!--/.footer-bottom-menu-->
    </div><!--/.footer-bottom-->
