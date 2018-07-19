@@ -42,7 +42,7 @@
             "key": "field_5b5115779c49d",
             "label": "Intro Text",
             "name": "service_intro_text",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -53,9 +53,9 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         },
         {
             "key": "field_5b2bed3459ae2",
@@ -180,5 +180,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1532040577
+    "modified": 1532040683
 }
