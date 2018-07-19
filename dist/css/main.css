@@ -3165,7 +3165,7 @@ body.nav-open {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 0 0.9375em;
+  padding: 0.9375em;
   color: white;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
@@ -3178,6 +3178,7 @@ body.nav-open {
 .back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+  padding: 0 0.9375em;
   background: #e6e6e6;
   color: #111111;
   overflow-y: scroll; }
