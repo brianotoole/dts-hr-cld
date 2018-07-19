@@ -3089,7 +3089,7 @@ body.nav-open {
   padding-bottom: 0.625em; }
   @media (min-width: 768px) {
     .card__type {
-      font-weight: 1.125em; } }
+      font-size: 1.125em; } }
 
 .card__more {
   display: inline-block;
