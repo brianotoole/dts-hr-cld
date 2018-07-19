@@ -163,6 +163,7 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
   transform: rotateY(180deg);
   background: $color__grey;
   color: $color__text;
+  overflow-y: scroll;
 }
 
 .grow { transition: transform 0.2s ease-out; transform: scale(1);-webkit-backface-visibility: hidden; }
