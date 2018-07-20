@@ -9,12 +9,13 @@ get_template_part('template-parts/solutions', 'single');
 
 // CTA (if yes)
 if (get_field('has_cta') == 'true') :
-get_template_part('template-parts/section', 'cta');
+  get_template_part('template-parts/section', 'cta');
 endif;
 
 // RELATED RESOURCES
-get_template_part('template-parts/section', 'related_resources');
-
+if (get_field('resources_is_selected') == 'true') :
+  get_template_part('template-parts/section', 'related_resources');
+endif;
 ?>
 
 <?php get_footer(); ?>

@@ -29,7 +29,9 @@ if (get_field('has_cta') == 'true') :
 endif;
 
 // RELATED RESOURCES
-get_template_part('template-parts/section', 'related_resources');
+if (get_field('resources_is_selected') == 'true') :
+  get_template_part('template-parts/section', 'related_resources');
+endif;
 
 ?>
 
