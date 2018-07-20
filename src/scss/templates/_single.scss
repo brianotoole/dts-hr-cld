@@ -17,6 +17,30 @@
   margin: calc-em(20) 0;
 }
 
+.entry-content a {
+  position: relative;
+  position: relative;
+  overflow: hidden;
+  color: $color__text;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: $color__text;
+    height: 2px;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  &:hover:before {
+    left: 0;
+    right: 0;
+  }
+}
+
 // Single - infographic
 .infographic__img {
   width: 100%;
