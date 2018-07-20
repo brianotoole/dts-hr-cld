@@ -24,7 +24,9 @@ $hero_button = get_field('hero_button');
                 <?php elseif ( is_404() ) : ?>
                   <?php printf( esc_html__( 'Page Not Found: 404', 'spx' )); ?>
                 <?php elseif ( is_author() ) : ?>
-                  jfkdjsfdkl
+                  Author Posts
+                <?php elseif (has_type('blog')) : ?>
+                  Blog
                 <?php else : ?>
                   <?php the_title(); ?>
                 <?php endif; ?>
