@@ -17,6 +17,7 @@ $hero_button = get_field('hero_button');
           <div class="col-sm-10 col-xs-12">
             <div class="hero__text">
               <h1 class="hero__heading h2 u-text-bold u-text-upper">
+
                 <?php if ($hero_heading) : ?>
                   <?php echo $hero_heading; ?>
                 <?php elseif ( is_search() ) : ?>
@@ -24,7 +25,7 @@ $hero_button = get_field('hero_button');
                 <?php elseif ( is_404() ) : ?>
                   <?php printf( esc_html__( 'Page Not Found: 404', 'spx' )); ?>
                 <?php elseif ( is_author() ) : ?>
-                  <?php printf( esc_html__( 'Articles by:', 'spx' ), '<strong>' . get_the_author_meta('display_name', $author_id) . '</strong>' ); ?>
+                  Articles by: <?php echo get_the_author_meta('display_name', $author_id); ?>
                 <?php elseif (has_type('blog')) : ?>
                   Blog
                 <?php else : ?>
