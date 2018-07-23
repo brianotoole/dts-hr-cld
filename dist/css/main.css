@@ -2867,6 +2867,14 @@ body.nav-open {
 /**
   * CTA
   */
+@media (max-width: 1020px) {
+  .section--cta-home .cta__form {
+    margin-top: 4em; } }
+
+@media (max-width: 480px) {
+  .section--cta-home .cta__form {
+    margin-top: 0; } }
+
 /**
   * Carousel
   * @NOTE: uses Slick
@@ -3393,7 +3401,7 @@ body .gf_simple_horizontal_wrapper .top_label div.ginput_container {
 .gf_simple_horizontal div.gform_footer.top_label input[type="submit"] {
   line-height: 26px;
   padding: 5px 24px; }
-  @media (min-width: 768px) {
+  @media (min-width: 480px) {
     .gf_simple_horizontal div.gform_footer.top_label input[type="submit"] {
       padding: 0 24px; } }
 
