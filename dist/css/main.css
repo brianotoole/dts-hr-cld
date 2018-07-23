@@ -2436,6 +2436,9 @@ address {
 .nav__inner li {
   padding-right: 1.25em; }
 
+.nav__inner > li {
+  padding-bottom: 10px; }
+
 .nav__inner li a {
   color: #323a45;
   text-transform: uppercase;
