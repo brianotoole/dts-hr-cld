@@ -2776,7 +2776,9 @@ body.nav-open {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat; }
-  .single-resource .hero {
+  .single-resource .hero,
+  .page-template-resources .hero,
+  .page-template-solutions .hero {
     height: 300px;
     background-image: url(../../dist/img/hero-resource-default.jpg); }
 
