@@ -2845,8 +2845,8 @@ body.nav-open {
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-  top: -55%;
-  right: 0;
+  top: -45%;
+  right: 100px;
   width: 500px;
   width: 24vw;
   height: 500px;
