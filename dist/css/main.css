@@ -2803,7 +2803,7 @@ body.nav-open {
 
 @media (min-width: 768px) {
   .hero__heading {
-    max-width: 42%;
+    max-width: 65%;
     padding-bottom: 0.3125em; } }
 
 .single-resource .hero__heading {

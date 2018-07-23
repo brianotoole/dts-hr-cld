@@ -41,7 +41,7 @@ $header__height: 80px;
 
 .hero__heading {
   @media (min-width: $tablet) {
-    max-width: 42%;
+    max-width: 65%;
     padding-bottom: calc-em(5px);
   }
   .single-resource & {
