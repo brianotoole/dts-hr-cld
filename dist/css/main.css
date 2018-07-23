@@ -3389,8 +3389,7 @@ body .gf_simple_horizontal_wrapper .top_label div.ginput_container {
 
 .gf_simple_horizontal div.gform_footer.top_label input[type="submit"] {
   line-height: 26px;
-  padding: 5px 24px;
-  text-transform: uppercase; }
+  padding: 5px 24px; }
   @media (min-width: 768px) {
     .gf_simple_horizontal div.gform_footer.top_label input[type="submit"] {
       padding: 0 24px; } }
