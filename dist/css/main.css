@@ -2588,12 +2588,13 @@ address {
       background: white;
       border-top: 1px solid rgba(207, 207, 207, 0.25);
       border-bottom: none;
-      text-align: center;
+      text-transform: capitalize;
       -webkit-transition: all 0.3s ease-out;
       transition: all 0.3s ease-out; }
       @media (min-width: 768px) {
         .nav-primary ul.sub-menu li a {
-          min-width: 220px; } }
+          min-width: 220px;
+          padding: 10px 22px; } }
       .nav-primary ul.sub-menu li a:hover {
         background: #ea8c2a;
         color: white; }

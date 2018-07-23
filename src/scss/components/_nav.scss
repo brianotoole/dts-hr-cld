@@ -171,10 +171,11 @@ $m_icon_height: 3px;
       background: white;
       border-top: 1px solid rgba($color__border, 0.25);
       border-bottom: none;
-      text-align: center;
+      text-transform: capitalize;
       transition: all 0.3s ease-out;
       @media (min-width: $tablet) {
         min-width: 220px;
+        padding: 10px 22px;
       }
       &:hover {
         background: $color__primary;
