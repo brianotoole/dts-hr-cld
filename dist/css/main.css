@@ -3421,8 +3421,26 @@ body .gf_simple_horizontal_wrapper .top_label div.ginput_container {
     margin-bottom: 0 !important; } }
 
 .gform_confirmation_message {
-  margin: 25px auto; }
+  margin: -20px auto; }
 
+.gform_wrapper .description_above .gfield_description {
+  position: absolute !important;
+  padding: 0 !important;
+  margin: 0 !important; }
+
+.gform_wrapper .field_sublabel_above .gfield_description {
+  margin: 0 !important; }
+
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required {
+  margin-bottom: 0 !important; }
+
+.gform_wrapper form.gf_simple_horizontal div.gform_body ul.top_label li.gfield {
+  margin-bottom: -5px !important; }
+
+/* Hide the error message since we're displaying it above 
+.validation_error, .validation_message {
+	display:none;
+}*/
 body img.gform_ajax_spinner {
   display: block;
   margin: 10px 0 0 10px;
