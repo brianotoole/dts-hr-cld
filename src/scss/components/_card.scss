@@ -153,13 +153,6 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
   height: 100%;
   padding: calc-em(15px);
   color: white;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transition: transform 0.2s ease-out; transform: scale(1);
-  &:hover {
-    -webkit-backface-visibility: hidden;
-    transform: translateZ(0) scale(1.0, 1.0);
-  }
 }
 
 .front {
