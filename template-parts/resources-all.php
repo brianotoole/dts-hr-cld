@@ -195,13 +195,11 @@ $(".custom-option:first-of-type").hover(function() {
   $(this).parents(".custom-options").removeClass("option-hover");
 });
 $(".custom-select-trigger").on("click", function() {
-  $('html').one('click',function() {
-    $(".custom-select").removeClass("opened");
-  });
+  $(".custom-select").removeClass("opened");
   $(this).parents(".custom-select").toggleClass("opened");
   event.stopPropagation();
 });
-$(".custom-option").on("click", function() {
+$(".custom-options .custom-option").on("click", function() {
   $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
   $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
   $(this).addClass("selection");
