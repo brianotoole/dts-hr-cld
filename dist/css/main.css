@@ -3162,6 +3162,10 @@ body.nav-open {
             transform: rotateY(180deg);
     -webkit-box-shadow: rgba(207, 207, 207, 0.4) 0px 0px 20px 0px;
             box-shadow: rgba(207, 207, 207, 0.4) 0px 0px 20px 0px; }
+  .card-flip.active .front {
+    z-index: 99; }
+  .card-flip.active .back {
+    z-index: 99; }
 
 .card-flip,
 .front,

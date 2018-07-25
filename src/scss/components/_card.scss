@@ -129,6 +129,12 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
     transform: rotateY(180deg);
     box-shadow: $card__shadow;
   }
+  &.active .front {
+    z-index: 99;
+  }
+  &.active .back {
+    z-index: 99;
+  }
 }
 
 .card-flip,
