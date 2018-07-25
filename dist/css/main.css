@@ -3184,7 +3184,18 @@ body.nav-open {
   padding: 0.9375em;
   color: white;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -webkit-transform: scale(1);
+          transform: scale(1); }
+  .front:hover,
+  .back:hover {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1, 1);
+            transform: translateZ(0) scale(1, 1); }
 
 .front {
   -webkit-transform: rotateY(0deg);
@@ -3198,19 +3209,16 @@ body.nav-open {
   background: #e6e6e6;
   color: #111111; }
 
-.grow {
-  -webkit-transition: -webkit-transform 0.2s ease-out;
-  transition: -webkit-transform 0.2s ease-out;
-  transition: transform 0.2s ease-out;
-  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-backface-visibility: hidden; }
-
-.grow:hover {
-  -webkit-transform: scale(1.025);
-          transform: scale(1.025); }
-
+/*
+.grow { 
+  -webkit-backface-visibility: hidden; 
+  transform: translateZ(0) scale(1.0, 1.0); 
+  transition: transform 0.2s ease-out; 
+}
+.grow:hover { 
+  transform: translateZ(0) scale(1.05, 1.05); 
+}
+*/
 input,
 textarea,
 select {

@@ -154,6 +154,11 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
   color: white;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  transition: transform 0.2s ease-out; transform: scale(1);
+  &:hover {
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0) scale(1.0, 1.0);
+  }
 }
 
 .front {
@@ -168,5 +173,13 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
   color: $color__text;
 }
 
-.grow { transition: transform 0.2s ease-out; transform: scale(1);-webkit-backface-visibility: hidden; }
-.grow:hover { transform: scale(1.025); }
+/*
+.grow { 
+  -webkit-backface-visibility: hidden; 
+  transform: translateZ(0) scale(1.0, 1.0); 
+  transition: transform 0.2s ease-out; 
+}
+.grow:hover { 
+  transform: translateZ(0) scale(1.05, 1.05); 
+}
+*/
