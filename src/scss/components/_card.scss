@@ -129,12 +129,6 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
     transform: rotateY(180deg);
     box-shadow: $card__shadow;
   }
-  &.active .front {
-    z-index: 99;
-  }
-  &.active .back {
-    z-index: 99;
-  }
 }
 
 .card-flip,
@@ -150,6 +144,7 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
   height: 100%;
   transition: 0.5s;
   transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
 .front,
@@ -162,19 +157,29 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
   height: 100%;
   padding: calc-em(15px);
   color: white;
+  transform-style: preserve-3d;
 }
 
 .front {
-  transform: rotateY(0deg);
   z-index: 2;
+  transform: rotateY(0deg);
 }
 
 .back {
-  transform: rotateY(180deg);
+  visibility: hidden;
+  opacity: 0;
+  transform: rotateY(-180deg);
   padding: calc-em(6px) calc-em(17px);
   background: $color__grey;
   color: $color__text;
 }
+
+.active .back {
+  visibility: visible;
+  opacity: 1;
+}
+
+
 
 /*
 .grow { 

@@ -3162,10 +3162,6 @@ body.nav-open {
             transform: rotateY(180deg);
     -webkit-box-shadow: rgba(207, 207, 207, 0.4) 0px 0px 20px 0px;
             box-shadow: rgba(207, 207, 207, 0.4) 0px 0px 20px 0px; }
-  .card-flip.active .front {
-    z-index: 99; }
-  .card-flip.active .back {
-    z-index: 99; }
 
 .card-flip,
 .front,
@@ -3180,7 +3176,9 @@ body.nav-open {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d; }
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
 
 .front,
 .back {
@@ -3191,19 +3189,27 @@ body.nav-open {
   width: 100%;
   height: 100%;
   padding: 0.9375em;
-  color: white; }
+  color: white;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d; }
 
 .front {
+  z-index: 2;
   -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-  z-index: 2; }
+          transform: rotateY(0deg); }
 
 .back {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
   padding: 0.375em 1.0625em;
   background: #e6e6e6;
   color: #111111; }
+
+.active .back {
+  visibility: visible;
+  opacity: 1; }
 
 /*
 .grow { 
