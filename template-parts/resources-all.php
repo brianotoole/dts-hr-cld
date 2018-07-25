@@ -35,7 +35,7 @@ $featQuery = new WP_Query($featArgs);
           while ( $featQuery->have_posts() ) :
             $featQuery->the_post(); ?>
             <li class="col-sm-4 col-xs-12 card card--has-footer grow">
-              <a href="<?php the_permalink(); ?>" class="card__overlay" style="background:linear-gradient(rgba(110, 154, 185, 1), rgba(110, 154, 185, 1)), url('<?php echo get_thumb_img($id); ?>')">
+              <a href="<?php the_permalink(); ?>" class="card__overlay" style="background:linear-gradient(rgba(110, 154, 185, 0.85), rgba(110, 154, 185, 0.85)), url('<?php echo get_thumb_img($id); ?>')">
                 <h5 class="card__type"><?php echo get_tax_name($id); ?></h5>
                 <h5 class="card__title"><?php the_title(); ?></h5>
               </a><!--/.card__overlay-->
@@ -62,20 +62,20 @@ $featQuery = new WP_Query($featArgs);
   <p class="col-sm-offset-1 col-sm-10 col-xs-12 u-text-center">See a sampling of our most popular resources below. Or, use the filters to browse through our full library.</p>
   
     <div class="filters">
-      <?php $topics = get_terms(array('taxonomy' => 'topic', 'hide_empty' => false)) ?>
+      <?php $topics = get_terms(array('taxonomy' => 'topic', 'hide_empty' => true)) ?>
       <div class="row center-xs">
-        <div class="col-sm-3 col-xs-6 custom-select">
-          <select class="topic">
-            <option value="All">Topic</option>
+        <div class="col-sm-3 col-xs-6">
+          <select class="topic custom-select" placeholder="Topic">
+            <option value="All">All</option>
             <?php foreach ($topics as $topic): ?>
-              <option value="<?php echo $topic->term_id ?>"><?php echo $topic->name ?></option>
+              <option value="<?php echo $topic->term_id; ?>"><?php echo $topic->name; ?></option>
             <?php endforeach ?>
           </select>
         </div><!--/.col.select-->
-      <?php $types = get_terms(array('taxonomy' => 'type', 'hide_empty' => false)) ?>
-        <div class="col-sm-3 col-xs-6 custom-select">
-          <select class="type">
-            <option value="All">Type</option>
+      <?php $types = get_terms(array('taxonomy' => 'type', 'hide_empty' => true)) ?>
+        <div class="col-sm-3 col-xs-6">
+          <select class="type custom-select" placeholder="Type">
+            <option value="All">All</option>
             <?php foreach ($types as $type): ?>
               <option value="<?php echo $type->term_id ?>"><?php echo $type->name ?></option>
             <?php endforeach ?>
@@ -150,7 +150,7 @@ $featQuery = new WP_Query($featArgs);
 
       }
 
-      $('.filters select').on('change', function() {
+      $('.filters .custom-option').on('click', function() {
 
         $('#js-resources-list').html('');
 
@@ -172,6 +172,42 @@ $featQuery = new WP_Query($featArgs);
       get_resources(ppp, page, $('.filters select.type').val(), $('.filters select.topic').val());
 
     });
+
+$(".custom-select").each(function() {
+  var classes = $(this).attr("class"),
+      id      = $(this).attr("id"),
+      name    = $(this).attr("name");
+  var template =  '<div class="' + classes + '">';
+      template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+      template += '<div class="custom-options">';
+      $(this).find("option").each(function() {
+        template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+      });
+  template += '</div></div>';
+  
+  $(this).wrap('<div class="custom-select-wrapper"></div>');
+  $(this).hide();
+  $(this).after(template);
+});
+$(".custom-option:first-of-type").hover(function() {
+  $(this).parents(".custom-options").addClass("option-hover");
+}, function() {
+  $(this).parents(".custom-options").removeClass("option-hover");
+});
+$(".custom-select-trigger").on("click", function() {
+  $('html').one('click',function() {
+    $(".custom-select").removeClass("opened");
+  });
+  $(this).parents(".custom-select").toggleClass("opened");
+  event.stopPropagation();
+});
+$(".custom-option").on("click", function() {
+  $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+  $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+  $(this).addClass("selection");
+  $(this).parents(".custom-select").removeClass("opened");
+  $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+});
   </script>
 
   </div><!--/.container-->

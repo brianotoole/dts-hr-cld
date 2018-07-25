@@ -53,7 +53,7 @@ label {
 
 .custom-select {
   position: relative;
-  &:after {
+  /*&:after {
     content:"\f078";
     font-family:'Font Awesome\ 5 Free';
     font-weight: 900;
@@ -64,7 +64,7 @@ label {
     transform: translateY(-50%);
     display: inline-block;
     pointer-events: none;
-  }
+  }*/
   select {
     display: block;
     width: 100%;
