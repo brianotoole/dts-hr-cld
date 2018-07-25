@@ -4202,6 +4202,9 @@ body img.gform_ajax_spinner {
 /*
 ** Resources
 */
+.load-more {
+  margin-top: 0.9375em; }
+
 .filters {
   margin-bottom: 3.125em; }
 
