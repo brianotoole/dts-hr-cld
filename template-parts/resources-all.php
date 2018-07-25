@@ -195,7 +195,7 @@ $(".custom-option:first-of-type").hover(function() {
   $(this).parents(".custom-options").removeClass("option-hover");
 });
 $(".custom-select-trigger").on("click", function() {
-  $(".custom-select").removeClass("opened");
+  //$(".custom-select").removeClass("opened");
   $(this).parents(".custom-select").toggleClass("opened");
   event.stopPropagation();
 });
