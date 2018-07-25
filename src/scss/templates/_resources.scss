@@ -38,6 +38,10 @@
   background: $color__primary;
   border-radius: 2px;
   cursor: pointer;
+  @media (max-width: $tablet) {
+    min-width: 180px;
+    font-size: 0.9em;
+  }
 }
 
 .custom-select-trigger:after {

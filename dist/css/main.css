@@ -3051,8 +3051,11 @@ body.nav-open {
 .card {
   position: relative;
   height: 325px;
-  padding: 15px;
+  padding: 15px 0;
   text-align: left; }
+  @media (min-width: 768px) {
+    .card {
+      padding: 15px; } }
 
 @media (min-width: 768px) {
   .card--related {
@@ -4235,6 +4238,10 @@ body img.gform_ajax_spinner {
   background: #ea8c2a;
   border-radius: 2px;
   cursor: pointer; }
+  @media (max-width: 768px) {
+    .custom-select-trigger {
+      min-width: 180px;
+      font-size: 0.9em; } }
 
 .custom-select-trigger:after {
   position: absolute;
