@@ -34,10 +34,10 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
   color: white;
   background-size: cover !important;
   box-shadow: 0;
-  //background-blend-mode: hard-light;	
+  background-blend-mode: hard-light;	
   transition: all 0.25s ease-out;
   &:hover {
-    background-color: rgba(black, 0);
+    background-color: rgba(white, 0);
     color: white;
     background-blend-mode: screen;	
     box-shadow: $card__shadow;
@@ -124,7 +124,7 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
 }
 
 .card-flip {
-  perspective: 800px;
+  perspective: 1000px;
   &.active .flip {
     transform: rotateY(180deg);
     box-shadow: $card__shadow;
@@ -139,6 +139,7 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
 }
 
 .flip {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
@@ -149,9 +150,9 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
 
 .front,
 .back {
-  display: block;
-  position: absolute;
-  top: 0;
+  backface-visibility: hidden;
+	position: absolute;
+	top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -162,6 +163,7 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
 
 .front {
   z-index: 2;
+	// for firefox
   transform: rotateY(0deg);
 }
 

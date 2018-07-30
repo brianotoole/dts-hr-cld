@@ -3071,10 +3071,11 @@ body.nav-open {
   background-size: cover !important;
   -webkit-box-shadow: 0;
           box-shadow: 0;
+  background-blend-mode: hard-light;
   -webkit-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out; }
   .card__overlay:hover {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
     color: white;
     background-blend-mode: screen;
     -webkit-box-shadow: rgba(207, 207, 207, 0.4) 0px 0px 20px 0px;
@@ -3155,8 +3156,8 @@ body.nav-open {
   background: #e6e6e6; }
 
 .card-flip {
-  -webkit-perspective: 800px;
-          perspective: 800px; }
+  -webkit-perspective: 1000px;
+          perspective: 1000px; }
   .card-flip.active .flip {
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
@@ -3170,6 +3171,7 @@ body.nav-open {
   height: 100%; }
 
 .flip {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
@@ -3182,7 +3184,8 @@ body.nav-open {
 
 .front,
 .back {
-  display: block;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
