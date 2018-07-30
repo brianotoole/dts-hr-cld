@@ -99,7 +99,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam reiciendis natus itaque pariatur a, ut assumenda sapiente.</p>
       </div><!--/.col-->
       <div class="col-sm-4 col-xs-12 end-xs">
-        <a href="" class="btn btn--primary">Explore Careers</a>
+        <a href="https://datishrcloud.e3applicants.com/" target="_blank" class="btn btn--primary">Explore Careers</a>
       </div><!--/.col-->
     </div><!--/.row-->
 
