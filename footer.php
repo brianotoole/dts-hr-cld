@@ -30,7 +30,8 @@
            <li><a>Company</a></li>
            <li><a>About</a></li>
            <li><a>Blog</a></li>
-           <li><a>Careers</a></li>
+           <li><a Blog</a></li>
+           <li><a href="https://datishrcloud.e3applicants.com/" target="_blank">Careers</a></li>
          </ul>
        </div>
        <div class="col-sm-3">
@@ -39,7 +40,7 @@
            <li><a>Company</a></li>
            <li><a>About</a></li>
            <li><a>Blog</a></li>
-           <li><a>Careers</a></li>
+           <li><a href="https://datishrcloud.e3applicants.com/" target="_blank">Careers</a></li>
          </ul>
        </div>
      </div>
