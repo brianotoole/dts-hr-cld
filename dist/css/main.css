@@ -2782,9 +2782,19 @@ body.nav-open {
   background-repeat: no-repeat; }
   .single-resource .hero,
   .page-template-resources .hero,
-  .page-template-solutions .hero {
+  .page-template-solutions .hero,
+  .page-template-services .hero {
     height: 300px;
     background-image: url(../../dist/img/hero-resource-default.jpg); }
+    .single-resource .hero .hero__inner,
+    .page-template-resources .hero .hero__inner,
+    .page-template-solutions .hero .hero__inner,
+    .page-template-services .hero .hero__inner {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding-top: 0;
+      padding-bottom: 0; }
 
 .hero__inner {
   height: 100%;

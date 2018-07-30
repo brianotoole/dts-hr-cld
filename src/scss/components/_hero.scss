@@ -15,10 +15,16 @@ $header__height: 80px;
   background-position: center center;
   background-repeat: no-repeat;
   .single-resource &,
-  .page-template-resources & ,
-  .page-template-solutions & {
+  .page-template-resources &,
+  .page-template-solutions &,
+  .page-template-services & {
     height: 300px;
     background-image: url('../img/hero-resource-default.jpg');//hero-resource-default
+    .hero__inner {
+      align-items: center;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 }
 
