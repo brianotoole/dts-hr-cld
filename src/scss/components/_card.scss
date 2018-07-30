@@ -145,7 +145,6 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
   height: 100%;
   transition: 0.5s;
   transform-style: preserve-3d;
-  backface-visibility: hidden;
 }
 
 .front,
@@ -179,6 +178,13 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
 .active .back {
   visibility: visible;
   opacity: 1;
+}
+
+.card__form {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 99999;
 }
 
 

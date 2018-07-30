@@ -22,7 +22,7 @@ $relatedArgs = array(
   'tax_query' => array(
   'relation' => 'AND',
     array(
-        'taxonomy' => 'type',
+        'taxonomy' => 'topic',
         'field'    => 'term_id',
         'terms'    => $terms_ids
          )
