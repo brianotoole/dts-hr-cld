@@ -2,7 +2,7 @@
 // Section Related Resources
 
 
-$terms = wp_get_post_terms( $post->ID, 'type'); 
+$terms = wp_get_post_terms( $post->ID, 'topic'); 
 $terms_ids = [];
 
 foreach ( $terms as $term ) {
@@ -23,7 +23,7 @@ $relatedArgs = array(
   'relation' => 'AND',
     array(
         'taxonomy' => 'topic',
-        'field'    => 'term_id',
+        'field'    => 'topic_id',
         'terms'    => $terms_ids
          )
     ),
