@@ -3119,6 +3119,13 @@ body.nav-open {
     .card__type {
       font-size: 1.125em; } }
 
+.card__title {
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  @media (min-width: 768px) {
+    .card__title {
+      font-size: 1.5em; } }
+
 .card__more {
   display: inline-block;
   position: absolute;

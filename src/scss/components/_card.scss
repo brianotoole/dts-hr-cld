@@ -73,6 +73,14 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
   }
 }
 
+.card__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media (min-width: $tablet) {
+    font-size: calc-em(24);
+  }
+}
+
 .card__more {
   display: inline-block;
   position: absolute;
