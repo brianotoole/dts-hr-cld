@@ -3957,7 +3957,7 @@ body img.gform_ajax_spinner {
   height: 400px;
   margin: 0.9375em;
   position: relative;
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   -webkit-backface-visibility: hidden;
   -webkit-transform: scale(1);
