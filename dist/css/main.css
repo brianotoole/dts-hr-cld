@@ -2626,7 +2626,7 @@ address {
   .nav-mobile__chevron:after {
     content: '';
     position: absolute;
-    top: 30px;
+    top: 26px;
     right: 30px;
     width: 10px;
     height: 10px;
