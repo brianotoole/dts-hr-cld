@@ -54,4 +54,4 @@ add_action('gform_after_submission', 'gform_post_to_pardot', 10, 2);
  * https://www.gravityhelp.com/documentation/article/gform_confirmation_anchor/
  */
 // Disable scroll on form
-//add_filter('gform_confirmation_anchor', '__return_false');
+add_filter('gform_confirmation_anchor', '__return_false');
