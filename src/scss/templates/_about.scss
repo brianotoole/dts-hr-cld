@@ -24,7 +24,7 @@
 
 .stat {
   height: auto;
-  background: $color__border;
+  background: #ebebeb;
   margin-bottom: calc-em(15px);
   padding: calc-em(30px) calc-em(15px);
   @media (min-width: $tablet) {
@@ -34,7 +34,7 @@
 }
 
 .stat__number {
-  color: $color__secondary;
+  color: #ea8c2a;
 }
 
 .icon-block {

@@ -3939,7 +3939,7 @@ body img.gform_ajax_spinner {
 
 .stat {
   height: auto;
-  background: #cfcfcf;
+  background: #ebebeb;
   margin-bottom: 0.9375em;
   padding: 1.875em 0.9375em; }
   @media (min-width: 768px) {
@@ -3948,7 +3948,7 @@ body img.gform_ajax_spinner {
       margin: 0; } }
 
 .stat__number {
-  color: #323a45; }
+  color: #ea8c2a; }
 
 .icon-block {
   position: relative;
