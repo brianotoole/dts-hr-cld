@@ -113,6 +113,7 @@ function create_solution_cpt() {
 		'show_in_rest' => true,
 		'publicly_queryable' => true,
 		'capability_type' => 'post',
+		'rewrite' => array('slug' => 'solutions','with_front' => false),
 	);
 	register_post_type( 'solution', $args );
 
