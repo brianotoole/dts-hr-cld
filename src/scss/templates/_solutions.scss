@@ -91,7 +91,8 @@
 .solution__btn {
   display: inline-block;
   position: relative;
-  color: $color__text;
+  color: $color__primary;
+  font-weight: bold;
   i {
     color: $color__primary;
     display: inline-block;
@@ -100,9 +101,9 @@
     transition: transform 0.2s ease-out;
   }
   &:hover {
-    color: $color__text--dark;
+    color: $color__tertiary;
     i {
-      color: $color__text;
+      color: $color__primary;
       transform: translateX(2px);
       transition: transform 0.2s ease-out;
     }
@@ -119,7 +120,7 @@
     left: 51%;
     right: 51%;
     bottom: 0;
-    background: $color__text;
+    background: $color__primary;
     height: 2px;
     transition-property: left, right;
     transition-duration: 0.3s;

@@ -4128,7 +4128,8 @@ body img.gform_ajax_spinner {
 .solution__btn {
   display: inline-block;
   position: relative;
-  color: #111111; }
+  color: #ea8c2a;
+  font-weight: bold; }
   .solution__btn i {
     color: #ea8c2a;
     display: inline-block;
@@ -4140,9 +4141,9 @@ body img.gform_ajax_spinner {
     transition: transform 0.2s ease-out;
     transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out; }
   .solution__btn:hover {
-    color: black; }
+    color: #1a2940; }
     .solution__btn:hover i {
-      color: #111111;
+      color: #ea8c2a;
       -webkit-transform: translateX(2px);
               transform: translateX(2px);
       -webkit-transition: -webkit-transform 0.2s ease-out;
@@ -4160,7 +4161,7 @@ body img.gform_ajax_spinner {
     left: 51%;
     right: 51%;
     bottom: 0;
-    background: #111111;
+    background: #ea8c2a;
     height: 2px;
     -webkit-transition-property: left, right;
     transition-property: left, right;
