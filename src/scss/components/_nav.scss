@@ -223,8 +223,8 @@ $m_icon_height: 3px;
     right: 30px;
     width: 10px;
     height: 10px;
-    border-right: 2px solid $color__text;
-    border-bottom: 2px solid $color__text;
+    border-right: 2px solid $color__primary;
+    border-bottom: 2px solid $color__primary;
     transform: rotate(45deg);
     transition: transform 0.2s ease-out;
   }
