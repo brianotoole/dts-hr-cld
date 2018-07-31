@@ -46,7 +46,7 @@ $teamQuery = new WP_Query($teamArgs);
       <div class="col-xs-12">
         <h4 class="cta__title u-color-text">Join the Team</h4>
         <p>Think you have what it takes to work with us? Cool. Check out our job postings below.</p>
-        <a href="" class="btn btn--primary">View Open Positions</a>
+        <a href="https://datishrcloud.e3applicants.com/" target="_blank" class="btn btn--primary">View Open Positions</a>
       </div><!-- /.col -->
     </div><!-- /.row -->
   </div><!-- .container -->
