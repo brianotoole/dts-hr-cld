@@ -3974,7 +3974,7 @@ body img.gform_ajax_spinner {
           -ms-flex: 0 0 33.333%;
               flex: 0 0 33.333%;
       margin: 0;
-      background-position: inital; } }
+      background-position: initial; } }
   @media (min-width: 768px) {
     .card-image:hover .card-image__content {
       height: 100%; }
