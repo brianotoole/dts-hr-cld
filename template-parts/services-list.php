@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h4 class="about__title u-color-primary"><?php the_field('service_intro_title'); ?></h4>
+        <h6 class="about__title u-color-primary"><?php the_field('service_intro_title'); ?></h6>
         <p><?php the_field('service_intro_text'); ?></p>
       </div><!--/.col-->
     </div><!--/.row-->
