@@ -4096,7 +4096,8 @@ body img.gform_ajax_spinner {
 .solution__title {
   color: #ea8c2a;
   text-transform: uppercase;
-  margin-top: 0.25em; }
+  margin-top: 0.25em;
+  padding-bottom: 0.3125em; }
 
 .solution__icon-wrap {
   position: relative;
@@ -4247,6 +4248,7 @@ body img.gform_ajax_spinner {
 
 .service-item__title {
   padding-top: 1.25em;
+  padding-bottom: 0.3125em;
   color: #ea8c2a; }
 
 .service-item__img--mobile {
