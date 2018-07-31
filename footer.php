@@ -7,8 +7,8 @@
            <div class="footer__top-title">Company</div>
            <li><a href="<?php echo home_url(); ?>/team">Team</a></li>
            <li><a href="<?php echo home_url(); ?>/about">About</a></li>
-           <li><a href="<?php echo home_url(); ?>/resources">Blog</a></li>
-           <li><a href="<?php echo home_url(); ?>/careers">Careers</a></li>
+           <li><a href="<?php echo home_url(); ?>/resources/?type=blog">Blog</a></li>
+           <li><a href="https://datishrcloud.e3applicants.com/" target="_blank">Careers</a></li>
          </ul>
        </div>
        <div class="col-sm-3">
@@ -27,18 +27,16 @@
        <div class="col-sm-3">
          <ul class="footer__top-menu">
            <div class="footer__top-title">Resources</div>
-           <li><a>Company</a></li>
-           <li><a>About</a></li>
-           <li><a>Blog</a></li>
+           <li><a href="<?php echo home_url(); ?>/about">About</a></li>
+           <li><a href="<?php echo home_url(); ?>/resources/?type=blog">Blog</a></li>
            <li><a href="https://datishrcloud.e3applicants.com/" target="_blank">Careers</a></li>
          </ul>
        </div>
        <div class="col-sm-3">
          <ul class="footer__top-menu">
            <div class="footer__top-title">Contact</div>
-           <li><a>Company</a></li>
-           <li><a>About</a></li>
-           <li><a>Blog</a></li>
+           <li><a href="<?php echo home_url(); ?>/about">About</a></li>
+           <li><a href="<?php echo home_url(); ?>/resources/?type=blog">Blog</a></li>
            <li><a href="https://datishrcloud.e3applicants.com/" target="_blank">Careers</a></li>
          </ul>
        </div>
