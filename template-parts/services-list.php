@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h6 class="about__title u-color-primary"><?php the_field('service_intro_title'); ?></h6>
+        <h4 class="about__title u-color-primary"><?php the_field('service_intro_title'); ?></h4>
         <p><?php the_field('service_intro_text'); ?></p>
       </div><!--/.col-->
     </div><!--/.row-->
@@ -67,7 +67,7 @@
           <div class="row <?php if($reverse == true) : echo 'reverse'; endif; ?>">
             <img class="service-item__img service-item__img--mobile col-xs-12" style="background-image:url('<?php echo $service_image['url']; ?>')">
             <div class="service-item__content col-sm-6 col-xs-12">
-              <h4 class="service-item__title"><?php echo $service_title; ?></h4>
+              <h6 class="service-item__title"><?php echo $service_title; ?></h6>
               <?php echo $service_excerpt; ?>
               <div class"service-item__btn-wrap">
                 <a href="<?php the_permalink(); ?>" class="service-item__btn solution__btn"><?php echo $service_button_title; ?> <i class="fas fa-long-arrow-alt-right"></i></a>
