@@ -100,7 +100,7 @@ function get_cta_text($id) {
 function get_the_resource_card($id) {
 
   $card_html = '
-  <a href="'. get_the_permalink($id) .'" class="card__overlay grow" style="background:linear-gradient('. get_rgba($color) .', 0.85), '. get_rgba($color) .', 0.85)), url('. get_thumb_img($id) .')">'.
+  <a href="'. get_the_permalink($id) .'" class="card__overlay grow" style="background:linear-gradient('. get_rgba($color) .', 0.9), '. get_rgba($color) .', 0.9)), url('. get_thumb_img($id) .')">'.
     '<h5 class="card__type">'. get_tax_name($id) .'</h5>'.
     '<h5 class="card__title">'. get_the_title($id) .'</h5>'.
     '<span class="card__more">'. get_cta_text($id) .'</span>'.
@@ -109,7 +109,7 @@ function get_the_resource_card($id) {
   $gated_card_html = '
   <div class="card-flip grow">'.
   '<a class="flip">'.
-    '<div class="card__overlay front" style="background:linear-gradient('. get_rgba($color) .', 0.85), '. get_rgba($color) .', 0.85)), url('. get_thumb_img($id) .')">'.
+    '<div class="card__overlay front" style="background:linear-gradient('. get_rgba($color) .', 0.9), '. get_rgba($color) .', 0.9)), url('. get_thumb_img($id) .')">'.
       '<h5 class="card__type">'. get_tax_name($id) .'</h5>'.
       '<h5 class="card__title">'. get_the_title($id) .'</h5>'.
       '<span class="card__more">'. get_cta_text($id) .'</span>'.
@@ -121,7 +121,7 @@ function get_the_resource_card($id) {
   '</div>'; //.card-flip
 
   $related_card_html = '
-  <a href="'. get_the_permalink($id, $post_object_id) .'" class="card__overlay grow" style="background:linear-gradient('. get_rgba($color) .', 0.85), '. get_rgba($color) .', 0.85)), url('. get_thumb_img($id) .')">'.
+  <a href="'. get_the_permalink($id, $post_object_id) .'" class="card__overlay grow" style="background:linear-gradient('. get_rgba($color) .', 0.9), '. get_rgba($color) .', 0.9)), url('. get_thumb_img($id) .')">'.
     '<h5 class="card__title">'. get_the_title($id) .'</h5>'.
     '<span class="card__more">'. get_cta_text($id) .' <i class="fas fa-long-arrow-alt-right"></i></span>'.
   '</a>';
@@ -129,7 +129,7 @@ function get_the_resource_card($id) {
   $related_gated_card_html = '
   <div class="card-flip grow">'.
   '<a class="flip">'.
-    '<div class="card__overlay front" style="background:linear-gradient('. get_rgba($color) .', 0.85), '. get_rgba($color) .', 0.85)), url('. get_thumb_img($id) .')">'.
+    '<div class="card__overlay front" style="background:linear-gradient('. get_rgba($color) .', 0.9), '. get_rgba($color) .', 0.9)), url('. get_thumb_img($id) .')">'.
     '<h5 class="card__title">'. get_the_title($id) .'</h5>'.
     '<span class="card__more">'. get_cta_text($id) .' <i class="fas fa-long-arrow-alt-right"></i></span>'.
     '</div>'. //.front
@@ -238,7 +238,7 @@ function ont_get_resources() {
   if($resQuery->have_posts()) :
     while ( $resQuery->have_posts() ) :
       $resQuery->the_post(); ?>
-      <li class="col-sm-3 col-xs-12 card">
+      <li class="col-md-3 col-sm-4 col-xs-12 card">
         <?php the_resource_card(get_the_ID()) ?>
       </li>
       <?php
