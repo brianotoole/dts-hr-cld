@@ -26,7 +26,7 @@ $testimonial_button = get_field('testimonial_button');
       <div class="testimonial">
         <div class="row">
           <div class="testimonial__description col-sm-10 col-xs-12">
-            <p>"<?php echo $testimonial_description; ?>"</p>
+            <p><?php echo $testimonial_description; ?></p>
             <h4 class="testimonial__title"><?php echo $testimonial_title; ?></h4>
             <h4 class="testimonial__position"><?php echo $testimonial_position; ?></h4>
             <a href="<?php echo $testimonial_button['url']; ?>" class="testimonial__button btn btn--primary" target="<?php echo $testimonial_button['target']; ?>"><?php echo $testimonial_button['title']; ?></a>
