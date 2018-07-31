@@ -3973,7 +3973,8 @@ body img.gform_ajax_spinner {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 33.333%;
               flex: 0 0 33.333%;
-      margin: 0; } }
+      margin: 0;
+      background-position: inital; } }
   @media (min-width: 768px) {
     .card-image:hover .card-image__content {
       height: 100%; }
