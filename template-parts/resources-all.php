@@ -34,6 +34,25 @@ $featQuery = new WP_Query($featArgs);
         if($featQuery->have_posts()) :
           while ( $featQuery->have_posts() ) :
             $featQuery->the_post(); ?>
+            <?php if (get_field('is_resource_gated') == 'true' ) : ?>
+            <li class="col-md-4 col-sm-6 col-xs-12 card card--has-footer grow">
+              <div class="card-flip">
+              <a class="flip">
+                <div class="card__overlay front" style="background:linear-gradient(<?php echo get_rgba($color); ?>, 0.9), <?php echo get_rgba($color); ?>, 0.9)), url('<?php echo get_thumb_img($id); ?>')">
+                    <h5 class="card__type"><?php echo get_tax_name($id); ?></h5>
+                    <h5 class="card__title"><?php the_title(); ?></h5>
+                    <div class="card__footer--featured">
+                      <p><?php echo wp_trim_words( get_the_content() , '20', '…' ); ?></p>
+                      <span class="card__more"><?php echo get_cta_text($id); ?></span>
+                    </div><!--/.card__footer--featured-->
+                  </div><!--/.front-->
+                  <div class="back">
+                    <div class="card__form"><?php the_field('gated_form_embed'); ?></div>
+                  </div><!--/.back-->
+                </a><!--/.flip-->
+              </div> 
+            </li><!--/.card-->
+            <?php else: ?>
             <li class="col-md-4 col-sm-6 col-xs-12 card card--has-footer grow">
               <a href="<?php the_permalink(); ?>" class="card__overlay" style="background:linear-gradient(rgba(110, 154, 185, 0.9), rgba(110, 154, 185, 0.9)), url('<?php echo get_thumb_img($id); ?>')">
                 <h5 class="card__type"><?php echo get_tax_name($id); ?></h5>
@@ -44,6 +63,7 @@ $featQuery = new WP_Query($featArgs);
                 <span class="card__more"><a href="<?php the_permalink(); ?>">View</a></span>
               </div><!--/.card__footer-->
             </li><!--/.card-->
+            <?php endif; ?>
             <?php
           endwhile;
         endif;

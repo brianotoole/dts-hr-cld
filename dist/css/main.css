@@ -3172,6 +3172,18 @@ body.nav-open {
   padding: 0.9375em;
   background: #e6e6e6; }
 
+.card__footer--featured {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 0.9375em;
+  background: #e6e6e6;
+  color: #111111; }
+
+.card__footer--featured span {
+  color: #ea8c2a; }
+
 .card-flip {
   -webkit-perspective: 1000px;
           perspective: 1000px; }

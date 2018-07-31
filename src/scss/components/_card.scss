@@ -131,6 +131,20 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
   background: $color__grey;
 }
 
+.card__footer--featured {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: calc-em(15px);
+  background: $color__grey;
+  color: $color__text;
+}
+
+.card__footer--featured span{
+  color: $color__primary;
+}
+
 .card-flip {
   perspective: 1000px;
   &.active .flip {
