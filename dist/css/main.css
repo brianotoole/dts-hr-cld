@@ -248,34 +248,34 @@ h2, .testimonial__name, .h2 {
       font-size: 44px; } }
 
 h3, .h3 {
-  font-size: calc(22px + 16 * ( (100vw - 420px) / 780));
+  font-size: calc(22px + 14 * ( (100vw - 420px) / 780));
   margin-bottom: 0.7em; }
   @media screen and (max-width: 420px) {
     h3, .h3 {
       font-size: 22px; } }
   @media screen and (min-width: 1200px) {
     h3, .h3 {
-      font-size: 38px; } }
+      font-size: 36px; } }
 
 h4, .h4 {
-  font-size: calc(20px + 12 * ( (100vw - 420px) / 780));
+  font-size: calc(20px + 10 * ( (100vw - 420px) / 780));
   margin-bottom: 0.6em; }
   @media screen and (max-width: 420px) {
     h4, .h4 {
       font-size: 20px; } }
   @media screen and (min-width: 1200px) {
     h4, .h4 {
-      font-size: 32px; } }
+      font-size: 30px; } }
 
 h5, .h5 {
-  font-size: calc(18px + 10 * ( (100vw - 420px) / 780));
+  font-size: calc(18px + 6 * ( (100vw - 420px) / 780));
   margin-bottom: 0.5em; }
   @media screen and (max-width: 420px) {
     h5, .h5 {
       font-size: 18px; } }
   @media screen and (min-width: 1200px) {
     h5, .h5 {
-      font-size: 28px; } }
+      font-size: 24px; } }
 
 address {
   line-height: 1.5;
