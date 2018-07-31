@@ -3081,13 +3081,13 @@ body.nav-open {
   background-size: cover !important;
   -webkit-box-shadow: 0;
           box-shadow: 0;
-  background-blend-mode: hard-light;
+  background-blend-mode: normal;
   -webkit-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out; }
   .card__overlay:hover {
     background-color: rgba(255, 255, 255, 0);
     color: white;
-    background-blend-mode: screen;
+    background-blend-mode: hard-light;
     -webkit-box-shadow: rgba(207, 207, 207, 0.4) 0px 0px 20px 0px;
             box-shadow: rgba(207, 207, 207, 0.4) 0px 0px 20px 0px;
     -webkit-transition: all 0.25s ease-out;

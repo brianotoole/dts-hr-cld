@@ -34,12 +34,12 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
   color: white;
   background-size: cover !important;
   box-shadow: 0;
-  background-blend-mode: hard-light;	
+  background-blend-mode: normal;	
   transition: all 0.25s ease-out;
   &:hover {
     background-color: rgba(white, 0);
     color: white;
-    background-blend-mode: screen;	
+    background-blend-mode: hard-light;
     box-shadow: $card__shadow;
     transition: all 0.25s ease-out;
     .card__more {
