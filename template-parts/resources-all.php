@@ -66,7 +66,7 @@ $featQuery = new WP_Query($featArgs);
       <div class="row center-xs">
         <div class="col-sm-3 col-xs-6">
           <select class="topic custom-select" placeholder="Topic">
-            <option value="All">All</option>
+            <option value="All">All Topics</option>
             <?php foreach ($topics as $topic): ?>
               <option value="<?php echo strtolower($topic->name); ?>"><?php echo $topic->name; ?></option>
             <?php endforeach ?>
@@ -75,7 +75,7 @@ $featQuery = new WP_Query($featArgs);
       <?php $types = get_terms(array('taxonomy' => 'type', 'hide_empty' => true)) ?>
         <div class="col-sm-3 col-xs-6">
           <select class="type custom-select" placeholder="Type">
-            <option value="All">All</option>
+            <option value="All">All Types</option>
             <?php foreach ($types as $type): ?>
               <option value="<?php echo strtolower($type->name); ?>"><?php echo $type->name; ?></option>
             <?php endforeach ?>
