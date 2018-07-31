@@ -37,7 +37,7 @@ $featQuery = new WP_Query($featArgs);
             <?php if (get_field('is_resource_gated') == 'true' ) : ?>
             <li class="col-md-4 col-sm-6 col-xs-12 card card--has-footer grow">
               <div class="card-flip">
-              <a class="flip">
+              <a class="flip flip--featured">
                 <div class="card__overlay front" style="background:linear-gradient(<?php echo get_rgba($color); ?>, 0.9), <?php echo get_rgba($color); ?>, 0.9)), url('<?php echo get_thumb_img($id); ?>')">
                     <h5 class="card__type"><?php echo get_tax_name($id); ?></h5>
                     <h5 class="card__title"><?php the_title(); ?></h5>
