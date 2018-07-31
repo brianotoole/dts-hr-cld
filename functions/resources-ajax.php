@@ -192,7 +192,7 @@ function ont_get_resources() {
     $args["tax_query"] = array(
       'relation' => 'AND',
       array(
-        'field' => 'ID',
+        'field' => 'slug',
         'taxonomy' => 'topic',
         'terms' => $topic
       )
@@ -203,7 +203,7 @@ function ont_get_resources() {
     $args["tax_query"] = array(
       'relation' => 'AND',
       array(
-        'field' => 'ID',
+        'field' => 'slug',
         'taxonomy' => 'type',
         'terms' => $type
       )
@@ -215,12 +215,12 @@ function ont_get_resources() {
     $args["tax_query"] = array(
       'relation' => 'AND',
       array(
-        'field' => 'ID',
+        'field' => 'slug',
         'taxonomy' => 'type',
         'terms' => $type
       ),
       array(
-        'field' => 'ID',
+        'field' => 'slug',
         'taxonomy' => 'topic',
         'terms' => $topic
       )
@@ -247,6 +247,6 @@ function ont_get_resources() {
   endif;
 
   wp_reset_query();
-  exit;
+  exit();
 }
 ?>

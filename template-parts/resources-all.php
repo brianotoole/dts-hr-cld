@@ -68,7 +68,7 @@ $featQuery = new WP_Query($featArgs);
           <select class="topic custom-select" placeholder="Topic">
             <option value="All">All</option>
             <?php foreach ($topics as $topic): ?>
-              <option value="<?php echo $topic->term_id; ?>"><?php echo $topic->name; ?></option>
+              <option value="<?php echo strtolower($topic->name); ?>"><?php echo $topic->name; ?></option>
             <?php endforeach ?>
           </select>
         </div><!--/.col.select-->
@@ -77,7 +77,7 @@ $featQuery = new WP_Query($featArgs);
           <select class="type custom-select" placeholder="Type">
             <option value="All">All</option>
             <?php foreach ($types as $type): ?>
-              <option value="<?php echo $type->term_id ?>"><?php echo $type->name ?></option>
+              <option value="<?php echo strtolower($type->name); ?>"><?php echo $type->name; ?></option>
             <?php endforeach ?>
           </select>
         </div><!--/.select-->
@@ -104,11 +104,10 @@ $featQuery = new WP_Query($featArgs);
         ppp = 16,
         page = 1;
 
-      var get_resources = function(ppp, page, type, topic) {
+      var get_resources = function(ppp, page, type, topic, params) {
 
         type = (typeof type == 'undefined' ? 'All' : type);
         topic = (typeof topic == 'undefined' ? 'All' : topic);
-
         //console.log('get_resources', ppp, page, type, topic);
 
         $('.loading-spinner').show();
@@ -116,6 +115,9 @@ $featQuery = new WP_Query($featArgs);
         //$('.all-shown').hide();
         $('.none-shown').hide();
         $('.filters select').attr('disabled', true);
+
+        type_param = type_param;
+    
 
         $.ajax({
           url: admin_ajax,
@@ -128,9 +130,11 @@ $featQuery = new WP_Query($featArgs);
             topic: topic
           },
           success: function(res) {
-
             $('#js-resources-list').append(res);
             $('.loading-spinner').hide();
+            //console.log(type_param)
+            //url = '?topic=' + topic + '&type='+ type;
+            //window.history.replaceState(null, null, url);
             if (total_resources == 0) {
               $('.loading-spinner').hide();
               $('.none-shown').show();
@@ -150,12 +154,100 @@ $featQuery = new WP_Query($featArgs);
 
       }
 
+function getAllUrlParams(url) {
+
+// get query string from url (optional) or window
+var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+
+// we'll store the parameters here
+var obj = {};
+
+// if query string exists
+if (queryString) {
+
+  // stuff after # is not part of query string, so get rid of it
+  queryString = queryString.split('#')[0];
+
+  // split our query string into its component parts
+  var arr = queryString.split('&');
+
+  for (var i=0; i<arr.length; i++) {
+    // separate the keys and the values
+    var a = arr[i].split('=');
+
+    // in case params look like: list[]=thing1&list[]=thing2
+    var paramNum = undefined;
+    var paramName = a[0].replace(/\[\d*\]/, function(v) {
+      paramNum = v.slice(1,-1);
+      return '';
+    });
+
+    // set parameter value (use 'true' if empty)
+    var paramValue = typeof(a[1])==='undefined' ? true : a[1];
+
+    // (optional) keep case consistent
+    paramName = paramName.toLowerCase();
+    paramValue = paramValue.toLowerCase();
+
+    // if parameter name already exists
+    if (obj[paramName]) {
+      // convert value to array (if still string)
+      if (typeof obj[paramName] === 'string') {
+        obj[paramName] = [obj[paramName]];
+      }
+      // if no array index number specified...
+      if (typeof paramNum === 'undefined') {
+        // put the value on the end of the array
+        obj[paramName].push(paramValue);
+      }
+      // if array index number specified...
+      else {
+        // put the value at that index number
+        obj[paramName][paramNum] = paramValue;
+      }
+    }
+    // if param name doesn't exist yet, set it
+    else {
+      obj[paramName] = paramValue;
+    }
+  }
+}
+
+return obj;
+}
+
+var topic_param = getAllUrlParams().topic;
+var type_param = getAllUrlParams().type;
+
+//console.log("topic:", topic_param, "type:", type_param);
+  
+if (window.location.href.indexOf(type_param) >= 0) {
+  var this_sel = $('.custom-options .custom-option[data-value*='+ type_param + ']');
+  this_sel.addClass("selection");
+  this_sel.find(".custom-select").removeClass("opened");
+  this_sel.find(".custom-select-trigger").text(this_sel).text();
+  this_sel.triggerHandler('click');   
+}
+
+
+
+
       $('.filters .custom-option').on('click', function() {
 
-        $('#js-resources-list').html('');
+        //var topic = $('.filters select.topic').val();
+        var type = $('.filters select.type').val();
 
+        //url = '?topic=' + topic + '&type='+ type;
+        url = '?type='+ type;
+        window.history.replaceState(null, null, url);
+
+
+        $('#js-resources-list').html('');
         get_resources(ppp, page, $('.filters select.type').val(), $('.filters select.topic').val());
+        
       });
+
+
 
       // $('.ont-select .options li').on('click', function() {
       //  console.log('option clicked', $(this).attr('data-value'));
@@ -199,7 +291,9 @@ $(".custom-select-trigger").on("click", function() {
   $(this).parents(".custom-select").toggleClass("opened");
   event.stopPropagation();
 });
-$(".custom-options .custom-option").on("click", function() {
+
+$(".custom-options .custom-option").on("click", function(e) {
+  e.preventDefault();
   $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
   $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
   $(this).addClass("selection");
