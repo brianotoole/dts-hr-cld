@@ -100,7 +100,7 @@ function get_cta_text($id) {
 function get_the_resource_card($id) {
 
   $card_html = '
-  <a href="'. get_the_permalink($id) .'" class="card__overlay grow" style="background:linear-gradient('. get_rgba($color) .', 0.9), '. get_rgba($color) .', 0.9)), url('. get_thumb_img($id) .')">'.
+  <a href="'. get_the_permalink($id) .'" target="'. get_post_meta($id, '_links_to_target', true). '" class="card__overlay grow" style="background:linear-gradient('. get_rgba($color) .', 0.9), '. get_rgba($color) .', 0.9)), url('. get_thumb_img($id) .')">'.
     '<h5 class="card__type">'. get_tax_name($id) .'</h5>'.
     '<h5 class="card__title">'. get_the_title($id) .'</h5>'.
     '<span class="card__more">'. get_cta_text($id) .'</span>'.
@@ -121,7 +121,7 @@ function get_the_resource_card($id) {
   '</div>'; //.card-flip
 
   $related_card_html = '
-  <a href="'. get_the_permalink($id, $post_object_id) .'" class="card__overlay grow" style="background:linear-gradient('. get_rgba($color) .', 0.9), '. get_rgba($color) .', 0.9)), url('. get_thumb_img($id) .')">'.
+  <a href="'. get_the_permalink($id, $post_object_id) .'" target="'. get_post_meta($id, '_links_to_target', true). '" class="card__overlay grow" style="background:linear-gradient('. get_rgba($color) .', 0.9), '. get_rgba($color) .', 0.9)), url('. get_thumb_img($id) .')">'.
     '<h5 class="card__type">'. get_tax_name($id) .'</h5>'.
     '<h5 class="card__title">'. get_the_title($id) .'</h5>'.
     '<span class="card__more">'. get_cta_text($id) .'</span>'.
