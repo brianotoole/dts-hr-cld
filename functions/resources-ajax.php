@@ -77,7 +77,7 @@ function get_tax_name() {
   if ( !empty( $terms ) ){
       // get the first term
       $term = array_shift( $terms );
-      return $term->slug;
+      return $term->name;
   }
 }
 
