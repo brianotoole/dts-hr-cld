@@ -173,7 +173,6 @@ $m_icon_height: 3px;
       padding: 10px;
       color: $color__text;
       background: white;
-      border-top: 1px solid rgba($color__border, 0.25);
       border-bottom: none;
       text-transform: capitalize;
       transition: all 0.3s ease-out;
@@ -276,7 +275,6 @@ body.nav-open {
     text-transform: uppercase;
     font-size: 1em;
     font-weight: 700;
-    border-bottom: 1px solid $color__border;
   }
 
 

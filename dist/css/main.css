@@ -2589,7 +2589,6 @@ address {
       padding: 10px;
       color: #111111;
       background: white;
-      border-top: 1px solid rgba(207, 207, 207, 0.25);
       border-bottom: none;
       text-transform: capitalize;
       -webkit-transition: all 0.3s ease-out;
@@ -2682,8 +2681,7 @@ body.nav-open {
   color: #111111;
   text-transform: uppercase;
   font-size: 1em;
-  font-weight: 700;
-  border-bottom: 1px solid #cfcfcf; }
+  font-weight: 700; }
 
 /**
   * Button
