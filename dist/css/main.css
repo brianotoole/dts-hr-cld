@@ -3117,7 +3117,8 @@ body.nav-open {
 
 .card__title {
   overflow: hidden;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+  text-transform: capitalize; }
   @media (min-width: 768px) {
     .card__title {
       font-size: 1.5em; } }
