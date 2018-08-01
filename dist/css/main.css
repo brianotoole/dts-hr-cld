@@ -3160,18 +3160,26 @@ body.nav-open {
     right: 0; }
 
 .card__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   padding: 0.9375em;
-  background: #e6e6e6; }
+  background: #e6e6e6;
+  min-height: 125px; }
 
 .card__footer--featured {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   bottom: 0;
   left: 0;
   padding: 0.9375em;
   background: #e6e6e6;
-  color: #111111; }
+  color: #111111;
+  min-height: 125px; }
 
 .card__footer--featured span {
   color: #ea8c2a; }

@@ -42,7 +42,7 @@ $featQuery = new WP_Query($featArgs);
                     <h5 class="card__type"><?php echo get_tax_name($id); ?></h5>
                     <h5 class="card__title"><?php the_title(); ?></h5>
                     <div class="card__footer--featured">
-                      <p><?php echo wp_trim_words( get_the_content() , '12', '…' ); ?></p>
+                      <p><?php echo mb_strimwidth(get_the_content(), 0, 105, '...'); ?></p>
                       <span class="card__more"><?php echo get_cta_text($id); ?></span>
                     </div><!--/.card__footer--featured-->
                   </div><!--/.front-->
@@ -59,7 +59,7 @@ $featQuery = new WP_Query($featArgs);
                 <h5 class="card__title"><?php the_title(); ?></h5>
               </a><!--/.card__overlay-->
               <div class="card__footer">
-                <p><?php echo wp_trim_words( get_the_content() , '12', '…' ); ?></p>
+                <p><?php echo mb_strimwidth(get_the_content(), 0, 105, '...'); ?></p>
                 <span class="card__more"><a href="<?php the_permalink(); ?>">View</a></span>
               </div><!--/.card__footer-->
             </li><!--/.card-->

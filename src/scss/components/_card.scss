@@ -128,19 +128,23 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
 }
 
 .card__footer {
+  display: flex;
   position: relative;
   padding: calc-em(15px);
   background: $color__grey;
+  min-height: 125px;
 }
 
 .card__footer--featured {
   position: absolute;
+  display: flex;
   width: 100%;
   bottom: 0;
   left: 0;
   padding: calc-em(15px);
   background: $color__grey;
   color: $color__text;
+  min-height: 125px;
 }
 
 .card__footer--featured span{
