@@ -369,6 +369,7 @@ function create_team_cpt() {
 		'show_in_rest' => true,
 		'publicly_queryable' => true,
 		'capability_type' => 'post',
+		'rewrite' => array('slug' => 'team-member'),
 	);
 	register_post_type( 'team', $args );
 
