@@ -2321,14 +2321,21 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 1.875em;
+  padding: 1.25em;
   text-align: left;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   @media (min-width: 768px) {
     .footer__bottom {
-      padding-top: 6.25em; } }
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
 
 .footer__bottom-copy {
   padding-right: 1.5625em; }

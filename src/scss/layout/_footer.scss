@@ -56,11 +56,13 @@
 
 .footer__bottom {
   display: flex;
-  padding-top: calc-em(30px);
+  padding: calc-em(20px);
   text-align: left;
   justify-content: space-between;
+  flex-direction: column;
   @media (min-width: $tablet) {
-    padding-top: calc-em(100px);
+    //padding-top: calc-em(100px);
+    flex-direction: row;
   }
   
 }
