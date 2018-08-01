@@ -13,7 +13,7 @@
           <li class="carousel__nav-item">HR</li>
         </div>
         <div class="carousel__slide">
-          <li class="carousel__nav-item">IT/OPS</li>
+          <li class="carousel__nav-item">OPS</li>
         </div>
       </div>
     <div class="carousel" id="carousel--audience">
