@@ -2,6 +2,7 @@
 // Service List
 ?>
 
+<?php if (get_field('service_intro_title') || get_field('service_intro_text')) : ?>
 <section class="section section--services-intro">
   <div class="container">
     <div class="row">
@@ -12,6 +13,7 @@
     </div><!--/.row-->
   </div><!--/.container-->
 </section>
+<?php endif; ?>
 
 <section class="section section--services-icons section--accent">
   <div class="container">
