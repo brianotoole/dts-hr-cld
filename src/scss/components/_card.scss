@@ -77,6 +77,7 @@ $card__shadow: rgba($color__border, 0.4) 0px 0px 20px 0px;
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: capitalize;
+  line-height: 1.25;
   @media (min-width: $tablet) {
     font-size: calc-em(24);
   }
