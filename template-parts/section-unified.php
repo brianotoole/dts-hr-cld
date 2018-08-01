@@ -48,7 +48,7 @@ $home_unified_button = get_field('home_unified_button');
          
          </div><!--/.row-->
 
-         <div class="row">
+         <div class="row u-visible-desktop">
           <div class="col-xs-12 start-xs">
             <a href="<?php echo $home_unified_button['url']; ?>" class="unified__button btn btn--primary" target="<?php echo $home_unified_button['target']; ?>"><?php echo $home_unified_button['title']; ?></a>
           </div><!--/.col-->
@@ -69,5 +69,12 @@ $home_unified_button = get_field('home_unified_button');
       </div>
     </div>
   </div>
+  <div class="container">
+    <div class="row u-hidden-desktop">
+      <div class="col-xs-12 start-xs">
+        <a href="<?php echo $home_unified_button['url']; ?>" class="unified__button btn btn--primary" target="<?php echo $home_unified_button['target']; ?>"><?php echo $home_unified_button['title']; ?></a>
+      </div><!--/.col-->
+    </div><!--/.row-->
+  </div><!-- /.container -->
   <div class="unified__spacer u-visible-desktop"></div>
 </section>
