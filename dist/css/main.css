@@ -2385,7 +2385,7 @@ address {
     padding: 6em 0; }
   @media (min-width: 768px) {
     .section--pad-top-xl {
-      padding-top: 10em; } }
+      padding-top: 5em; } }
   .section--no-pad {
     padding: 0; }
   .section--primary {
@@ -4205,8 +4205,9 @@ body img.gform_ajax_spinner {
       margin-top: 1.875em; } }
 
 .icon__image img {
-  max-width: 150px;
-  max-height: 95px;
+  max-width: 125px;
+  max-height: 75px;
+  margin-top: 1em;
   margin-bottom: 1em; }
   @media (max-width: 768px) {
     .icon__image img {

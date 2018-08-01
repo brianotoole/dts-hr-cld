@@ -10,8 +10,9 @@
 }
 
 .icon__image img {
-  max-width: 150px;
-  max-height: 95px;
+  max-width: 125px;
+  max-height: 75px;
+  margin-top: 1em;
   margin-bottom: 1em;
   @media (max-width: $tablet) {
     max-width: 135px;
