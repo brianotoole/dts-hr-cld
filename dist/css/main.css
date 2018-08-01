@@ -2321,17 +2321,14 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 1.5625em;
+  padding-top: 1.875em;
   text-align: left;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
   @media (min-width: 768px) {
     .footer__bottom {
-      padding-top: 6.25em;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start; } }
+      padding-top: 6.25em; } }
 
 .footer__bottom-copy {
   padding-right: 1.5625em; }
@@ -2343,22 +2340,19 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0;
-  list-style-type: none;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-  @media (min-width: 480px) {
-    .footer__bottom-menu ul {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row; } }
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+  list-style-type: none; }
 
 .footer__bottom-menu li a {
   color: white;
-  margin: 0 1.5625em; }
+  margin: 0 0.5em; }
+  @media (min-width: 768px) {
+    .footer__bottom-menu li a {
+      margin: 0 1.5625em; } }
   .footer__bottom-menu li a:first-child {
     padding-left: 0; }
 

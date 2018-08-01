@@ -56,12 +56,11 @@
 
 .footer__bottom {
   display: flex;
-  padding-top: calc-em(25px);
+  padding-top: calc-em(30px);
   text-align: left;
   justify-content: space-between;
   @media (min-width: $tablet) {
     padding-top: calc-em(100px);
-    justify-content: flex-start;
   }
   
 }
@@ -76,16 +75,16 @@
 .footer__bottom-menu {
   ul {
     display: flex;
+    flex-direction: row;
     padding: 0;
     list-style-type: none;
-    flex-direction: column;
-    @media (min-width: $phone) {
-      flex-direction: row;
-    }
   }
   li a {
     color: white;
-    margin: 0 calc-em(25px);
+    margin: 0 calc-em(8px);
+    @media (min-width: $tablet) {
+      margin: 0 calc-em(25px);
+    }
     &:first-child {
       padding-left: 0;
     }
