@@ -3833,7 +3833,7 @@ body img.gform_ajax_spinner {
   */
 .unified__item {
   margin-top: 1.25em;
-  margin-bottom: 1.25em;
+  margin-bottom: 0.3125em;
   padding: 0.5em;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -3873,7 +3873,8 @@ body img.gform_ajax_spinner {
       display: flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; } }
+              align-items: center;
+      margin-bottom: 1.25em; } }
 
 .unified__icon {
   color: #ea8c2a;
@@ -3885,9 +3886,11 @@ body img.gform_ajax_spinner {
       margin: 0; } }
 
 .unified__title {
-  color: #323a45; }
+  color: #323a45;
+  margin-top: 1.25em; }
   @media (min-width: 768px) {
     .unified__title {
+      margin-top: 0;
       margin-left: 0.625em;
       text-align: left; } }
 

@@ -314,7 +314,7 @@
   */
 .unified__item {
   margin-top: calc-em(20px);
-  margin-bottom: calc-em(20px);
+  margin-bottom: calc-em(5px);
   padding: 0.5em;
   vertical-align: middle;
   transform: perspective(1px) translateZ(0);
@@ -344,6 +344,7 @@
   @media (min-width: $tablet) {
     display: flex;
     align-items: center;
+    margin-bottom: calc-em(20px);
   }
 }
 
@@ -359,7 +360,9 @@
 
 .unified__title {
   color: $color__secondary;
+  margin-top: calc-em(20px);
   @media (min-width: $tablet) {
+    margin-top: 0;
     margin-left: calc-em(10px);
     text-align: left;
   }
