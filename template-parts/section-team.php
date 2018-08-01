@@ -9,7 +9,7 @@ $teamQuery = new WP_Query($teamArgs);
 ?>
 
 <section class="section">
-  <div class="container">
+  <div class="container container--narrow">
     <div class="row row--team">
 
       <?php
