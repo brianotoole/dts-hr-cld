@@ -24,6 +24,21 @@ function gform_post_to_pardot($entry, $form) {
 // Add function to form (or whichever form you need)
 add_action('gform_after_submission', 'gform_post_to_pardot', 10, 2);
 
+ 
+function gf_trigger_wistia() {
+    { ?>
+    <script>
+    // trigger a click on video
+    jQuery('.wistia_embed').attr('src', '//fast.wistia.net/embed/iframe/yzhn558bcf');
+    jQuery('.vid-click').trigger('click');
+    </script>
+    <?php }
+}
+
+add_filter( 'gform_after_submission', 'gf_trigger_wistia', 20, 2 );
+
+
+
 
 
 /**
