@@ -6,7 +6,7 @@
   <div class="container benefits">
     <div class="row">
       <div class="col-xs-12">
-        <h2 class="section__title benefits__title u-width-sm">Key Benefits</h2>
+        <h2 class="section__title benefits__title u-width-sm"><?php the_field('home_benefits_section_title'); ?></h2>
       </div><!--/.col-->
     </div><!--/.row-->
 
