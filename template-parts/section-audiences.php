@@ -1,5 +1,5 @@
 <section class="section section--accent">
-<div class="section__img u-visible-desktop" style="background-image: url('http://solana.sparxoodev.com/wp-content/uploads/2018/04/diversity-section-image.jpg')"></div>
+<div class="section__img u-visible-desktop" style="background-image: url('<?php echo get_field('home_audience_image'); ?>')"></div>
   <div class="container">
   <div class="section--pad">
      <div class="carousel carousel--audience-nav" id="carousel--audience-nav">
