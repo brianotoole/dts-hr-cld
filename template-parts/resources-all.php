@@ -54,7 +54,7 @@ $featQuery = new WP_Query($featArgs);
             </li><!--/.card-->
             <?php else: ?>
             <li class="col-md-4 col-sm-6 col-xs-12 card card--has-footer grow">
-              <a href="<?php the_permalink(); ?>" target="<?php echo get_post_meta($post->ID, '_links_to_target', true); ?>" class="card__overlay" style="background:linear-gradient(rgba(110, 154, 185, 0.9), rgba(110, 154, 185, 0.9)), url('<?php echo get_thumb_img($id); ?>')">
+              <a href="<?php the_permalink(); ?>" target="<?php echo get_post_meta($post->ID, '_links_to_target', true); ?>" class="card__overlay" style="background:linear-gradient(<?php echo get_rgba($color); ?>, 0.9), <?php echo get_rgba($color); ?>, 0.9)), url('<?php echo get_thumb_img($id); ?>')">
                 <h5 class="card__type"><?php echo get_tax_name($id); ?></h5>
                 <h5 class="card__title"><?php the_title(); ?></h5>
               </a><!--/.card__overlay-->
