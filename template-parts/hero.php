@@ -32,7 +32,11 @@ $hero_button = get_field('hero_button');
                   <?php the_title(); ?>
                 <?php endif; ?>
               </h1>
-              <p class="hero__subheading"><?php the_field('hero_subheading'); ?></p>
+              
+              <p class="hero__subheading <?php if (get_field('hero_subheading_mobile')) : echo 'u-visible-desktop'; endif; ?>"><?php the_field('hero_subheading'); ?></p>
+              <?php if (get_field('hero_subheading_mobile')) : ?>
+              <p class="hero__subheading u-hidden-desktop"><?php the_field('hero_subheading_mobile'); ?></p>
+              <?php endif; ?>
 
               <?php if (get_field('hero_button_type') == 'video') : ?>
                 <div class="hero__button">

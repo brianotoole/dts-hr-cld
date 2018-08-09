@@ -65,6 +65,25 @@
             "new_lines": ""
         },
         {
+            "key": "field_5b6cb1c94c2e8",
+            "label": "Hero Subheading (Mobile Only)",
+            "name": "hero_subheading_mobile",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_5b454247390c5",
             "label": "Hero Button Type",
             "name": "hero_button_type",
@@ -185,5 +204,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1532367485
+    "modified": 1533850075
 }
