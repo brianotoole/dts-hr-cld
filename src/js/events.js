@@ -72,7 +72,8 @@ $(function() {
  * Card flip for gated content
  */
 $(document).on('click', '.card-flip', function() {
-  console.log('click');
+  //console.log('clicked on a resource card');
+  $('.card-flip.active').not(this).removeClass('active');
   $(this).toggleClass('active');
 });
 
