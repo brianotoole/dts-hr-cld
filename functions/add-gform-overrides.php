@@ -38,6 +38,11 @@ function gf_trigger_wistia() {
 add_filter('gform_after_submission', 'gf_trigger_wistia', 20, 2);
 
 
+
+/**
+ * function to validate email address
+ * check against array of blacklisted domains
+ */
 function gf_email_validation($validation_result) {
     // Set the $validation_result object to $form
     $form = $validation_result["form"];
