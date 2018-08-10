@@ -35,8 +35,32 @@ function gf_trigger_wistia() {
     <?php }
 }
 
-add_filter( 'gform_after_submission', 'gf_trigger_wistia', 20, 2 );
+add_filter('gform_after_submission', 'gf_trigger_wistia', 20, 2);
 
+
+function gf_email_validation($validation_result) {
+    // Set the $validation_result object to $form
+    $form = $validation_result["form"];
+    // Get the value the user entered for the email field (name of input)
+    $email = $_POST["input_2"];
+    $email_blacklist = array("yahoo.com", "hotmail.com", "aol.com", "msn.com", "verizon.com", "comcast.com", "live.com", "gmx.com", "outlook.com", "gmail.com");
+    //explode will store the string into array, e.g: example@gmail.com
+    $udomain = explode('@', $email);
+    //select the email domain from the above splitted array
+    $email_domain = $udomain[1];
+    
+    if (in_array($email_domain, $email_blacklist)) {
+        // set the form validation to false
+        $validation_result["is_valid"] = false;
+        // specify the invalid field and provide custom validation message
+        $form["fields"][1]["failed_validation"] = true;
+        $form["fields"][1]["validation_message"] = __('You must enter a business email address.', 'spx');
+    }
+    // update the form in the validation result with the form object you modified
+    $validation_result["form"] = $form;
+    return $validation_result;
+}
+add_filter('gform_validation', 'gf_email_validation');
 
 
 
