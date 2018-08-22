@@ -2,9 +2,19 @@
  <div class="container">
    <div class="footer__top">
      <?php footer_nav(); ?>
-   </div><!--/.footer-top-->
+   </div><!--/.footer__top-->
   
    <div class="footer__bottom">
+     <div class="footer__bottom-logo u-visible-desktop">
+       <?php $site_logo = get_field('site_logo', 'option'); ?>
+       <?php if ($site_logo) : ?>
+          <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
+            <img src="<?php echo $site_logo; ?>" title="<?php bloginfo('name'); ?>" rel="logo" class="logo">
+          </a>
+        <?php else : ?>
+          <?php bloginfo('name'); ?>
+        <?php endif; ?>
+      </div><!--/.footer__bottom-logo-->
      <div class="footer__bottom-copy">&copy; <?php echo bloginfo('name'); ?> <?php echo the_date('Y'); ?></div>
      <div class="footer__bottom-menu">
        <ul>
@@ -12,8 +22,21 @@
          <li><a href="<?php echo home_url(); ?>/terms">Terms of Use</a></li>
          <li><a href="<?php echo home_url(); ?>/privacy">Privacy Policy</a></li>
        </ul>
-     </div><!--/.footer-bottom-menu-->
-   </div><!--/.footer-bottom-->
+     </div><!--/.footer__bottom-menu-->
+     <div class="footer__bottom-badge">
+       <img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo-aicpa.png">
+       <div class="footer__bottom-logo u-hidden-desktop">
+       <?php $site_logo = get_field('site_logo', 'option'); ?>
+       <?php if ($site_logo) : ?>
+          <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
+            <img src="<?php echo $site_logo; ?>" title="<?php bloginfo('name'); ?>" rel="logo" class="logo">
+          </a>
+        <?php else : ?>
+          <?php bloginfo('name'); ?>
+        <?php endif; ?>
+      </div><!--/.footer__bottom-logo-->
+     </div><!--/footer__bottom-badge-->
+   </div><!--/.footer__bottom-->
 
  </div><!--/.container-->
 </section>
