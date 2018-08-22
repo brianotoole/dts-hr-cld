@@ -2338,9 +2338,9 @@ address {
   text-align: center; }
   @media (min-width: 768px) {
     .footer__top-menu > * {
-      -ms-flex-preferred-size: auto;
-          flex-basis: auto;
-      width: auto;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+      width: 20%;
       text-align: left; } }
 
 .footer__top-menu > li > a {

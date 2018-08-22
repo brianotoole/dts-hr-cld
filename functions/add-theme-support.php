@@ -97,4 +97,18 @@ function footer_nav() {
 }
 
 
+// allow html inside menu description
+remove_filter( 'nav_menu_description', 'strip_tags' );
+// Add menu description support
+function prefix_nav_description( $item_output, $item, $depth, $args ) {
+  if ( !empty( $item->description ) ) {
+      $item_output = '<div class="menu-item-description">' . $item->description . '</div>';
+  }
+
+  return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 4 );
+
+
+
 ?>

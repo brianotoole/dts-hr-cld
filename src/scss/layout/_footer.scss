@@ -64,8 +64,8 @@
   width: 100%;
   text-align: center;
   @media (min-width: $tablet) {
-    flex-basis: auto;
-    width: auto;
+    flex-basis: 20%;
+    width: 20%;
     text-align: left;
   }
 }
