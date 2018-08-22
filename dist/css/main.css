@@ -2274,10 +2274,6 @@ address {
 /**
   * Footer
   */
-@media (max-width: 768px) {
-  .footer * {
-    font-size: 14px; } }
-
 .footer--secondary {
   background-color: #323a45;
   color: white; }
@@ -2345,8 +2341,12 @@ address {
 
 .footer__top-menu > li > a {
   color: #ea8c2a;
-  margin-top: 1em;
-  margin-bottom: 1em; }
+  margin-top: 2em;
+  margin-bottom: 0; }
+  @media (min-width: 768px) {
+    .footer__top-menu > li > a {
+      margin-top: 1em;
+      margin-bottom: 1em; } }
 
 .footer__top-menu .sub-menu {
   margin-top: 1em; }
@@ -2424,7 +2424,7 @@ address {
 
 .footer__bottom-menu li a {
   color: white;
-  margin: 0.5em auto;
+  margin: 0.25em auto;
   display: inline-block; }
   @media (min-width: 768px) {
     .footer__bottom-menu li a {

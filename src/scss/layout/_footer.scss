@@ -3,12 +3,7 @@
   */
 
 .footer {
-  @media (max-width: $tablet) {
-    * {
-      font-size: 14px;
-    }
-  }
-
+  
   &--secondary {
     background-color: $color__secondary;
     color: white;
@@ -73,8 +68,12 @@
 // top level menu items
 .footer__top-menu > li > a {
   color: $color__primary;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 2em;
+  margin-bottom: 0;
+  @media (min-width: $tablet) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }
 
 // sub menu menu items
@@ -140,7 +139,7 @@
   }
   li a {
     color: white;
-    margin: 0.5em auto;
+    margin: 0.25em auto;
     display: inline-block;
     @media (min-width: $tablet) {
       margin: 0 calc-em(25px);
