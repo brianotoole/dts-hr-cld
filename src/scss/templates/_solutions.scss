@@ -15,22 +15,22 @@
 
 .solutions__line {
   position: absolute;
-  top: 5em;
+  top: 12em;
   width: 100%;
   height: auto;
   svg {
     display: block;
     margin: 0 auto;
-    max-width: 73%;
+    max-width: 63%;
   }
   path {
     fill: transparent;
     stroke: $color__border;
-    stroke-width: 2px;
+    stroke-width: 4px;
     stroke-dasharray: 2000;
     visibility: hidden;
     &.active {
-      animation: draw 5s reverse linear;
+      animation: draw 3s reverse linear;
       visibility: visible;
     }
   }

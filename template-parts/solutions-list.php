@@ -9,7 +9,7 @@ $solutions_main_button = get_field('solutions_main_button');
   
   <div class="solutions" id="js-stagger-solutions-trigger">
     <div class="solutions__line u-visible-desktop">
-      <?php get_template_part('template-parts/svg', 'solutions-lines2.svg'); ?>
+      <?php get_template_part('template-parts/svg', 'solutions-lines3.svg'); ?>
     </div>
     <?php
       $solution_args = array(
