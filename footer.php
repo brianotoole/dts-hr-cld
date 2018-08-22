@@ -1,4 +1,4 @@
-<section class="section footer footer--secondary">
+<section class="section footer">
  <div class="container">
    <div class="footer__top">
      <?php footer_nav(); ?>

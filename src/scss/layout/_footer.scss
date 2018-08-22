@@ -3,12 +3,8 @@
   */
 
 .footer {
-
-  &--secondary {
-    background-color: $color__secondary;
-    color: white;
-  }
-
+  background-color: $color__tertiary;
+  color: white;
 }
 
 .footer a {
@@ -134,6 +130,7 @@
     margin: 2em auto 0;
     img {
       padding: 10px;
+      order: 2;
     }
   }
 }

@@ -2274,8 +2274,8 @@ address {
 /**
   * Footer
   */
-.footer--secondary {
-  background-color: #323a45;
+.footer {
+  background-color: #1a2940;
   color: white; }
 
 .footer a {
@@ -2418,7 +2418,10 @@ address {
             align-items: center;
     margin: 2em auto 0; }
     .footer__bottom-badge img {
-      padding: 10px; } }
+      padding: 10px;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; } }
 
 .footer__bottom-menu ul {
   display: -webkit-box;
@@ -4149,21 +4152,21 @@ body img.gform_ajax_spinner {
 
 .solutions__line {
   position: absolute;
-  top: 5em;
+  top: 12em;
   width: 100%;
   height: auto; }
   .solutions__line svg {
     display: block;
     margin: 0 auto;
-    max-width: 73%; }
+    max-width: 63%; }
   .solutions__line path {
     fill: transparent;
     stroke: #cfcfcf;
-    stroke-width: 2px;
+    stroke-width: 4px;
     stroke-dasharray: 2000;
     visibility: hidden; }
     .solutions__line path.active {
-      animation: draw 5s reverse linear;
+      animation: draw 3s reverse linear;
       visibility: visible; }
 
 @-webkit-keyframes draw {
