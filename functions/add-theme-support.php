@@ -17,7 +17,8 @@ if ( ! function_exists( 'spx_setup' ) ) :
     register_nav_menus( array(
      'primary' => esc_html__( 'Primary', 'spx' ),
      'secondary' => esc_html__( 'Secondary', 'spx' ),
-     'mobile'  => esc_html__( 'Mobile', 'spx')
+     'mobile'  => esc_html__( 'Mobile', 'spx'),
+     'footer'  => esc_html__( 'Footer', 'spx')
     ) );
    }
     // ACF - Add Options page-header
@@ -78,6 +79,19 @@ function mobile_nav() {
     'menu_class'     => '',
     'container'      => 'div',
     'container_class' => 'nav-mobile'
+		)
+	);
+}
+
+
+// Footer Nav
+function footer_nav() {
+	wp_nav_menu(
+	array(
+		'theme_location'  => 'footer',
+    'menu_class'      => 'footer__top-menu',
+    'container'       => 'div',
+    'container_class' => 'nav-footer'
 		)
 	);
 }

@@ -5,7 +5,7 @@
 .footer {
   @media (max-width: $tablet) {
     * {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 
@@ -44,16 +44,46 @@
   li a {
     display: inline-block;
     color: white;
-    margin-bottom: 0.75em;
+    margin-bottom: 0.5em;
   }
 }
 
-.footer__top-title {
+// footer menu wrapper
+.footer__top-menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media (min-width: $tablet) {
+    justify-content: space-between;
+  }
+}
+
+.footer__top-menu > * {
+  flex-basis: 100%;
+  width: 100%;
+  text-align: center;
+  @media (min-width: $tablet) {
+    flex-basis: auto;
+    width: auto;
+    text-align: left;
+  }
+}
+
+// top level menu items
+.footer__top-menu > li > a {
   color: $color__primary;
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
+// sub menu menu items
+.footer__top-menu .sub-menu {
+  margin-top: 1.5em;
+}
+
+
+// copyright section
 .footer__bottom {
   display: flex;
   padding: calc-em(20px);

@@ -65,7 +65,7 @@ function gf_email_validation($validation_result) {
     $validation_result["form"] = $form;
     return $validation_result;
 }
-add_filter('gform_validation', 'gf_email_validation');
+add_filter('gform_validation', 'gf_email_validation', 20, 2);
 
 
 

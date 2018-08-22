@@ -2276,7 +2276,7 @@ address {
   */
 @media (max-width: 768px) {
   .footer * {
-    font-size: 12px; } }
+    font-size: 14px; } }
 
 .footer--secondary {
   background-color: #323a45;
@@ -2310,12 +2310,46 @@ address {
 .footer__top-menu li a {
   display: inline-block;
   color: white;
-  margin-bottom: 0.75em; }
+  margin-bottom: 0.5em; }
 
-.footer__top-title {
+.footer__top-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  @media (min-width: 768px) {
+    .footer__top-menu {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
+
+.footer__top-menu > * {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 100%;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .footer__top-menu > * {
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+      width: auto;
+      text-align: left; } }
+
+.footer__top-menu > li > a {
   color: #ea8c2a;
   margin-top: 1em;
   margin-bottom: 1em; }
+
+.footer__top-menu .sub-menu {
+  margin-top: 1.5em; }
 
 .footer__bottom {
   display: -webkit-box;
