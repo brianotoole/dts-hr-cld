@@ -3,7 +3,7 @@
   */
 
 .footer {
-  
+
   &--secondary {
     background-color: $color__secondary;
     color: white;
@@ -108,7 +108,15 @@
   }
 }
 
-.footer__bottom-logo img {}
+.footer__bottom-logo a {
+  &:before {display: none;}
+}
+
+.footer__bottom-logo img {
+  @media (min-width: $tablet) {
+    margin-top: -1em;
+  }
+}
 
 .footer__bottom-badge img {
   width: 125px;
