@@ -45,11 +45,24 @@ $hero_button = get_field('hero_button');
                   <a href="//fast.wistia.net/embed/iframe/<?php echo $wistia_id; ?>?popover=true" class="btn btn--primary wistia-popover[height=388,playerColor=7b796a,width=640]">Watch Video</a>
                   <script src="//fast.wistia.com/assets/external/popover-v1.js" charset="ISO-8859-1"></script>
                 </div><!--/.hero__button-->
-              <?php elseif (get_field('hero_button_type') != 'video' && get_field('hero_button_link')) : ?>
+              <?php elseif (get_field('hero_button_type') == 'link' && get_field('hero_button_link')) : ?>
                 <div class="hero__button">
                 <?php $hero_button_link = get_field('hero_button_link'); ?>
                   <a class="btn btn--primary" href="<?php echo $hero_button_link['url']; ?>" target="<?php echo $hero_button_link['target']; ?>"><?php echo $hero_button_link['title']; ?></a>
                 </div><!--/.hero__button-->
+              <?php elseif (get_field('hero_button_type') == 'gated') : ?>
+              <?php function title_lowercase_no_chars($content) {
+                //trim, strip excess whitespace 
+                $content = preg_replace("/ +/", " ", trim($content)); 
+                //trim spaces 
+                $content = str_replace(" ", "", $content); 
+                //to lower case 
+                $content = strtolower($content);
+
+                return $content;
+
+              } ?>
+              <a class="btn btn--primary solutions-video solutions-video-<?php echo title_lowercase_no_chars(get_the_title());?>" href="#">Watch Video</a>
               <?php endif; ?>
 
             </div><!--/.hero__text-->

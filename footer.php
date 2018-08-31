@@ -45,6 +45,20 @@
   </div><!--/#page-->
 
 <script>
+
+var wistiaEmbedSrc = jQuery('.pum-content').find('iframe').attr('src');
+jQuery('.pum-close').on('click',function() {
+  var wistiaEmbed = jQuery('.pum-content').find('iframe');
+  wistiaEmbed.attr('src', '');
+  jQuery('.solutions-video').on('click',function() {
+      wistiaEmbed.attr('src', wistiaEmbedSrc);
+  });
+});
+
+
+
+
+
 // Capterra
 var capterra_vkey = 'cc880d56a1ff17c5129509568115807e',
 capterra_vid = '2094770',
