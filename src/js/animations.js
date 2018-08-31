@@ -11,8 +11,8 @@ import TimelineMax from 'gsap/src/uncompressed/TimelineMax';
 var controller = new ScrollMagic.Controller();
 var tl = new TimelineMax();
 
-
-$('.solutions .solution__wrap').each(function() {
+var solution_wrap_item = $('.solutions .solution__wrap').slice(1);
+solution_wrap_item.each(function() {
   //build tween
   var tween = TweenMax.from($(this), 1, {
     autoAlpha: 0, 
@@ -25,12 +25,13 @@ $('.solutions .solution__wrap').each(function() {
     //scene options
     triggerElement: this,
     triggerHook: 0.8,
-    reverse: false //dont repeat scene on scroll back up 
+    reverse: true //dont repeat scene on scroll back up 
   })
   .setTween(tween)//trigger tween
   //.addIndicators({name: 'tween:module',}) //DEBUG ONLY; uses plugin
   .addTo(controller);
 });
+
 
 $('.solutions path').each(function(){
   // Create a scene for each project
@@ -60,8 +61,8 @@ var shapeLength = shape.getTotalLength();
 console.log(shapeLength);
 */
 
-
-$('.solution__item').each(function() {
+var solution_item = $('.solution__item').slice(1);
+solution_item.each(function() {
   //build tween
   var tween = TweenMax.from($(this), 1, {
     autoAlpha: 0, 
